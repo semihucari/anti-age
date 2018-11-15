@@ -8,8 +8,9 @@ import InputBase from '@material-ui/core/InputBase';
 import {fade} from '@material-ui/core/styles/colorManipulator';
 import {withStyles} from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
+import AccountIcon from '@material-ui/icons/AccountBoxSharp';
 import SearchIcon from '@material-ui/icons/Search';
-import {Button} from '@material-ui/core';
+import {Button, Menu, MenuItem} from '@material-ui/core';
 
 const styles = theme => ({
     root: {
@@ -95,13 +96,28 @@ const styles = theme => ({
     },
     labelLight: {
         fontWeight: 100
+    },
+    navigationContainer: {
+        display: 'contents'
+    },
+    personalContainer: {
+        display: 'flex',
+        marginRight: '2vw'
+    },
+    hiddenContainer: {
+        display: 'none'
+    },
+    buttonContainer: {
+        margin: '2vw',
+        cursor: 'pointer'
     }
 });
 
 class PrimarySearchAppBar extends React.Component {
     state = {
         anchorEl: null,
-        mobileMoreAnchorEl: null
+        mobileMoreAnchorEl: null,
+        menuOpen: false
     };
 
     handleProfileMenuOpen = event => {
@@ -121,8 +137,15 @@ class PrimarySearchAppBar extends React.Component {
         this.setState({mobileMoreAnchorEl: null});
     };
 
+    handleMenu = () => {
+        this.setState({
+            menuOpen: !this.state.menuOpen
+        });
+    }
+
     render() {
         const {classes} = this.props;
+        const {menuOpen} = this.state;
 
         return (
             <div className={classes.root}>
@@ -138,32 +161,64 @@ class PrimarySearchAppBar extends React.Component {
                             Lubex anti-age
                         </Typography>
                         <div className={classes.grow}/>
-                        <div>
-                            <Button classes={{label: classes.labelLight}} color='secondary' disableRipple>
-                                Ürünler
-                            </Button>
-                        </div>
-                        <div>
-                            <Button classes={{label: classes.labelLight}} color='secondary' disableRipple>
-                                İletİŞİm
-                            </Button>
-                        </div>
-                        <div className={classes.search}>
-                            <div className={classes.searchIcon}>
-                                <SearchIcon/>
+                        <div
+                            className={menuOpen
+                            ? classes.hiddenContainer
+                            : classes.navigationContainer}>
+                            <div>
+                                <Button
+                                    classes={{
+                                    label: classes.labelLight
+                                }}
+                                    color='secondary'
+                                    disableRipple>
+                                    Ürünler
+                                </Button>
                             </div>
-                            <InputBase
-                                placeholder="Ara…"
-                                classes={{
-                                root: classes.inputRoot,
-                                input: classes.inputInput
-                            }}/>
+                            <div>
+                                <Button
+                                    classes={{
+                                    label: classes.labelLight
+                                }}
+                                    color='secondary'
+                                    disableRipple>
+                                    İletİŞİm
+                                </Button>
+                            </div>
+                            <div className={classes.search}>
+                                <div className={classes.searchIcon}>
+                                    <SearchIcon/>
+                                </div>
+                                <InputBase
+                                    placeholder="Ara…"
+                                    classes={{
+                                    root: classes.inputRoot,
+                                    input: classes.inputInput
+                                }}/>
+                            </div>
+                        </div>
+                        <div
+                            className={!menuOpen
+                            ? classes.hiddenContainer
+                            : classes.personalContainer}>
+                            <div className={classes.buttonContainer}>
+                                <img src={require('./images/envelope.png')}/>
+                            </div>
+                            <div className={classes.buttonContainer}>
+                                <img src={require('./images/ring.png')}/>
+                            </div>
+                            <div className={classes.buttonContainer}>
+                                <img src={require('./images/settings.png')}/>
+                            </div>
+                            <div className={classes.buttonContainer}>
+                                <img src={require('./images/profile.png')}/>
+                            </div>
                         </div>
                         <IconButton
                             className={classes.menuButton}
                             color="inherit"
                             aria-label="Open drawer">
-                            <MenuIcon fontSize="large"/>
+                            <MenuIcon fontSize="large" onClick={this.handleMenu}/>
                         </IconButton>
                     </Toolbar>
                 </AppBar>

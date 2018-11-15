@@ -24,7 +24,7 @@ class SubscribeMain extends Component {
         return (
             <div className={classes.subscribeContainer}>
                 <Typography variant="h6" align='center'>
-                    HEMEN KAYIT OLUN İLK SİPARİŞİNİZDE %20 İNDİRİM FIRSATINI KAÇIRMAYIN!
+                    HEMEN KAYIT OLUN İLK SİPARİŞİNİZDE %20 EK İNDİRİM FIRSATINI KAÇIRMAYIN!
                 </Typography>
                 <div className={classes.mailContainer}>
                     <TextField variant='outlined' placeholder='Email...'></TextField>

@@ -18,7 +18,8 @@ const styles = theme => ({
     mediaIcon: {
         background: 'white',
         marginTop: '2vh',
-        marginRight: '1vh'
+        marginRight: '1vh',
+        cursor: 'pointer'
     },
     subtitle1: {
         fontWeight: 100
