@@ -179,4 +179,4 @@ PrimarySearchAppBar.propTypes = {
     classes: PropTypes.object.isRequired
 };
 
-export default withStyles(sty
+export default withStyles(styles)(PrimarySearchAppBar);
