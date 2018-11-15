@@ -1,0 +1,50 @@
+{
+    "name": "scratch",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "babel": {
+        "presets": [
+            "@babel/preset-env",
+            "@babel/preset-react"
+        ],
+        "plugins": [
+            [
+                "@babel/plugin-proposal-class-properties",
+                {
+                    "loose": true
+                }
+            ]
+        ]
+    },
+    "devDependencies": {
+        "@babel/core": "^7.1.6",
+        "@babel/plugin-proposal-class-properties": "^7.1.0",
+        "@babel/preset-env": "^7.1.6",
+        "@babel/preset-react": "^7.0.0",
+        "babel-loader": "^8.0.4",
+        "css-loader": "^1.0.1",
+        "file-loader": "^2.0.0",
+        "react-hot-loader": "^4.3.12",
+        "source-map-loader": "^0.2.4",
+        "style-loader": "^0.23.1",
+        "url-loader": "^1.1.2",
+        "webpack": "^4.25.1",
+        "webpack-cli": "^3.1.2",
+        "webpack-dev-server": "^3.1.10"
+    },
+    "dependencies": {
+        "@material-ui/core": "^3.5.1",
+        "@material-ui/icons": "^3.0.1",
+        "react": "^16.6.3",
+        "react-dom": "^16.6.3",
+        "react-swipeable-views": "^0.13.0"
+    }
+}
