@@ -2,6 +2,7 @@ import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import {autoPlay} from 'react-swipeable-views-utils';
 import Pagination from './Pagination';
+import { Button } from '@material-ui/core';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const styles = {

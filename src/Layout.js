@@ -8,9 +8,9 @@ import InputBase from '@material-ui/core/InputBase';
 import {fade} from '@material-ui/core/styles/colorManipulator';
 import {withStyles} from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
-import AccountIcon from '@material-ui/icons/AccountBoxSharp';
 import SearchIcon from '@material-ui/icons/Search';
 import {Button, Menu, MenuItem} from '@material-ui/core';
+import Fade from '@material-ui/core/Fade';
 
 const styles = theme => ({
     root: {
@@ -33,6 +33,14 @@ const styles = theme => ({
         marginLeft: 0,
         marginRight: -20,
         float: 'right'
+    },
+    chartButton: {
+        marginLeft: 0,
+        float: 'right',
+        cursor: 'pointer'
+    },
+    buttonLarge: {
+        height: '-webkit-fill-available'
     },
     title: {
         display: 'none',
@@ -110,6 +118,10 @@ const styles = theme => ({
     buttonContainer: {
         margin: '2vw',
         cursor: 'pointer'
+    },
+    imgResize: {
+        width: '48px',
+        height: '48px'
     }
 });
 
@@ -167,6 +179,7 @@ class PrimarySearchAppBar extends React.Component {
                             : classes.navigationContainer}>
                             <div>
                                 <Button
+                                className={classes.buttonLarge}
                                     classes={{
                                     label: classes.labelLight
                                 }}
@@ -177,6 +190,18 @@ class PrimarySearchAppBar extends React.Component {
                             </div>
                             <div>
                                 <Button
+                                className={classes.buttonLarge}
+                                    classes={{
+                                    label: classes.labelLight
+                                }}
+                                    color='secondary'
+                                    disableRipple>
+                                    Lubex Hakkında
+                                </Button>
+                            </div>
+                            <div>
+                                <Button
+                                className={classes.buttonLarge}
                                     classes={{
                                     label: classes.labelLight
                                 }}
@@ -197,29 +222,38 @@ class PrimarySearchAppBar extends React.Component {
                                 }}/>
                             </div>
                         </div>
-                        <div
-                            className={!menuOpen
-                            ? classes.hiddenContainer
-                            : classes.personalContainer}>
-                            <div className={classes.buttonContainer}>
-                                <img src={require('./images/envelope.png')}/>
+                        <Fade in={menuOpen} timeout={500}>
+                            <div
+                                className={!menuOpen
+                                ? classes.hiddenContainer
+                                : classes.personalContainer}>
+                                <div className={classes.buttonContainer}>
+                                    <img src={require('./images/envelope.png')} className={classes.imgResize}/>
+                                </div>
+                                <div className={classes.buttonContainer}>
+                                    <img src={require('./images/ring.png')} className={classes.imgResize}/>
+                                </div>
+                                <div className={classes.buttonContainer}>
+                                    <img src={require('./images/settings.png')} className={classes.imgResize}/>
+                                </div>
+                                <div className={classes.buttonContainer}>
+                                    <img src={require('./images/profile.png')} className={classes.imgResize}/>
+                                </div>
                             </div>
-                            <div className={classes.buttonContainer}>
-                                <img src={require('./images/ring.png')}/>
+                        </Fade>
+                        <div>
+                            <div>
+                                <IconButton
+                                    className={classes.menuButton}
+                                    color="inherit"
+                                    aria-label="Open drawer">
+                                    <MenuIcon fontSize="large" onClick={this.handleMenu}/>
+                                </IconButton>
                             </div>
-                            <div className={classes.buttonContainer}>
-                                <img src={require('./images/settings.png')}/>
-                            </div>
-                            <div className={classes.buttonContainer}>
-                                <img src={require('./images/profile.png')}/>
+                            <div className={classes.chartButton}>
+                                <img src={require('./images/shopping-cart.png')}/>
                             </div>
                         </div>
-                        <IconButton
-                            className={classes.menuButton}
-                            color="inherit"
-                            aria-label="Open drawer">
-                            <MenuIcon fontSize="large" onClick={this.handleMenu}/>
-                        </IconButton>
                     </Toolbar>
                 </AppBar>
                 <main>

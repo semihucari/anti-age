@@ -7,7 +7,8 @@ const styles = theme => ({
         height: '25vh',
         background: 'black',
         marginTop: '2vh',
-        paddingTop: '1vh'
+        paddingTop: '1vh',
+        position: 'relative'
     },
     rowContainer: {
         maxWidth: '250px'
@@ -26,6 +27,21 @@ const styles = theme => ({
     },
     body2: {
         fontWeight: 100
+    },
+    overline: {
+        fontWeight: 200,
+        fontSize: 12
+    },
+    copyrights: {
+        position: 'absolute',
+        bottom: 0
+    },
+    contact: {
+        position: 'absolute',
+        bottom: 0,
+        left: '100%',
+        transform: 'translate(-100%)',
+        paddingRight: '1vw'
     }
 });
 
@@ -121,7 +137,6 @@ class Footer extends Component {
                     </Grid>
                     <Grid item xs={3}>
                         <div className={classes.rowContainer}>
-
                             <img className={classes.mediaIcon} src={require('../images/instagram.png')}/>
                             <img className={classes.mediaIcon} src={require('../images/facebook.png')}/>
                             <img className={classes.mediaIcon} src={require('../images/twitter.png')}/>
@@ -129,6 +144,24 @@ class Footer extends Component {
                         </div>
                     </Grid>
                 </Grid>
+                <Typography
+                    variant="overline"
+                    className={classes.copyrights}
+                    classes={{
+                    overline: classes.overline
+                }}
+                    color="secondary">
+                    © INTERPHARM İLAÇ SAN. TİC. LTD. ŞTİ TÜM HAKLARI SAKLIDIR.
+                </Typography>
+                <Typography
+                    variant="overline"
+                    className={classes.contact}
+                    classes={{
+                    overline: classes.overline
+                }}
+                    color="secondary">
+                    INFO@INTERPHARM.COM.TR      +90 212 500 35 35
+                </Typography>
             </div>
         )
 
