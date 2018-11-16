@@ -17,8 +17,8 @@ const styles = theme => ({
         cursor: 'pointer'
     },
     imgResize: {
-        width: '8vh',
-        height: '8vh',
+        width: '7vh',
+        height: '7vh',
         marginTop: '0.5rem',
         marginRight: '1rem'
     }
@@ -27,19 +27,47 @@ const styles = theme => ({
 class ButtonMenu extends Component {
     render() {
 
-        const {classes} = this.props;
-
+        const {classes, menuFor} = this.props;
+        console.log(menuFor);
         return (
-            <div className={classes.buttonMenu}>
-                <div className={classes.iconContainer}>
-                    <img src={require('../images/cosmetics.png')} className={classes.imgResize}/>
-                </div>
-                <div className={classes.iconContainer}>
-                    <img src={require('../images/lotion.png')} className={classes.imgResize}/>
-                </div>
-                <div className={classes.iconContainer}>
-                    <img src={require('../images/facial-mask.png')} className={classes.imgResize}/>
-                </div>
+            <div>
+
+                {menuFor === 'products' && <div className={classes.buttonMenu}>
+                    <div className={classes.iconContainer}>
+                        <img src={require('../images/cosmetics.png')} className={classes.imgResize}/>
+                    </div>
+                    <div className={classes.iconContainer}>
+                        <img src={require('../images/lotion.png')} className={classes.imgResize}/>
+                    </div>
+                    <div className={classes.iconContainer}>
+                        <img src={require('../images/facial-mask.png')} className={classes.imgResize}/>
+                    </div>
+                </div>}
+
+                {menuFor === 'about' && <div className={classes.buttonMenu}>
+                    <div className={classes.iconContainer}>
+                        <img src={require('../images/history.png')} className={classes.imgResize}/>
+                    </div>
+                    <div className={classes.iconContainer}>
+                        <img src={require('../images/flour.png')} className={classes.imgResize}/>
+                    </div>
+                    <div className={classes.iconContainer}>
+                        <img src={require('../images/care.png')} className={classes.imgResize}/>
+                    </div>
+                </div>}
+
+                {menuFor === 'contact' && <div className={classes.buttonMenu}>
+                    <div className={classes.iconContainer}>
+                        <img src={require('../images/call.png')} className={classes.imgResize}/>
+                    </div>
+                    <div className={classes.iconContainer}>
+                        <img src={require('../images/email.png')} className={classes.imgResize}/>
+                    </div>
+                    <div className={classes.iconContainer}>
+                        <img src={require('../images/map.png')} className={classes.imgResize}/>
+                    </div>
+                </div>}
+
             </div>
         )
     }

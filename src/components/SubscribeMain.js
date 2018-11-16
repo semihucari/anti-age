@@ -6,7 +6,12 @@ import SearchIcon from '@material-ui/icons/Search';
 
 const styles = theme => ({
     subscribeContainer: {
-        margin: '4vh'
+        marginTop: '4vh',
+        marginBottom: '4vh',
+        padding: '2vh',
+        margin: 'auto',
+        background: 'lavenderblush',
+        width: '70vw'
     },
     mailContainer: {
         textAlign: 'center',

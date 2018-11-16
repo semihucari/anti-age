@@ -146,7 +146,8 @@ class PrimarySearchAppBar extends React.Component {
         anchorEl: null,
         mobileMoreAnchorEl: null,
         menuOpen: false,
-        buttonMenuOpen: false
+        buttonMenuOpen: false,
+        menuFor: ''
     };
 
     handleProfileMenuOpen = event => {
@@ -180,7 +181,7 @@ class PrimarySearchAppBar extends React.Component {
 
     render() {
         const {classes} = this.props;
-        const {menuOpen, buttonMenuOpen} = this.state;
+        const {menuOpen, menuFor, buttonMenuOpen} = this.state;
 
         return (
             <div className={classes.root}>
@@ -205,7 +206,7 @@ class PrimarySearchAppBar extends React.Component {
                                 <Link to='/products' className={classes.link}>
                                     <Button
                                         onMouseOver={() => {
-                                        this.setState({buttonMenuOpen: true})
+                                        this.setState({buttonMenuOpen: true, menuFor: 'products'})
                                     }}
                                         className={classes.buttonLarge}
                                         classes={{
@@ -221,7 +222,7 @@ class PrimarySearchAppBar extends React.Component {
                                 <Link to='/about' className={classes.link}>
                                     <Button
                                         onMouseOver={() => {
-                                        this.setState({buttonMenuOpen: true})
+                                        this.setState({buttonMenuOpen: true, menuFor: 'about'})
                                     }}
                                         className={classes.buttonLarge}
                                         classes={{
@@ -237,7 +238,7 @@ class PrimarySearchAppBar extends React.Component {
                                 <Link to='/contact' className={classes.link}>
                                     <Button
                                         onMouseOver={() => {
-                                        this.setState({buttonMenuOpen: true})
+                                        this.setState({buttonMenuOpen: true, menuFor: 'contact'})
                                     }}
                                         className={classes.buttonLarge}
                                         classes={{
@@ -306,7 +307,7 @@ class PrimarySearchAppBar extends React.Component {
                     <div
                         onMouseLeave={() => {
                         this.setState({buttonMenuOpen: false})
-                    }}><ButtonMenu/></div>
+                    }}><ButtonMenu menuFor={menuFor}/></div>
                 </Drawer>
                 <main>
                     {this.props.children}

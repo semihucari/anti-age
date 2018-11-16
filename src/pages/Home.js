@@ -11,9 +11,6 @@ class Main extends Component {
         return (
             <div>
                 <Swipes/>
-                <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
-  {props => <div style={props}>hello</div>}
-</Spring>
                 <SubscribeMain/>
                 <Footer/>
             </div>
