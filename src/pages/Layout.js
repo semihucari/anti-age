@@ -9,8 +9,10 @@ import {fade} from '@material-ui/core/styles/colorManipulator';
 import {withStyles} from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import {Button, Menu, MenuItem} from '@material-ui/core';
+import {Button, Menu, MenuItem, Collapse, Drawer} from '@material-ui/core';
 import Fade from '@material-ui/core/Fade';
+import ButtonMenu from '../components/ButtonMenu';
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 const styles = theme => ({
     root: {
@@ -122,6 +124,20 @@ const styles = theme => ({
     imgResize: {
         width: '48px',
         height: '48px'
+    },
+    drawer: {
+        position: 'fixed',
+        zIndex: 1
+    },
+    drawerPaper: {
+        width: '100vw',
+        height: '11vh',
+        backgroundColor: 'black',
+        position: 'relative'
+    },
+    link: {
+        textDecoration: 'none',
+        color: 'white'
     }
 });
 
@@ -129,7 +145,8 @@ class PrimarySearchAppBar extends React.Component {
     state = {
         anchorEl: null,
         mobileMoreAnchorEl: null,
-        menuOpen: false
+        menuOpen: false,
+        buttonMenuOpen: false
     };
 
     handleProfileMenuOpen = event => {
@@ -155,9 +172,15 @@ class PrimarySearchAppBar extends React.Component {
         });
     }
 
+    handleClick = (name) => event => {
+        this.setState({
+            buttonMenuOpen: !this.state.buttonMenuOpen
+        })
+    }
+
     render() {
         const {classes} = this.props;
-        const {menuOpen} = this.state;
+        const {menuOpen, buttonMenuOpen} = this.state;
 
         return (
             <div className={classes.root}>
@@ -168,47 +191,63 @@ class PrimarySearchAppBar extends React.Component {
                     positionSticky: classes.appBar
                 }}>
                     <Toolbar className={classes.toolbar}>
-
-                        <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-                            Lubex anti-age
-                        </Typography>
+                        <Link to='/' className={classes.link}>
+                            <Typography className={classes.title} variant="h6" color="inherit" noWrap>
+                                Lubex anti-age
+                            </Typography>
+                        </Link>
                         <div className={classes.grow}/>
                         <div
                             className={menuOpen
                             ? classes.hiddenContainer
                             : classes.navigationContainer}>
                             <div>
-                                <Button
-                                className={classes.buttonLarge}
-                                    classes={{
-                                    label: classes.labelLight
-                                }}
-                                    color='secondary'
-                                    disableRipple>
-                                    Ürünler
-                                </Button>
+                                <Link to='/products' className={classes.link}>
+                                    <Button
+                                        onMouseOver={() => {
+                                        this.setState({buttonMenuOpen: true})
+                                    }}
+                                        className={classes.buttonLarge}
+                                        classes={{
+                                        label: classes.labelLight
+                                    }}
+                                        color='secondary'
+                                        disableRipple>
+                                        Ürünler
+                                    </Button>
+                                </Link>
                             </div>
                             <div>
-                                <Button
-                                className={classes.buttonLarge}
-                                    classes={{
-                                    label: classes.labelLight
-                                }}
-                                    color='secondary'
-                                    disableRipple>
-                                    Lubex Hakkında
-                                </Button>
+                                <Link to='/about' className={classes.link}>
+                                    <Button
+                                        onMouseOver={() => {
+                                        this.setState({buttonMenuOpen: true})
+                                    }}
+                                        className={classes.buttonLarge}
+                                        classes={{
+                                        label: classes.labelLight
+                                    }}
+                                        color='secondary'
+                                        disableRipple>
+                                        Lubex Hakkında
+                                    </Button>
+                                </Link>
                             </div>
                             <div>
-                                <Button
-                                className={classes.buttonLarge}
-                                    classes={{
-                                    label: classes.labelLight
-                                }}
-                                    color='secondary'
-                                    disableRipple>
-                                    İletİŞİm
-                                </Button>
+                                <Link to='/contact' className={classes.link}>
+                                    <Button
+                                        onMouseOver={() => {
+                                        this.setState({buttonMenuOpen: true})
+                                    }}
+                                        className={classes.buttonLarge}
+                                        classes={{
+                                        label: classes.labelLight
+                                    }}
+                                        color='secondary'
+                                        disableRipple>
+                                        İletİŞİm
+                                    </Button>
+                                </Link>
                             </div>
                             <div className={classes.search}>
                                 <div className={classes.searchIcon}>
@@ -228,16 +267,16 @@ class PrimarySearchAppBar extends React.Component {
                                 ? classes.hiddenContainer
                                 : classes.personalContainer}>
                                 <div className={classes.buttonContainer}>
-                                    <img src={require('./images/envelope.png')} className={classes.imgResize}/>
+                                    <img src={require('../images/envelope.png')} className={classes.imgResize}/>
                                 </div>
                                 <div className={classes.buttonContainer}>
-                                    <img src={require('./images/ring.png')} className={classes.imgResize}/>
+                                    <img src={require('../images/ring.png')} className={classes.imgResize}/>
                                 </div>
                                 <div className={classes.buttonContainer}>
-                                    <img src={require('./images/settings.png')} className={classes.imgResize}/>
+                                    <img src={require('../images/settings.png')} className={classes.imgResize}/>
                                 </div>
                                 <div className={classes.buttonContainer}>
-                                    <img src={require('./images/profile.png')} className={classes.imgResize}/>
+                                    <img src={require('../images/profile.png')} className={classes.imgResize}/>
                                 </div>
                             </div>
                         </Fade>
@@ -251,11 +290,24 @@ class PrimarySearchAppBar extends React.Component {
                                 </IconButton>
                             </div>
                             <div className={classes.chartButton}>
-                                <img src={require('./images/shopping-cart.png')}/>
+                                <img src={require('../images/shopping-cart.png')}/>
                             </div>
                         </div>
                     </Toolbar>
                 </AppBar>
+                <Drawer
+                    className={classes.drawer}
+                    variant="persistent"
+                    anchor="top"
+                    open={buttonMenuOpen}
+                    classes={{
+                    paper: classes.drawerPaper
+                }}>
+                    <div
+                        onMouseLeave={() => {
+                        this.setState({buttonMenuOpen: false})
+                    }}><ButtonMenu/></div>
+                </Drawer>
                 <main>
                     {this.props.children}
                 </main>

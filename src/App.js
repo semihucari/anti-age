@@ -1,10 +1,13 @@
 import React, {Component} from 'react'
-import Layout from './Layout';
+import Layout from './pages/Layout';
 import {withStyles} from '@material-ui/core/styles';
 import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
-import Swipes from './components/Swipes';
-import Footer from './components/Footer';
-import SubscribeMain from './components/SubscribeMain';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Loadable from "react-loadable";
+import Loading from "./components/Loading";
+import {BrowserRouter as Router, Link} from "react-router-dom";
+import {Switch, Route} from 'react-router'
 
 const theme = createMuiTheme({
     palette: {
@@ -27,16 +30,32 @@ const theme = createMuiTheme({
 
 const styles = theme => ({});
 
+const LoadableHome = Loadable({
+    loader: () => import ('./pages/Home'),
+    loading: (Loading)
+});
+
+const LoadableProducts = Loadable({
+    loader: () => import ('./pages/Products'),
+    loading: (Loading)
+});
+
 class App extends Component {
     render() {
         return (
-            <MuiThemeProvider theme={theme}>
-                <Layout className={this.props.classes.root}>
-                    <Swipes/>
-                    <SubscribeMain/>
-                    <Footer/>
-                </Layout>
-            </MuiThemeProvider>
+            <div className="App">
+                <MuiThemeProvider theme={theme}>
+                    <Router>
+                        <Switch>
+                            <Route path="/" exact render={() => <Layout><LoadableHome/></Layout>}/>
+                            <Route path="/home" component={() => <Layout><LoadableHome/></Layout>}/>
+                            <Route path="/about" component={() => <Layout><About/></Layout>}/>
+                            <Route path="/products" component={() => <Layout><LoadableProducts/></Layout>}/>
+                            <Route path="/contact" component={() => <Layout><Contact/></Layout>}/>
+                        </Switch>
+                    </Router>
+                </MuiThemeProvider>
+            </div>
         )
     }
 }

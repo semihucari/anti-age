@@ -8,22 +8,6 @@ body {
     overflow-x: hidden;
 }
 
-/* body::after {
-    background: url("./Eye-Makeup.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    content: "";
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: -1;
-} */
-
 .img {
     height: 75vh;
     transition: transform .5s;
@@ -58,4 +42,12 @@ body {
 .selected-dot:hover {
     transform: scale(1.2);
     cursor: pointer;
+}
+
+.animated-page-wrapper {
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
