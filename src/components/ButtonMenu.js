@@ -19,7 +19,7 @@ const styles = theme => ({
     imgResize: {
         width: '7vh',
         height: '7vh',
-        marginTop: '0.5rem',
+        marginTop: '1rem',
         marginRight: '1rem'
     }
 });
@@ -28,7 +28,7 @@ class ButtonMenu extends Component {
     render() {
 
         const {classes, menuFor} = this.props;
-        console.log(menuFor);
+
         return (
             <div>
 

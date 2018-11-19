@@ -131,9 +131,10 @@ const styles = theme => ({
     },
     drawerPaper: {
         width: '100vw',
+        opacity: '0.7',
+        marginTop: '20vh',
         height: '11vh',
-        backgroundColor: 'black',
-        position: 'relative'
+        backgroundColor: 'black'
     },
     link: {
         textDecoration: 'none',
@@ -194,7 +195,7 @@ class PrimarySearchAppBar extends React.Component {
                     <Toolbar className={classes.toolbar}>
                         <Link to='/' className={classes.link}>
                             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-                                Lubex anti-age
+                                Semix anti-age
                             </Typography>
                         </Link>
                         <div className={classes.grow}/>
@@ -230,7 +231,7 @@ class PrimarySearchAppBar extends React.Component {
                                     }}
                                         color='secondary'
                                         disableRipple>
-                                        Lubex Hakkında
+                                        Semix Hakkında
                                     </Button>
                                 </Link>
                             </div>
@@ -290,9 +291,11 @@ class PrimarySearchAppBar extends React.Component {
                                     <MenuIcon fontSize="large" onClick={this.handleMenu}/>
                                 </IconButton>
                             </div>
-                            <div className={classes.chartButton}>
-                                <img src={require('../images/shopping-cart.png')}/>
-                            </div>
+                            <Link to='/cart' className={classes.link}>
+                                <div className={classes.chartButton}>
+                                    <img src={require('../images/shopping-cart.png')}/>
+                                </div>
+                            </Link>
                         </div>
                     </Toolbar>
                 </AppBar>

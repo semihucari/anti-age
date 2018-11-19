@@ -8,6 +8,7 @@ import Loadable from "react-loadable";
 import Loading from "./components/Loading";
 import {BrowserRouter as Router, Link} from "react-router-dom";
 import {Switch, Route} from 'react-router'
+import Cart from './pages/Cart';
 
 const theme = createMuiTheme({
     palette: {
@@ -52,6 +53,7 @@ class App extends Component {
                             <Route path="/about" component={() => <Layout><About/></Layout>}/>
                             <Route path="/products" component={() => <Layout><LoadableProducts/></Layout>}/>
                             <Route path="/contact" component={() => <Layout><Contact/></Layout>}/>
+                            <Route path="/cart" component={() => <Layout><Cart/></Layout>}/>
                         </Switch>
                     </Router>
                 </MuiThemeProvider>

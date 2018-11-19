@@ -13,14 +13,14 @@ module.exports = {
                         "presets": ["@babel/react"],
                         "plugins": ["@babel/plugin-syntax-dynamic-import"]
                     }
-                  }
+                }
             }, {
                 test: /\.js$/,
                 use: ["source-map-loader"],
                 enforce: "pre"
             }, {
                 test: /\.css$/,
-                use: "style-loader!css-loader"
+                use: ['style-loader', 'css-loader']
             }, {
                 test: /\.(jpg|png)$/,
                 use: {
