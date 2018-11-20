@@ -21,7 +21,7 @@ const styles = theme => ({
         fontWeight: 100
     },
     appBar: {
-        height: '150px',
+        height: '20vh',
         boxShadow: 'none'
     },
     toolbar: {
@@ -85,7 +85,7 @@ const styles = theme => ({
     inputRoot: {
         color: 'inherit',
         width: '100%',
-        height: '150px'
+        height: '20vh'
     },
     inputInput: {
         paddingTop: theme.spacing.unit,
