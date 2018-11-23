@@ -4,6 +4,7 @@ import Swipes from '../components/Swipes';
 import Footer from '../components/Footer';
 import SubscribeMain from '../components/SubscribeMain';
 import { Spring } from 'react-spring'
+
 const styles = theme => ({});
 
 class Main extends Component {

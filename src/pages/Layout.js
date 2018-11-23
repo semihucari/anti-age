@@ -21,7 +21,7 @@ const styles = theme => ({
         fontWeight: 100
     },
     appBar: {
-        height: '20vh',
+        height: '15vh',
         boxShadow: 'none'
     },
     toolbar: {
@@ -85,7 +85,7 @@ const styles = theme => ({
     inputRoot: {
         color: 'inherit',
         width: '100%',
-        height: '20vh'
+        height: '15vh'
     },
     inputInput: {
         paddingTop: theme.spacing.unit,
@@ -132,13 +132,16 @@ const styles = theme => ({
     drawerPaper: {
         width: '100vw',
         opacity: '0.7',
-        marginTop: '20vh',
+        marginTop: '15vh',
         height: '11vh',
         backgroundColor: 'black'
     },
     link: {
         textDecoration: 'none',
         color: 'white'
+    },
+    logoResize: {
+        height: '15vh'
     }
 });
 
@@ -193,11 +196,11 @@ class PrimarySearchAppBar extends React.Component {
                     positionSticky: classes.appBar
                 }}>
                     <Toolbar className={classes.toolbar}>
-                        <Link to='/' className={classes.link}>
-                            <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-                                Semix anti-age
-                            </Typography>
-                        </Link>
+                        <div className={classes.buttonContainer}>
+                            <Link to='/' className={classes.link}>
+                                <img src={require('../images/balaban.jpg')} className={classes.logoResize}/>
+                            </Link>
+                        </div>
                         <div className={classes.grow}/>
                         <div
                             className={menuOpen
@@ -215,7 +218,7 @@ class PrimarySearchAppBar extends React.Component {
                                     }}
                                         color='secondary'
                                         disableRipple>
-                                        Ürünler
+                                        Dersler
                                     </Button>
                                 </Link>
                             </div>
