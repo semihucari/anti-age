@@ -2,7 +2,6 @@ import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import {autoPlay} from 'react-swipeable-views-utils';
 import Pagination from './Pagination';
-import { Button } from '@material-ui/core';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const styles = {
@@ -32,6 +31,7 @@ class Swipes extends React.Component {
             <div
                 style={{
                 width: '100vw',
+                height: '100vh',
                 textAlign: '-webkit-center'
             }}>
                 <div style={styles.root}>

@@ -17,10 +17,10 @@ const styles = theme => ({
         cursor: 'pointer'
     },
     imgResize: {
-        width: '7vh',
-        height: '7vh',
-        marginTop: '1rem',
-        marginRight: '1rem'
+        width: '3em',
+        height: '3em',
+        marginTop: '1em',
+        marginRight: '1em'
     }
 });
 

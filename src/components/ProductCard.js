@@ -2,32 +2,47 @@ import React, {Component} from 'react'
 import {withStyles} from '@material-ui/core';
 
 const styles = theme => ({
-    CardContainer: {
+    parentContainer: {
         display: 'inline-flex',
         width: '26vw',
         height: '70vh',
         margin: '2vh',
-        borderRadius: '3px'
+        borderRadius: '3px',
+        position: 'relative',
+        cursor: 'pointer',
+        '&:hover .class-info': {
+            height: '10em',
+            background: 'black'
+        }
+    },
+    firstChildContainer: {
+        width: '100%',
+        height: '100%',
+        zIndex: '1000'
+    },
+    firstChildContainerHover: {
+        width: '100%',
+        height: '100%',
+        filter: 'blur(3px)',
+        zIndex: '1000'
+    },
+    secondChildContainer: {
+        width: '100%',
+        height: '100%',
+        position: 'absolute',
+        top: '0',
+        zIndex: '1001'
     },
     titleContainer: {
         height: '20vh',
         width: '26vw',
-        background: '-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.4' +
-                ')), color-stop(100%,rgba(0,0,0,1)))',
+        background: '-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.4)), ' +
+                'color-stop(100%,rgba(0,0,0,1)))',
         position: 'absolute',
-        bottom: '0',
-        transform: 'translate(0, -12vh)',
-        borderRadius: '3px'
-    },
-    titleShrink: {
-        height: '8vh',
-        width: '26vw',
-        background: '-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(137,255,241,0' +
-                ')), color-stop(100%,rgba(0,0,0,1)))',
-        position: 'absolute',
-        bottom: '0',
-        transform: 'translate(0, -12vh)',
-        borderRadius: '3px'
+        bottom: '-1px',
+        // transform: 'translate(0, -12vh)',
+        borderRadius: '3px',
+        overflow: 'hidden'
     }
 });
 
@@ -40,12 +55,12 @@ class ProductCard extends Component {
 
         const {classes, mouseEnter, mouseLeave, id} = this.props;
         const {hover} = this.state;
-        
+
         const items = this.props.children;
 
         return (
             <div
-                className={this.props.className + ' ' + classes.CardContainer}
+                className={classes.parentContainer}
                 onMouseEnter={() => {
                 this.setState({hover: true});
                 mouseEnter(id)
@@ -54,8 +69,14 @@ class ProductCard extends Component {
                 this.setState({hover: false});
                 mouseLeave(id)
             }}>
-                <div className={hover ? classes.titleContainer:classes.titleShrink}>
-                    {this.props.children}
+                <div
+                    className={this.props.className + ' ' + (hover
+                    ? classes.firstChildContainerHover
+                    : classes.firstChildContainer)}></div>
+                <div className={classes.secondChildContainer}>
+                    <div
+                        className='class-info'>
+                        {this.props.children}</div>
                 </div>
             </div>
         )

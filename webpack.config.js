@@ -29,7 +29,11 @@ module.exports = {
                         limit: 25000
                     }
                 }
-            }
+            },
+            {
+				test: /\.(gif|svg|mp4)$/i,
+				use: 'file-loader'
+			}
         ]
     },
     resolve: {

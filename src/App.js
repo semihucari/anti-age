@@ -4,6 +4,7 @@ import {withStyles} from '@material-ui/core/styles';
 import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Courses from './pages/Courses';
 import Loadable from "react-loadable";
 import Loading from "./components/Loading";
 import {BrowserRouter as Router, Link} from "react-router-dom";
@@ -52,6 +53,7 @@ class App extends Component {
                             <Route path="/home" component={() => <Layout><LoadableHome/></Layout>}/>
                             <Route path="/about" component={() => <Layout><About/></Layout>}/>
                             <Route path="/products" component={() => <Layout><LoadableProducts/></Layout>}/>
+                            <Route path="/courses" component={() => <Layout><Courses/></Layout>}/>
                             <Route path="/contact" component={() => <Layout><Contact/></Layout>}/>
                             <Route path="/cart" component={() => <Layout><Cart/></Layout>}/>
                         </Switch>

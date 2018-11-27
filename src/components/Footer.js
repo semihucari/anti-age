@@ -4,10 +4,10 @@ import {Grid, Typography} from '@material-ui/core';
 
 const styles = theme => ({
     footerContainer: {
-        height: '25vh',
+        height: '11em',
         background: 'black',
-        marginTop: '2vh',
-        paddingTop: '1vh',
+        marginTop: '1em',
+        paddingTop: '0.8em',
         position: 'relative'
     },
     rowContainer: {
@@ -30,7 +30,7 @@ const styles = theme => ({
     },
     overline: {
         fontWeight: 200,
-        fontSize: 12
+        fontSize: '0.7em'
     },
     copyrights: {
         position: 'absolute',
@@ -84,7 +84,7 @@ class Footer extends Component {
                                     variant="body2"
                                     color="secondary"
                                     noWrap>
-                                    Basında Biz
+                                    Başarılarımız
                                 </Typography>
                                 <Typography
                                     className={classes.title}
@@ -95,7 +95,7 @@ class Footer extends Component {
                                     color="secondary"
                                     noWrap>
                                     Bize Ulaşın
-                                </Typography>
+                                </Typography>s
                             </div>
                         </div>
                     </Grid>
@@ -120,7 +120,7 @@ class Footer extends Component {
                                     variant="body2"
                                     color="secondary"
                                     noWrap>
-                                    Güzellik Tavsiyeleri
+                                    Dövüş Sanatları Tavsiyeleri
                                 </Typography>
                                 <Typography
                                     className={classes.title}
@@ -151,7 +151,7 @@ class Footer extends Component {
                     overline: classes.overline
                 }}
                     color="secondary">
-                    © INTERPHARM İLAÇ SAN. TİC. LTD. ŞTİ TÜM HAKLARI SAKLIDIR.
+                    © ÖMER BALABAN FİGHT ACADEMY TÜM HAKLARI SAKLIDIR.
                 </Typography>
                 <Typography
                     variant="overline"
@@ -160,7 +160,7 @@ class Footer extends Component {
                     overline: classes.overline
                 }}
                     color="secondary">
-                    INFO@INTERPHARM.COM.TR      +90 212 500 35 35
+                    INFO@OMERBALABAN.COM.TR      0553 619 97 68
                 </Typography>
             </div>
         )

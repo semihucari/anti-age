@@ -1,18 +1,18 @@
 import React, {Component} from 'react'
 import {withStyles} from '@material-ui/core/styles';
+import TopVideo from '../components/TopVideo';
 import Swipes from '../components/Swipes';
 import Footer from '../components/Footer';
-import SubscribeMain from '../components/SubscribeMain';
-import { Spring } from 'react-spring'
 
-const styles = theme => ({});
+const styles = theme => ({
+});
 
 class Main extends Component {
     render() {
         return (
             <div>
+                <TopVideo/>
                 <Swipes/>
-                <SubscribeMain/>
                 <Footer/>
             </div>
         )
