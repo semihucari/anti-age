@@ -32,7 +32,8 @@ class Swipes extends React.Component {
                 style={{
                 width: '100vw',
                 height: '100vh',
-                textAlign: '-webkit-center'
+                textAlign: '-webkit-center',
+                paddingTop: '1em'
             }}>
                 <div style={styles.root}>
                     <AutoPlaySwipeableViews index={index} onChangeIndex={this.handleChangeIndex} interval={3000}>

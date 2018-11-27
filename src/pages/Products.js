@@ -40,11 +40,11 @@ const styles = theme => ({
     },
     h6: {
         fontSize: '1.9em',
-        fontFamily: '"Anton", cursive',
+        fontFamily: '"Anton", sans-serif',
         color: 'yellow'
     },
     subtitle1: {
-        fontFamily: '"Anton", cursive',
+        fontFamily: '"Anton", sans-serif',
         fontSize: '1.2em'
     },
     subtitle: {

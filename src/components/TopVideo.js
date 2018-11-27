@@ -4,7 +4,8 @@ import {withStyles} from '@material-ui/core';
 const styles = theme => ({
     videoContainer: {
         height: '100vh',
-        width: '100vw'
+        width: '100vw',
+        overflow: 'hidden'
     }
 });
 

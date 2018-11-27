@@ -91,5 +91,21 @@ iframe {
     left: -4px;
     border-radius: 3px;
     overflow: hidden;
-    transition: all .3s;
+    transition: all 0.3s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.fade-in {
+    animation: fade-in 2.5s;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

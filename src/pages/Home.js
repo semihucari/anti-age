@@ -3,6 +3,7 @@ import {withStyles} from '@material-ui/core/styles';
 import TopVideo from '../components/TopVideo';
 import Swipes from '../components/Swipes';
 import Footer from '../components/Footer';
+import Banner from '../components/Banner';
 
 const styles = theme => ({
 });
@@ -12,6 +13,7 @@ class Main extends Component {
         return (
             <div>
                 <TopVideo/>
+                <Banner/>
                 <Swipes/>
                 <Footer/>
             </div>

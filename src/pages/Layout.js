@@ -6,7 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import {fade} from '@material-ui/core/styles/colorManipulator';
 import {withStyles} from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
-import {Button, Menu, MenuItem, Collapse, Drawer} from '@material-ui/core';
+import {Button, Menu, MenuItem, Collapse, Drawer, Typography} from '@material-ui/core';
 import ButtonMenu from '../components/ButtonMenu';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
@@ -26,7 +26,7 @@ const styles = theme => ({
         height: '100%'
     },
     labelLight: {
-        fontFamily: '"Anton", cursive',
+        fontFamily: '"Anton", sans-serif',
         fontSize: '1.8em'
     },
     navigationContainer: {
@@ -68,6 +68,13 @@ const styles = theme => ({
     }
 });
 
+const MyTypography = withStyles({
+    subtitle1: {
+        fontSize: '1em',
+        fontFamily: '"Anton", sans-serif'
+    }
+})(Typography)
+
 class PrimarySearchAppBar extends React.Component {
     state = {
         buttonMenuOpen: false,
@@ -84,8 +91,11 @@ class PrimarySearchAppBar extends React.Component {
                     <div className={classes.buttonContainer}>
                         <Link to='/' className={classes.link}>
                             <img
-                                src={require('../images/sarı-balaban.jpg')}
+                                src={require('../images/balaban-tra.png')}
                                 className={classes.logoResize}/>
+                            <MyTypography variant='subtitle1' style={{marginLeft: '0.5em'}}>
+                                Ana Sayfa
+                            </MyTypography>
                         </Link>
                     </div>
                     <div className={classes.navigationContainer}>

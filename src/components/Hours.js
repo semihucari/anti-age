@@ -6,7 +6,7 @@ const styles = theme => ({
         height: '19em',
         width: '37vw',
         margin: '2em',
-        background: 'yellow'
+        background: 'rgb(254, 184, 28)'
     },
     title: {
         marginTop: '0.3em',
@@ -31,11 +31,11 @@ const styles = theme => ({
 const MyTypography = withStyles({
     h5: {
         fontSize: '1.9em',
-        fontFamily: '"Anton", cursive'
+        fontFamily: '"Anton", sans-serif'
     },
     subtitle1:{
         fontSize: '1.1em',
-        fontFamily: '"Anton", cursive'
+        fontFamily: '"Anton", sans-serif'
     }
 })(Typography)
 
@@ -124,6 +124,9 @@ class Hours extends Component {
                                 <Divider/>
                                 <MyTypography variant='subtitle1'>
                                     0553 619 97 68
+                                </MyTypography>
+                                <MyTypography variant='subtitle1'>
+                                    INFO@OMERBALABAN.COM.TR 
                                 </MyTypography>
                             </div>
                         </Paper>
