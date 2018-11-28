@@ -11,7 +11,7 @@ const styles = theme => ({
 class Main extends Component {
     render() {
         return (
-            <div>
+            <div className='home'>
                 <TopVideo/>
                 <Banner/>
                 <Swipes/>

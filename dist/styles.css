@@ -99,7 +99,7 @@ iframe {
 }
 
 .fade-in {
-    animation: fade-in 2.5s;
+    animation: fade-in 3.5s;
 }
 @keyframes fade-in {
     from {
@@ -109,3 +109,8 @@ iframe {
         opacity: 1;
     }
 }
+
+/* video {
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 70%);
+    mask-image: linear-gradient(to top, transparent 0%, black 70%);
+} */

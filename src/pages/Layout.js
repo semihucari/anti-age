@@ -104,7 +104,7 @@ class PrimarySearchAppBar extends React.Component {
                             <Link to='/products' className={classes.link}>
                                 <Button
                                     onMouseOver={() => {
-                                    this.setState({buttonMenuOpen: true, menuFor: 'products'})
+                                    this.setState({buttonMenuOpen: true})
                                 }}
                                     className={classes.buttonLarge}
                                     classes={{
@@ -112,7 +112,7 @@ class PrimarySearchAppBar extends React.Component {
                                 }}
                                     color='primary'
                                     disableRipple>
-                                    Sınıflar
+                                    Üyelİkler
                                 </Button>
                             </Link>
                         </div>
@@ -120,7 +120,7 @@ class PrimarySearchAppBar extends React.Component {
                             <Link to='/courses' className={classes.link}>
                                 <Button
                                     onMouseOver={() => {
-                                    this.setState({buttonMenuOpen: true, menuFor: 'products'})
+                                    this.setState({buttonMenuOpen: true})
                                 }}
                                     className={classes.buttonLarge}
                                     classes={{
@@ -136,7 +136,7 @@ class PrimarySearchAppBar extends React.Component {
                             <Link to='/about' className={classes.link}>
                                 <Button
                                     onMouseOver={() => {
-                                    this.setState({buttonMenuOpen: true, menuFor: 'about'})
+                                    this.setState({buttonMenuOpen: true})
                                 }}
                                     className={classes.buttonLarge}
                                     classes={{
@@ -152,7 +152,7 @@ class PrimarySearchAppBar extends React.Component {
                             <Link to='/contact' className={classes.link}>
                                 <Button
                                     onMouseOver={() => {
-                                    this.setState({buttonMenuOpen: true, menuFor: 'contact'})
+                                    this.setState({buttonMenuOpen: true})
                                 }}
                                     className={classes.buttonLarge}
                                     classes={{
@@ -161,6 +161,22 @@ class PrimarySearchAppBar extends React.Component {
                                     color='primary'
                                     disableRipple>
                                     İletİŞİm
+                                </Button>
+                            </Link>
+                        </div>
+                        <div>
+                            <Link to='/about' className={classes.link}>
+                                <Button
+                                    onMouseOver={() => {
+                                    this.setState({buttonMenuOpen: true})
+                                }}
+                                    className={classes.buttonLarge}
+                                    classes={{
+                                    label: classes.labelLight
+                                }}
+                                    color='primary'
+                                    disableRipple>
+                                    Hakkımızda
                                 </Button>
                             </Link>
                         </div>

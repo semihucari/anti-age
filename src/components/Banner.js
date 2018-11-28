@@ -9,7 +9,14 @@ const styles = theme => ({
         height: '100vh',
         background: 'black',
         textAlign: 'center',
-        paddingTop: '25vh'
+        paddingTop: '25vh',
+        backgroundImage: `linear-gradient(
+            rgba(0, 0, 0, 0.90), 
+            rgba(0, 0, 0, 0.60)
+          ), url(${require('../images/banner-back.jpg')})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
     },
     buttonRoot: {
         width: '14em',
@@ -78,7 +85,7 @@ class Banner extends Component {
                     <div
                         style={{
                         display: 'inline-block',
-                        marginRight: '4em'
+                        marginRight: '6em'
                     }}
                         id='power'>
                         <img
@@ -95,7 +102,7 @@ class Banner extends Component {
                     <div
                         style={{
                         display: 'inline-block',
-                        marginRight: '4em'
+                        marginRight: '6em'
                     }}>
                         <img
                             src={require('../images/warming.png')}
@@ -111,7 +118,7 @@ class Banner extends Component {
                     <div
                         style={{
                         display: 'inline-block',
-                        marginRight: '4em'
+                        marginRight: '6em'
                     }}>
                         <img
                             src={require('../images/cardio.png')}
