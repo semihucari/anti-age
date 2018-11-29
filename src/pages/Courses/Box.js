@@ -9,7 +9,7 @@ const styles = theme => ({
         background: `linear-gradient(
             rgba(187, 228, 1, 0.45), 
             rgba(0, 0, 0, 0.74)
-          ), url(${require('../../images/box-page.jpg')})`,
+          ), url(${require('../../images/box-page.png')})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         width: '100vw',

@@ -15,6 +15,7 @@ const styles = theme => ({
         backgroundImage: `url(${require('../images/Martial-Arts-Class.jpg')})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
         transition: 'all .25s ease'
     },
     premiumClass: {
@@ -23,6 +24,7 @@ const styles = theme => ({
         backgroundImage: `url(${require('../images/premium-class.jpg')})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
         transition: 'all .25s ease'
     },
     specialClass: {
@@ -31,6 +33,7 @@ const styles = theme => ({
         backgroundImage: `url(${require('../images/special-class.jpg')})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
         transition: 'all .25s ease'
     },
     title: {

@@ -114,3 +114,12 @@ iframe {
     -webkit-mask-image: linear-gradient(to top, transparent 0%, black 70%);
     mask-image: linear-gradient(to top, transparent 0%, black 70%);
 } */
+
+#img-dialog{
+    animation: fadeIn 0.7s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ } 
