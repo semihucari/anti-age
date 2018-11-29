@@ -8,7 +8,7 @@ import {withStyles} from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import {Button, Menu, MenuItem, Collapse, Drawer, Typography} from '@material-ui/core';
 import ButtonMenu from '../components/ButtonMenu';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {HashRouter as Router, Route, Link} from "react-router-dom";
 
 const styles = theme => ({
     root: {
@@ -101,22 +101,6 @@ class PrimarySearchAppBar extends React.Component {
                     <div className={classes.navigationContainer}>
                         <div className={classes.grow}></div>
                         <div>
-                            <Link to='/products' className={classes.link}>
-                                <Button
-                                    onMouseOver={() => {
-                                    this.setState({buttonMenuOpen: true})
-                                }}
-                                    className={classes.buttonLarge}
-                                    classes={{
-                                    label: classes.labelLight
-                                }}
-                                    color='primary'
-                                    disableRipple>
-                                    Üyelİkler
-                                </Button>
-                            </Link>
-                        </div>
-                        <div>
                             <Link to='/courses' className={classes.link}>
                                 <Button
                                     onMouseOver={() => {
@@ -129,6 +113,22 @@ class PrimarySearchAppBar extends React.Component {
                                     color='primary'
                                     disableRipple>
                                     Kurslar
+                                </Button>
+                            </Link>
+                        </div>
+                        <div>
+                            <Link to='/products' className={classes.link}>
+                                <Button
+                                    onMouseOver={() => {
+                                    this.setState({buttonMenuOpen: true})
+                                }}
+                                    className={classes.buttonLarge}
+                                    classes={{
+                                    label: classes.labelLight
+                                }}
+                                    color='primary'
+                                    disableRipple>
+                                    Üyelİkler
                                 </Button>
                             </Link>
                         </div>

@@ -1,7 +1,9 @@
 const webpack = require('webpack');
 
 module.exports = {
-    entry: ["babel-polyfill", "./src/index.js"],
+    entry: [
+        "babel-polyfill", "./src/index.js"
+    ],
     module: {
         rules: [
             {
@@ -26,14 +28,18 @@ module.exports = {
                 use: {
                     loader: "url-loader",
                     options: {
-                        limit: 25000
+                        limit: 99999999999
                     }
                 }
-            },
-            {
-				test: /\.(gif|svg|mp4)$/i,
-				use: 'file-loader'
-			}
+            }, {
+                test: /\.(gif|svg|mp4)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        context: ''
+                    }
+                }
+            }
         ]
     },
     resolve: {

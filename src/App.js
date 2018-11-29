@@ -7,7 +7,7 @@ import Contact from './pages/Contact';
 import Courses from './pages/Courses';
 import Loadable from "react-loadable";
 import Loading from "./components/Loading";
-import {BrowserRouter as Router, Link} from "react-router-dom";
+import {HashRouter as Router, Link} from "react-router-dom";
 import {Switch, Route} from 'react-router'
 import Cart from './pages/Cart';
 import MuayThai from './pages/Courses/MuayThai';

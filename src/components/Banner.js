@@ -63,7 +63,7 @@ class Banner extends Component {
         }
 
         function checkPosition() {
-            if (document.getElementById('power').getBoundingClientRect().top < window.innerHeight + window.scrollY) {
+            if (document.getElementById('power') && document.getElementById('power').getBoundingClientRect().top < window.innerHeight + window.scrollY) {
                 document
                     .getElementById('bannerContainer')
                     .className = 'fade-in';
