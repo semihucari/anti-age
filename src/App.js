@@ -10,6 +10,7 @@ import Loading from "./components/Loading";
 import {HashRouter as Router, Link} from "react-router-dom";
 import {Switch, Route} from 'react-router'
 import Cart from './pages/Cart';
+import Gym from './pages/Gym';
 import MuayThai from './pages/Courses/MuayThai';
 import KickBox from './pages/Courses/KickBox';
 import Box from './pages/Courses/Box';
@@ -82,6 +83,7 @@ class App extends Component {
                                     component={({history}) => <Layout><Mma history={history}/></Layout>}/>
                                 <Route path="/contact" component={() => <Layout><Contact/></Layout>}/>
                                 <Route path="/cart" component={() => <Layout><Cart/></Layout>}/>
+                                <Route path="/gym" component={() => <Layout><Gym/></Layout>}/>
                             </Switch>
                         </ScrollToTop>
                     </Router>

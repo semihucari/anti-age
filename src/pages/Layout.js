@@ -133,7 +133,7 @@ class PrimarySearchAppBar extends React.Component {
                             </Link>
                         </div>
                         <div>
-                            <Link to='/about' className={classes.link}>
+                            <Link to='/gym' className={classes.link}>
                                 <Button
                                     onMouseOver={() => {
                                     this.setState({buttonMenuOpen: true})
