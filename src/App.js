@@ -49,7 +49,14 @@ const LoadableProducts = Loadable({
     loading: (Loading)
 });
 
+localStorage.setItem('lang', 'tr');
+
 class App extends Component {
+
+    changeLang = () => {
+        console.log('fckyoufckyou')
+    }
+
     render() {
         return (
             <div className="App">
@@ -57,11 +64,11 @@ class App extends Component {
                     <Router>
                         <ScrollToTop>
                             <Switch>
-                                <Route path="/" exact render={() => <Layout><LoadableHome/></Layout>}/>
-                                <Route path="/home" component={() => <Layout><LoadableHome/></Layout>}/>
-                                <Route path="/about" component={() => <Layout><About/></Layout>}/>
-                                <Route path="/products" component={() => <Layout><LoadableProducts/></Layout>}/>
-                                <Route path="/courses" component={() => <Layout><Courses/></Layout>}/>
+                                <Route path="/" exact render={() => <Layout changeLang={this.changeLang}><LoadableHome/></Layout>}/>
+                                <Route path="/home" component={() => <Layout changeLang={this.changeLang}><LoadableHome/></Layout>}/>
+                                <Route path="/about" component={() => <Layout changeLang={this.changeLang}><About/></Layout>}/>
+                                <Route path="/products" component={() => <Layout changeLang={this.changeLang}><LoadableProducts/></Layout>}/>
+                                <Route path="/courses" component={() => <Layout changeLang={this.changeLang}><Courses/></Layout>}/>
                                 <Route
                                     path="/muaythai"
                                     component={({history}) => <Layout><MuayThai history={history}/></Layout>}/>

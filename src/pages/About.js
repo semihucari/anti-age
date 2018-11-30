@@ -46,13 +46,7 @@ class About extends Component {
                     <Grid item xs={4}>
                         <img className={classes.img} src={require('../images/sensei.png')}/>
                         <MyTypography variant='h5' color='secondary'>
-                            SENSEI
-                        </MyTypography>
-                        <MyTypography variant='subtitle2' color='secondary'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet metus
-                            quis sem luctus, sit amet dignissim massa volutpat. Aliquam ut varius quam.
-                            Proin at cursus sem. Curabitur posuere, ante in accumsan tempor, urna tellus
-                            elementum elit, a mattis ante.
+                            Ömer Balaban
                         </MyTypography>
                     </Grid>
                     <Grid item xs={6}>

@@ -1,0 +1,14 @@
+{
+    "tr": {
+        "translation": {
+            "courses": "Kurslar",
+            "homePage": "Ana Sayfa"
+        }
+    },
+    "en": {
+        "translation": {
+            "courses": "Courses",
+            "homePage": "Home Page"
+        }
+    }
+}

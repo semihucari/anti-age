@@ -6,9 +6,26 @@ import IconButton from '@material-ui/core/IconButton';
 import {fade} from '@material-ui/core/styles/colorManipulator';
 import {withStyles} from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
-import {Button, Menu, MenuItem, Collapse, Drawer, Typography} from '@material-ui/core';
+import {
+    Button,
+    Menu,
+    MenuItem,
+    Collapse,
+    Drawer,
+    Typography
+} from '@material-ui/core';
 import ButtonMenu from '../components/ButtonMenu';
 import {HashRouter as Router, Route, Link} from "react-router-dom";
+import i18n from "i18next";
+import {withI18n, reactI18nextModule} from "react-i18next";
+import {LocEn, LocTr} from '../localization/translation';
+
+const translate = (key) => {
+    const lang = localStorage.getItem('lang');
+    return lang === 'tr'
+        ? LocTr(key)
+        : LocEn(key);
+}
 
 const styles = theme => ({
     root: {
@@ -25,9 +42,24 @@ const styles = theme => ({
     buttonLarge: {
         height: '100%'
     },
+    buttonFit: {
+        height: '72%'
+    },
+    buttonSmall: {
+        height: '20%'
+    },
     labelLight: {
         fontFamily: '"Anton", sans-serif',
         fontSize: '1.8em'
+    },
+    labelFit: {
+        fontFamily: '"Anton", sans-serif',
+        fontSize: '1.8em',
+        marginTop: '-30%'
+    },
+    langLabel: {
+        fontFamily: '"Anton", sans-serif',
+        fontSize: '0.8em'
     },
     navigationContainer: {
         display: 'inline-flex',
@@ -76,36 +108,30 @@ const MyTypography = withStyles({
 })(Typography)
 
 class PrimarySearchAppBar extends React.Component {
-    state = {
-        buttonMenuOpen: false,
-        menuFor: ''
-    };
 
     render() {
-        const {classes} = this.props;
-        const {menuFor, buttonMenuOpen} = this.state;
+        const {classes, changeLang} = this.props;
 
         return (
             <div className={classes.root}>
                 <div id='app-bar' className='app-bar'>
                     <div className={classes.buttonContainer}>
                         <Link to='/' className={classes.link}>
-                            <img
-                                src={require('../images/balaban-tra.png')}
-                                className={classes.logoResize}/>
-                            <MyTypography variant='subtitle1' style={{marginLeft: '0.5em'}}>
-                                Ana Sayfa
+                            <img src={require('../images/balaban-tra.png')} className={classes.logoResize}/>
+                            <MyTypography
+                                variant='subtitle1'
+                                style={{
+                                marginLeft: '0.5em'
+                            }}>
+                                {translate('homePage')}
                             </MyTypography>
                         </Link>
                     </div>
                     <div className={classes.navigationContainer}>
-                        <div className={classes.grow}></div>
+                        <div className={classes.grow}/>
                         <div>
                             <Link to='/courses' className={classes.link}>
                                 <Button
-                                    onMouseOver={() => {
-                                    this.setState({buttonMenuOpen: true})
-                                }}
                                     className={classes.buttonLarge}
                                     classes={{
                                     label: classes.labelLight
@@ -119,9 +145,6 @@ class PrimarySearchAppBar extends React.Component {
                         <div>
                             <Link to='/products' className={classes.link}>
                                 <Button
-                                    onMouseOver={() => {
-                                    this.setState({buttonMenuOpen: true})
-                                }}
                                     className={classes.buttonLarge}
                                     classes={{
                                     label: classes.labelLight
@@ -135,9 +158,6 @@ class PrimarySearchAppBar extends React.Component {
                         <div>
                             <Link to='/gym' className={classes.link}>
                                 <Button
-                                    onMouseOver={() => {
-                                    this.setState({buttonMenuOpen: true})
-                                }}
                                     className={classes.buttonLarge}
                                     classes={{
                                     label: classes.labelLight
@@ -151,9 +171,6 @@ class PrimarySearchAppBar extends React.Component {
                         <div>
                             <Link to='/contact' className={classes.link}>
                                 <Button
-                                    onMouseOver={() => {
-                                    this.setState({buttonMenuOpen: true})
-                                }}
                                     className={classes.buttonLarge}
                                     classes={{
                                     label: classes.labelLight
@@ -164,15 +181,24 @@ class PrimarySearchAppBar extends React.Component {
                                 </Button>
                             </Link>
                         </div>
-                        <div>
+                        <div style={{textAlign: 'right'}}>
+                            <div>
+                                <Button
+                                    className={classes.buttonSmall}
+                                    classes={{
+                                    label: classes.langLabel
+                                }}
+                                    color='primary'
+                                    disableRipple
+                                    onClick={() => changeLang()}>
+                                    <img src={require('../images/english.png')}/>
+                                </Button>
+                            </div>
                             <Link to='/about' className={classes.link}>
                                 <Button
-                                    onMouseOver={() => {
-                                    this.setState({buttonMenuOpen: true})
-                                }}
-                                    className={classes.buttonLarge}
+                                    className={classes.buttonFit}
                                     classes={{
-                                    label: classes.labelLight
+                                    label: classes.labelFit
                                 }}
                                     color='primary'
                                     disableRipple>

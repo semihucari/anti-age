@@ -190,7 +190,6 @@ class Contact extends Component {
                             </MyTypography>
                         </Grid>
                     </Grid>
-
                 </div>
                 <Divider
                     classes={{
