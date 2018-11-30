@@ -42,7 +42,7 @@ const styles = theme => ({
     buttonContainer: {
         cursor: 'pointer',
         display: 'inline-flex',
-        width: '100%'
+        width: '5em'
     },
     imgResize: {
         width: '3em',
