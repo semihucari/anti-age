@@ -15,20 +15,12 @@ const styles = theme => ({
     banner: {
         width: '100vw',
         height: '100vh',
-        background: 'black',
         textAlign: 'center',
-        paddingTop: '25vh',
-        backgroundImage: `linear-gradient(
-            rgba(0, 0, 0, 0.90), 
-            rgba(0, 0, 0, 0.60)
-          ), url(${require('../images/banner-back.jpg')})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center'
+        paddingTop: '13vh'
     },
     buttonRoot: {
-        width: '14em',
-        height: '8em',
+        width: '12vw',
+        height: '10vw',
         background: 'rgb(254, 184, 28)',
         display: 'block',
         marginTop: '7vh',
@@ -39,46 +31,35 @@ const styles = theme => ({
         }
     },
     buttonLabel: {
-        fontSize: '1.8em',
+        fontSize: '2vw',
         fontFamily: '"Anton", sans-serif',
         color: 'black'
     },
     link: {
         textDecoration: 'none'
+    },
+    img: {
+        margin: '4vw 0 3vw 0',
+        height: '8vw',
+        width: '8vw',
     }
 });
 
 const MyTypography = withStyles({
     h4: {
-        fontSize: '3em',
+        fontSize: '3vw',
         fontFamily: '"Anton", sans-serif',
-        color: 'rgb(254, 184, 28)'
+        color: 'rgb(254, 184, 28)',
+        marginBottom: '1vw'
     },
     h5: {
-        fontSize: '1.9em',
+        fontSize: '2vw',
         fontFamily: '"Anton", sans-serif',
         color: 'rgb(254, 184, 28)'
     }
 })(Typography)
 
 class Banner extends Component {
-    componentDidMount = () => {
-        addEventHandlers();
-
-        function addEventHandlers() {
-            window.addEventListener('scroll', checkPosition);
-            window.addEventListener('resize', checkPosition);
-        }
-
-        function checkPosition() {
-            if (document.getElementById('power') && document.getElementById('power').getBoundingClientRect().top < window.innerHeight + window.scrollY) {
-                document
-                    .getElementById('bannerContainer')
-                    .className = 'fade-in';
-            }
-        }
-
-    }
 
     render() {
 
@@ -86,7 +67,7 @@ class Banner extends Component {
 
         return (
             <div className={classes.banner}>
-                <div className='hidden' id='bannerContainer'>
+                <div className='fade-in' id='bannerContainer'>
                     <MyTypography variant='h4'>
                         ÖMER BALABAN FIGHT ACADEMY
                     </MyTypography>
@@ -98,11 +79,7 @@ class Banner extends Component {
                         id='power'>
                         <img
                             src={require('../images/body-building.png')}
-                            style={{
-                            padding: '2em',
-                            height: '12em',
-                            width: '12em'
-                        }}/>
+                            className={classes.img}/>
                         <MyTypography variant='h5'>
                             {translate('power')}
                         </MyTypography>
@@ -114,11 +91,7 @@ class Banner extends Component {
                     }}>
                         <img
                             src={require('../images/warming.png')}
-                            style={{
-                            padding: '2em',
-                            height: '12em',
-                            width: '12em'
-                        }}/>
+                            className={classes.img}/>
                         <MyTypography variant='h5'>
                             {translate('flexibility')}
                         </MyTypography>
@@ -130,11 +103,7 @@ class Banner extends Component {
                     }}>
                         <img
                             src={require('../images/cardio.png')}
-                            style={{
-                            padding: '2em',
-                            height: '12em',
-                            width: '12em'
-                        }}/>
+                            className={classes.img}/>
                         <MyTypography variant='h5'>
                             {translate('cardio')}
                         </MyTypography>
@@ -145,11 +114,7 @@ class Banner extends Component {
                     }}>
                         <img
                             src={require('../images/speed.png')}
-                            style={{
-                            padding: '2em',
-                            height: '12em',
-                            width: '12em'
-                        }}/>
+                            className={classes.img}/>
                         <MyTypography variant='h5'>
                             {translate('speed')}
                         </MyTypography>
