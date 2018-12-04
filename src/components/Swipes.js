@@ -61,64 +61,72 @@ class Swipes extends React.Component {
         return (
             <div
                 style={{
-                width: '70vw',
-                height: '100vh',
-                textAlign: '-webkit-center',
-                paddingTop: '6vw',
-                textTransform: 'uppercase'
+                display: 'block',
+                background: 'black',
+                width: '100vw',
+                textAlign: '-webkit-center'
             }}>
-                <div style={styles.root}>
-                    <AutoPlaySwipeableViews
-                        index={index}
-                        onChangeIndex={this.handleChangeIndex}
-                        interval={4000}>
-                        <div style={styles.slide}>
-                            <img
-                                src={require('../images/WhatsApp Image 2018-12-03 at 15.44.16.jpeg')}
-                                className='img'/>
-                            <MyTypography variant='h5'>{translate('kids')}</MyTypography>
-                        </div>
-                        <div style={styles.slide}>
-                            <img src={require('../images/img1.jpg')} className='img'/>
-                            <MyTypography variant='h5'>{translate('muayThai')}</MyTypography>
-                        </div>
-                        <div style={styles.slide}>
-                            <img src={require('../images/personal-training.jpg')} className='img'/>
-                            <MyTypography variant='h5'>{translate('personalTraining')}</MyTypography>
-                        </div>
-                        <div style={styles.slide}>
-                            <img src={require('../images/taek-swipe.jpg')} className='img'/>
-                            <MyTypography variant='h5'>{translate('taek')}</MyTypography>
-                        </div>
-                        <div style={styles.slide}>
-                            <img src={require('../images/boxing-swipe.jpg')} className='img'/>
-                            <MyTypography variant='h5'>{translate('boxing')}</MyTypography>
-                        </div>
-                        <div style={styles.slide}>
-                            <img src={require('../images/func-fit.png')} className='img'/>
-                            <MyTypography variant='h5'>{translate('functionalFitness')}</MyTypography>
-                        </div>
-                        <div style={styles.slide}>
-                            <img src={require('../images/cardio.jpg')} className='img'/>
-                            <MyTypography variant='h5'>{translate('CARDIO')}</MyTypography>
-                        </div>
-                        <div style={styles.slide}>
-                            <img src={require('../images/mma-swipe.jpg')} className='img'/>
-                            <MyTypography variant='h5'>{translate('mma')}</MyTypography>
-                        </div>
-                        <div style={styles.slide}>
-                            <img src={require('../images/kb.jpg')} className='img'/>
-                            <MyTypography variant='h5'>{translate('kickboxing')}</MyTypography>
-                        </div>
-                        <div style={styles.slide}>
-                            <img src={require('../images/wushu-swipe.jpg')} className='img'/>
-                            <MyTypography variant='h5'>{translate('wushu')}</MyTypography>
-                        </div>
-                    </AutoPlaySwipeableViews>
-                    <Pagination
-                        dots={10}
-                        selectedDot={index}
-                        onChangeIndex={this.handleChangeIndex}/>
+                <div
+                    style={{
+                    width: '70vw',
+                    height: '100vh',
+                    textAlign: '-webkit-center',
+                    paddingTop: '6vw',
+                    textTransform: 'uppercase'
+                }}>
+                    <div style={styles.root}>
+                        <AutoPlaySwipeableViews
+                            index={index}
+                            onChangeIndex={this.handleChangeIndex}
+                            interval={4000}>
+                            <div style={styles.slide}>
+                                <img
+                                    src={require('../images/WhatsApp Image 2018-12-03 at 15.44.16.jpeg')}
+                                    className='img'/>
+                                <MyTypography variant='h5'>{translate('kids')}</MyTypography>
+                            </div>
+                            <div style={styles.slide}>
+                                <img src={require('../images/img1.jpg')} className='img'/>
+                                <MyTypography variant='h5'>{translate('muayThai')}</MyTypography>
+                            </div>
+                            <div style={styles.slide}>
+                                <img src={require('../images/personal-training.jpg')} className='img'/>
+                                <MyTypography variant='h5'>{translate('personalTraining')}</MyTypography>
+                            </div>
+                            <div style={styles.slide}>
+                                <img src={require('../images/taek-swipe.jpg')} className='img'/>
+                                <MyTypography variant='h5'>{translate('taek')}</MyTypography>
+                            </div>
+                            <div style={styles.slide}>
+                                <img src={require('../images/boxing-swipe.jpg')} className='img'/>
+                                <MyTypography variant='h5'>{translate('boxing')}</MyTypography>
+                            </div>
+                            <div style={styles.slide}>
+                                <img src={require('../images/func-fit.png')} className='img'/>
+                                <MyTypography variant='h5'>{translate('functionalFitness')}</MyTypography>
+                            </div>
+                            <div style={styles.slide}>
+                                <img src={require('../images/cardio.jpg')} className='img'/>
+                                <MyTypography variant='h5'>{translate('CARDIO')}</MyTypography>
+                            </div>
+                            <div style={styles.slide}>
+                                <img src={require('../images/mma-swipe.jpg')} className='img'/>
+                                <MyTypography variant='h5'>{translate('mma')}</MyTypography>
+                            </div>
+                            <div style={styles.slide}>
+                                <img src={require('../images/kb.jpg')} className='img'/>
+                                <MyTypography variant='h5'>{translate('kickboxing')}</MyTypography>
+                            </div>
+                            <div style={styles.slide}>
+                                <img src={require('../images/wushu-swipe.jpg')} className='img'/>
+                                <MyTypography variant='h5'>{translate('wushu')}</MyTypography>
+                            </div>
+                        </AutoPlaySwipeableViews>
+                        <Pagination
+                            dots={10}
+                            selectedDot={index}
+                            onChangeIndex={this.handleChangeIndex}/>
+                    </div>
                 </div>
             </div>
         );
