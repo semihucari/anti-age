@@ -35,7 +35,7 @@ class Motivation extends Component {
         return (
             <div>
                 <MyTypography variant='h5'>
-                    Zamanı boşa harcama. Çünkü hayat zamandan ibarettir.
+                    {translate('bruceLee')}
                 </MyTypography>
                 <MyTypography variant='h6'>
                     Bruce Lee
