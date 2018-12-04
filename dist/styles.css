@@ -40,6 +40,10 @@ body {
 
 .img {
     height: 75vh;
+    border-width: 4px !important;
+    border: white;
+    border-style: solid;
+    border-color: #feb81c;
 }
 
 .dot {

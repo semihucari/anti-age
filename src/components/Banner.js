@@ -23,7 +23,7 @@ const styles = theme => ({
         height: '10vw',
         background: 'rgb(254, 184, 28)',
         display: 'block',
-        marginTop: '7vh',
+        marginTop: '9vw',
         margin: 'auto',
         borderRadius: '0px',
         '&:hover': {

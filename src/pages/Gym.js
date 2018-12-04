@@ -102,14 +102,14 @@ const tileData = [
         cols: 2,
         rows: 2
     }, {
-        img: require('../images/15.34.14.jpeg'),
-        title: '15.34.14.jpeg',
+        img: require('../images/15.34.19.jpeg'),
+        title: '15.34.19.jpeg',
         author: 'author',
         cols: 1,
         rows: 2
     }, {
-        img: require('../images/15.34.19.jpeg'),
-        title: '15.34.19.jpeg',
+        img: require('../images/15.34.14.jpeg'),
+        title: '15.34.14.jpeg',
         author: 'author',
         cols: 1,
         rows: 2
@@ -126,14 +126,14 @@ const tileData = [
         cols: 2,
         rows: 2
     }, {
-        img: require('../images/15.34.14 (1).jpeg'),
-        title: '15.34.14 (1).jpeg',
-        author: 'author',
-        cols: 2,
-        rows: 1
-    }, {
         img: require('../images/15.34.16 (1).jpeg'),
         title: '15.34.16 (1).jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/15.34.14 (1).jpeg'),
+        title: '15.34.14 (1).jpeg',
         author: 'author',
         cols: 1,
         rows: 2
@@ -170,12 +170,6 @@ const tileData = [
     }, {
         img: require('../images/WhatsApp Image 2018-12-03 at 15.43.43.jpeg'),
         title: 'WhatsApp Image 2018-12-03 at 15.43.43.jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
-        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.11.jpeg'),
-        title: 'WhatsApp Image 2018-12-03 at 15.44.11.jpeg',
         author: 'author',
         cols: 1,
         rows: 2
@@ -237,7 +231,7 @@ const tileData = [
         img: require('../images/WhatsApp Image 2018-12-03 at 15.44.16.jpeg'),
         title: 'WhatsApp Image 2018-12-03 at 15.44.16.jpeg',
         author: 'author',
-        cols: 1,
+        cols: 2,
         rows: 2
     }
 ]
@@ -265,7 +259,8 @@ const MyTypography = withStyles({
     h3: {
         fontSize: '2em',
         fontFamily: '"Anton", sans-serif',
-        color: 'rgb(254, 184, 28)'
+        color: 'rgb(254, 184, 28)',
+        marginBottom: '.7em'
     }
 })(Typography)
 
@@ -296,7 +291,7 @@ class Contact extends Component {
                         <Grid item xs={4}>
                             <Avatar
                                 alt='Omer Balaban'
-                                src={require('../images/pain.jpg')}
+                                src={require('../images/balaban.jpeg')}
                                 className={classes.avatar}/>
                         </Grid>
                         <Grid item xs={5}>

@@ -3,6 +3,7 @@ import {withStyles} from '@material-ui/core/styles';
 import ProductCard from '../components/ProductCard';
 import {Typography, Grow} from '@material-ui/core';
 import {LocEn, LocTr} from '../localization/translation';
+import {Link} from "react-router-dom";
 
 const translate = (key) => {
     const lang = localStorage.getItem('lang');
@@ -87,151 +88,157 @@ class Products extends Component {
 
         return (
             <div className={classes.productContainer}>
-                <ProductCard
-                    className={classes.groupClass}
-                    id='groupLecturesShow'
-                    mouseEnter={this.mouseEnter}
-                    mouseLeave={this.mouseLeave}>
-                    <Typography
-                        variant='h6'
-                        color='secondary'
-                        className={classes.title}
-                        noWrap
-                        classes={{
-                        h6: classes.h6
-                    }}>
-                        {translate('groupClasses')}
-                    </Typography>
-                    <Grow in={groupLecturesShow}>
-                        {groupLecturesShow
-                            ? <div>
-                                    <Typography
-                                        variant='subtitle1'
-                                        color='secondary'
-                                        className={classes.subtitle}
-                                        classes={{
-                                        subtitle1: classes.subtitle1
-                                    }}>
-                                        {translate('fourDaysAWeek')}
-                                    </Typography>
-                                    <Typography
-                                        variant='subtitle1'
-                                        color='secondary'
-                                        className={classes.subtitle}
-                                        classes={{
-                                        subtitle1: classes.subtitle1
-                                    }}>
-                                        {translate('1520Students')}
-                                    </Typography>
-                                    <Typography
-                                        variant='subtitle1'
-                                        color='secondary'
-                                        className={classes.subtitle}
-                                        classes={{
-                                        subtitle1: classes.subtitle1
-                                    }}>
-                                        {translate('200TLMonth')}
-                                    </Typography>
-                                </div>
-                            : <div></div>}
-                    </Grow>
-                </ProductCard>
-                <ProductCard
-                    className={classes.premiumClass}
-                    id='premiumLecturesShow'
-                    mouseEnter={this.mouseEnter}
-                    mouseLeave={this.mouseLeave}>
-                    <Typography
-                        variant='h6'
-                        color='secondary'
-                        className={classes.title}
-                        noWrap
-                        classes={{
-                        h6: classes.h6
-                    }}>
-                        {translate('premiumGroupClasses')}
-                    </Typography>
-                    <Grow in={premiumLecturesShow}>
-                        {premiumLecturesShow
-                            ? <div>
-                                    <Typography
-                                        variant='subtitle1'
-                                        color='secondary'
-                                        className={classes.subtitle}
-                                        classes={{
-                                        subtitle1: classes.subtitle1
-                                    }}>
-                                        {translate('fourDaysAWeek')}
-                                    </Typography>
-                                    <Typography
-                                        variant='subtitle1'
-                                        color='secondary'
-                                        className={classes.subtitle}
-                                        classes={{
-                                        subtitle1: classes.subtitle1
-                                    }}>
-                                        {translate('8Students')}
-                                    </Typography>
-                                    <Typography
-                                        variant='subtitle1'
-                                        color='secondary'
-                                        className={classes.subtitle}
-                                        classes={{
-                                        subtitle1: classes.subtitle1
-                                    }}>
-                                        {translate('400TLMonth')}
-                                    </Typography>
-                                </div>
-                            : <div></div>}
-                    </Grow>
-                </ProductCard>
-                <ProductCard
-                    className={classes.specialClass}
-                    id='specialLecturesShow'
-                    mouseEnter={this.mouseEnter}
-                    mouseLeave={this.mouseLeave}>
-                    <Typography
-                        variant='h6'
-                        color='secondary'
-                        className={classes.title}
-                        noWrap
-                        classes={{
-                        h6: classes.h6
-                    }}>{translate('individualClasses')}</Typography>
-                    <Grow in={specialLecturesShow}>
-                        {specialLecturesShow
-                            ? <div>
-                                    <Typography
-                                        variant='subtitle1'
-                                        color='secondary'
-                                        className={classes.subtitle}
-                                        classes={{
-                                        subtitle1: classes.subtitle1
-                                    }}>
-                                        {translate('wheneverYouChoose')}
-                                    </Typography>
-                                    <Typography
-                                        variant='subtitle1'
-                                        color='secondary'
-                                        className={classes.subtitle}
-                                        classes={{
-                                        subtitle1: classes.subtitle1
-                                    }}>
-                                        {translate('withOmerSensei')}
-                                    </Typography>
-                                    <Typography
-                                        variant='subtitle1'
-                                        color='secondary'
-                                        className={classes.subtitle}
-                                        classes={{
-                                        subtitle1: classes.subtitle1
-                                    }}>
-                                        {translate('100TLHour')}
-                                    </Typography>
-                                </div>
-                            : <div></div>}
-                    </Grow>
-                </ProductCard>
+                <Link to='/groupclasses'>
+                    <ProductCard
+                        className={classes.groupClass}
+                        id='groupLecturesShow'
+                        mouseEnter={this.mouseEnter}
+                        mouseLeave={this.mouseLeave}>
+                        <Typography
+                            variant='h6'
+                            color='secondary'
+                            className={classes.title}
+                            noWrap
+                            classes={{
+                            h6: classes.h6
+                        }}>
+                            {translate('groupClasses')}
+                        </Typography>
+                        <Grow in={groupLecturesShow}>
+                            {groupLecturesShow
+                                ? <div>
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='secondary'
+                                            className={classes.subtitle}
+                                            classes={{
+                                            subtitle1: classes.subtitle1
+                                        }}>
+                                            {translate('fourDaysAWeek')}
+                                        </Typography>
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='secondary'
+                                            className={classes.subtitle}
+                                            classes={{
+                                            subtitle1: classes.subtitle1
+                                        }}>
+                                            {translate('1520Students')}
+                                        </Typography>
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='secondary'
+                                            className={classes.subtitle}
+                                            classes={{
+                                            subtitle1: classes.subtitle1
+                                        }}>
+                                            {translate('200TLMonth')}
+                                        </Typography>
+                                    </div>
+                                : <div></div>}
+                        </Grow>
+                    </ProductCard>
+                </Link>
+                <Link to='/premiumclasses'>
+                    <ProductCard
+                        className={classes.premiumClass}
+                        id='premiumLecturesShow'
+                        mouseEnter={this.mouseEnter}
+                        mouseLeave={this.mouseLeave}>
+                        <Typography
+                            variant='h6'
+                            color='secondary'
+                            className={classes.title}
+                            noWrap
+                            classes={{
+                            h6: classes.h6
+                        }}>
+                            {translate('premiumGroupClasses')}
+                        </Typography>
+                        <Grow in={premiumLecturesShow}>
+                            {premiumLecturesShow
+                                ? <div>
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='secondary'
+                                            className={classes.subtitle}
+                                            classes={{
+                                            subtitle1: classes.subtitle1
+                                        }}>
+                                            {translate('fourDaysAWeek')}
+                                        </Typography>
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='secondary'
+                                            className={classes.subtitle}
+                                            classes={{
+                                            subtitle1: classes.subtitle1
+                                        }}>
+                                            {translate('8Students')}
+                                        </Typography>
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='secondary'
+                                            className={classes.subtitle}
+                                            classes={{
+                                            subtitle1: classes.subtitle1
+                                        }}>
+                                            {translate('400TLMonth')}
+                                        </Typography>
+                                    </div>
+                                : <div></div>}
+                        </Grow>
+                    </ProductCard>
+                </Link>
+                <Link to='/individualclasses'>
+                    <ProductCard
+                        className={classes.specialClass}
+                        id='specialLecturesShow'
+                        mouseEnter={this.mouseEnter}
+                        mouseLeave={this.mouseLeave}>
+                        <Typography
+                            variant='h6'
+                            color='secondary'
+                            className={classes.title}
+                            noWrap
+                            classes={{
+                            h6: classes.h6
+                        }}>{translate('individualClasses')}</Typography>
+                        <Grow in={specialLecturesShow}>
+                            {specialLecturesShow
+                                ? <div>
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='secondary'
+                                            className={classes.subtitle}
+                                            classes={{
+                                            subtitle1: classes.subtitle1
+                                        }}>
+                                            {translate('wheneverYouChoose')}
+                                        </Typography>
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='secondary'
+                                            className={classes.subtitle}
+                                            classes={{
+                                            subtitle1: classes.subtitle1
+                                        }}>
+                                            {translate('withOmerSensei')}
+                                        </Typography>
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='secondary'
+                                            className={classes.subtitle}
+                                            classes={{
+                                            subtitle1: classes.subtitle1
+                                        }}>
+                                            {translate('100TLHour')}
+                                        </Typography>
+                                    </div>
+                                : <div></div>}
+                        </Grow>
+                    </ProductCard>
+                </Link>
             </div>
         )
     }
