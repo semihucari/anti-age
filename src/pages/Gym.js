@@ -11,6 +11,14 @@ import {
     Grid
 } from '@material-ui/core';
 import FullscreenIcon from '@material-ui/icons/FullscreenRounded';
+import {LocEn, LocTr} from '../localization/translation';
+
+const translate = (key) => {
+    const lang = localStorage.getItem('lang');
+    return lang === 'tr'
+        ? LocTr(key)
+        : LocEn(key);
+}
 
 const styles = theme => ({
     gymContainer: {
@@ -77,43 +85,157 @@ const styles = theme => ({
     },
     divider: {
         background: 'rgb(254, 184, 28)'
+    },
+    zoom: {
+        transition: 'all .2s',
+        '&:hover': {
+            filter: 'sepia(60%)'
+        }
     }
 });
 
 const tileData = [
     {
-        img: require('../images/heavy-bag-1.jpg'),
-        title: 'HeavyBag1',
+        img: require('../images/15.34.15.jpeg'),
+        title: '15.34.15.jpeg',
+        author: 'author',
+        cols: 2,
+        rows: 2
+    }, {
+        img: require('../images/15.34.14.jpeg'),
+        title: '15.34.14.jpeg',
         author: 'author',
         cols: 1,
         rows: 2
     }, {
-        img: require('../images/ring-2.jpg'),
-        title: 'Ring2',
-        author: 'author',
-        cols: 2,
-        rows: 2
-    }, {
-        img: require('../images/ring.jpg'),
-        title: 'Ring1',
-        author: 'author',
-        cols: 2,
-        rows: 1
-    }, {
-        img: require('../images/bags-1.jpg'),
-        title: 'Bag1',
+        img: require('../images/15.34.19.jpeg'),
+        title: '15.34.19.jpeg',
         author: 'author',
         cols: 1,
-        rows: 1
+        rows: 2
     }, {
-        img: require('../images/mma-box.jpg'),
-        title: 'MMARing1',
+        img: require('../images/15.34.13.jpeg'),
+        title: '15.34.13.jpeg',
         author: 'author',
         cols: 2,
         rows: 2
     }, {
-        img: require('../images/training-1.jpg'),
-        title: 'Training1',
+        img: require('../images/15.34.09.jpeg'),
+        title: '15.34.09.jpeg',
+        author: 'author',
+        cols: 2,
+        rows: 2
+    }, {
+        img: require('../images/15.34.14 (1).jpeg'),
+        title: '15.34.14 (1).jpeg',
+        author: 'author',
+        cols: 2,
+        rows: 1
+    }, {
+        img: require('../images/15.34.16 (1).jpeg'),
+        title: '15.34.16 (1).jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/15.34.16.jpeg'),
+        title: '15.34.16.jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/15.34.17.jpeg'),
+        title: '15.34.17.jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/15.34.18 (1).jpeg'),
+        title: '15.34.18 (1).jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/15.34.18.jpeg'),
+        title: '15.34.18.jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2018-12-03 at 15.35.02.jpeg'),
+        title: 'WhatsApp Image 2018-12-03 at 15.35.02.jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2018-12-03 at 15.43.43.jpeg'),
+        title: 'WhatsApp Image 2018-12-03 at 15.43.43.jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.11.jpeg'),
+        title: 'WhatsApp Image 2018-12-03 at 15.44.11.jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.12.jpeg'),
+        title: 'WhatsApp Image 2018-12-03 at 15.44.12.jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.13 (1).jpeg'),
+        title: 'WhatsApp Image 2018-12-03 at 15.44.13 (1).jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.13 (2).jpeg'),
+        title: 'WhatsApp Image 2018-12-03 at 15.44.13 (2).jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.13.jpeg'),
+        title: 'WhatsApp Image 2018-12-03 at 15.44.13.jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.14 (1).jpeg'),
+        title: 'WhatsApp Image 2018-12-03 at 15.44.14 (1).jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.14 (2).jpeg'),
+        title: 'WhatsApp Image 2018-12-03 at 15.44.14 (2).jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.14.jpeg'),
+        title: 'WhatsApp Image 2018-12-03 at 15.44.14.jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.15 (1).jpeg'),
+        title: 'WhatsApp Image 2018-12-03 at 15.44.15 (1).jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.15.jpeg'),
+        title: 'WhatsApp Image 2018-12-03 at 15.44.15.jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.16.jpeg'),
+        title: 'WhatsApp Image 2018-12-03 at 15.44.16.jpeg',
         author: 'author',
         cols: 1,
         rows: 2
@@ -137,9 +259,10 @@ const MyTypography = withStyles({
     h6: {
         fontSize: '1.2em',
         fontFamily: '"Anton", sans-serif',
-        color: 'white'
+        color: 'white',
+        whiteSpace: 'pre-line'
     },
-    h7: {
+    h3: {
         fontSize: '2em',
         fontFamily: '"Anton", sans-serif',
         color: 'rgb(254, 184, 28)'
@@ -177,16 +300,11 @@ class Contact extends Component {
                                 className={classes.avatar}/>
                         </Grid>
                         <Grid item xs={5}>
-                            <MyTypography variant='h7'>
+                            <MyTypography variant='h3'>
                                 Ömer Balaban
                             </MyTypography>
                             <MyTypography variant='h6'>
-                                Salon sahibi<br/>
-                                Emekli profesyonel milli kick boks dövüşçüşü - Dünya şampiyonu<br/>
-                                Milli antrenör<br/>
-                                4. Dan usta eğitmen<br/>
-                                Profesyonel MMA-Boks-Taekwondo-Muay Thai dövüşçüsü<br/>
-                                25 yıllık sporcu/antrenör tecrübesi
+                                {translate('balabanSummarize')}
                             </MyTypography>
                         </Grid>
                     </Grid>
@@ -197,7 +315,7 @@ class Contact extends Component {
                 }}/>
                 <div className={classes.features}>
                     <MyTypography variant='h5'>
-                        Ekipmanlarımız
+                        {translate('equipments')}
                     </MyTypography>
                     <div className={classes.itemContainer}>
                         <img
@@ -207,7 +325,7 @@ class Contact extends Component {
                             width: '10em'
                         }}/>
                         <MyTypography variant='h4'>
-                            Normal Kum Torbası
+                            {translate('punchingBag')}
                         </MyTypography>
                     </div>
                     <div className={classes.itemContainer}>
@@ -218,7 +336,7 @@ class Contact extends Component {
                             width: '10em'
                         }}/>
                         <MyTypography variant='h4'>
-                            Uzun Kum Torbası (2m)
+                            {translate('punchingBagLong')}
                         </MyTypography>
                     </div>
                     <div className={classes.itemContainer}>
@@ -230,7 +348,7 @@ class Contact extends Component {
                             width: '11em'
                         }}/>
                         <MyTypography variant='h4'>
-                            Araba Lastiği Torba
+                            {translate('tireBag')}
                         </MyTypography>
                     </div>
                     <div className={classes.itemContainer}>
@@ -242,7 +360,7 @@ class Contact extends Component {
                             width: '11em'
                         }}/>
                         <MyTypography variant='h4'>
-                            Yuvarlak Torba
+                            {translate('ballBag')}
                         </MyTypography>
                     </div>
                     <div className={classes.itemContainer}>
@@ -254,7 +372,7 @@ class Contact extends Component {
                             width: '11em'
                         }}/>
                         <MyTypography variant='h4'>
-                            Şekilli Torba
+                            {translate('curvedBag')}
                         </MyTypography>
                     </div>
                     <div className={classes.itemContainer}>
@@ -266,7 +384,7 @@ class Contact extends Component {
                             width: '10em'
                         }}/>
                         <MyTypography variant='h4'>
-                            Hız Torbası
+                            {translate('speedBag')}
                         </MyTypography>
                     </div>
                     <div className={classes.itemContainer}>
@@ -278,7 +396,7 @@ class Contact extends Component {
                             width: '11em'
                         }}/>
                         <MyTypography variant='h4'>
-                            Ring x 2
+                            {translate('ringx2')}
                         </MyTypography>
                     </div>
                     <div className={classes.itemContainer}>
@@ -290,7 +408,7 @@ class Contact extends Component {
                             width: '11em'
                         }}/>
                         <MyTypography variant='h4'>
-                            Fitness Ağırlıkları
+                            {translate('weights')}
                         </MyTypography>
                     </div>
                 </div>
@@ -300,13 +418,17 @@ class Contact extends Component {
                 }}/>
                 <div className={classes.photoGallery}>
                     <MyTypography variant='h5'>
-                        Foto Galeri
+                        {translate('photoGallery')}
                     </MyTypography>
                     <GridList cellHeight={250} className={classes.gridList} cols={3} spacing={0}>
                         {tileData.map(tile => {
                             const img = tile.img;
                             return (
-                                <GridListTile key={img} cols={tile.cols || 1} rows={tile.rows || 1}>
+                                <GridListTile
+                                    key={img}
+                                    cols={tile.cols || 1}
+                                    rows={tile.rows || 1}
+                                    className={classes.zoom}>
                                     <img src={img} alt={tile.title}/>
                                     <GridListTileBar
                                         titlePosition="top"

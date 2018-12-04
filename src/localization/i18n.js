@@ -1,7 +1,7 @@
 import i18n from 'i18next';
 import {reactI18nextModule} from 'react-i18next';
 
-var store = require('./tr.json');
+var store = require('./translations.json');
 
 i18n.use(reactI18nextModule) // if not using I18nextProvider
     .init({

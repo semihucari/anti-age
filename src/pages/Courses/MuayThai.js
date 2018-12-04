@@ -1,6 +1,14 @@
 import React, {Component} from 'react'
 import {withStyles} from '@material-ui/core/styles';
 import {Typography, IconButton} from '@material-ui/core';
+import {LocEn, LocTr} from '../../localization/translation';
+
+const translate = (key) => {
+    const lang = localStorage.getItem('lang');
+    return lang === 'tr'
+        ? LocTr(key)
+        : LocEn(key);
+}
 
 const styles = theme => ({
     root: {
@@ -47,7 +55,7 @@ class MuayThai extends Component {
         return (
             <div className={classes.root}>
                 <MyTypography variant='h5' color='secondary'>
-                    MUAY THAI
+                    {translate('muayThai')}
                 </MyTypography>
                 <MyTypography
                     variant='subtitle1'

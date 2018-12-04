@@ -1,5 +1,13 @@
 import React, {Component} from 'react'
 import {withStyles, Typography, Paper, Divider, Grid} from '@material-ui/core';
+import {LocEn, LocTr} from '../localization/translation';
+
+const translate = (key) => {
+    const lang = localStorage.getItem('lang');
+    return lang === 'tr'
+        ? LocTr(key)
+        : LocEn(key);
+}
 
 const styles = theme => ({
     paper: {
@@ -33,7 +41,7 @@ const MyTypography = withStyles({
         fontSize: '1.9em',
         fontFamily: '"Anton", sans-serif'
     },
-    subtitle1:{
+    subtitle1: {
         fontSize: '1.1em',
         fontFamily: '"Anton", sans-serif'
     }
@@ -53,53 +61,53 @@ class Hours extends Component {
                         <Paper className={classes.paper} elevation={0} square={true}>
                             <div className={classes.hoursContainer}>
                                 <MyTypography variant='h5' className={classes.title}>
-                                    Çalışma Saatleri
+                                    {translate('workingHours')}
                                 </MyTypography>
                                 <Divider/>
                                 <MyTypography variant='subtitle1'>
-                                    Pazartesi
+                                    {translate('monday')}
                                     <div className={classes.timeContainer}>
                                         <MyTypography variant='subtitle1'>
                                             08:00 - 23.00</MyTypography>
                                     </div>
                                 </MyTypography>
                                 <MyTypography variant='subtitle1'>
-                                    Salı
+                                    {translate('tuesday')}
                                     <div className={classes.timeContainer}>
                                         <MyTypography variant='subtitle1'>
                                             08:00 - 23.00</MyTypography>
                                     </div>
                                 </MyTypography>
                                 <MyTypography variant='subtitle1'>
-                                    Çarşamba
+                                    {translate('wednesday')}
                                     <div className={classes.timeContainer}>
                                         <MyTypography variant='subtitle1'>
                                             08:00 - 23.00</MyTypography>
                                     </div>
                                 </MyTypography>
                                 <MyTypography variant='subtitle1'>
-                                    Perşembe
+                                    {translate('thursday')}
                                     <div className={classes.timeContainer}>
                                         <MyTypography variant='subtitle1'>
                                             08:00 - 23.00</MyTypography>
                                     </div>
                                 </MyTypography>
                                 <MyTypography variant='subtitle1'>
-                                    Cuma
+                                    {translate('friday')}
                                     <div className={classes.timeContainer}>
                                         <MyTypography variant='subtitle1'>
                                             08:00 - 23.00</MyTypography>
                                     </div>
                                 </MyTypography>
                                 <MyTypography variant='subtitle1'>
-                                    Cumartesi
+                                    {translate('saturday')}
                                     <div className={classes.timeContainer}>
                                         <MyTypography variant='subtitle1'>
                                             08:00 - 23.00</MyTypography>
                                     </div>
                                 </MyTypography>
                                 <MyTypography variant='subtitle1'>
-                                    Pazar
+                                    {translate('sunday')}
                                     <div className={classes.timeContainer}>
                                         <MyTypography variant='subtitle1'>
                                             08:00 - 23.00</MyTypography>
@@ -112,21 +120,21 @@ class Hours extends Component {
                         <Paper className={classes.paper} elevation={0} square={true}>
                             <div className={classes.hoursContainer}>
                                 <MyTypography variant='h5' className={classes.title}>
-                                    Adres
+                                    {translate('address')}
                                 </MyTypography>
                                 <Divider/>
                                 <MyTypography variant='subtitle1'>
-                                    Kırkkonaklar Mahallesi, Şemsettin Günaltay Cd. No:308, 06610 Çankaya/Ankara
+                                    {translate('location')}
                                 </MyTypography>
                                 <MyTypography variant='h5' className={classes.title2}>
-                                    Telefon
+                                    {translate('phone')}
                                 </MyTypography>
                                 <Divider/>
                                 <MyTypography variant='subtitle1'>
                                     0553 619 97 68
                                 </MyTypography>
                                 <MyTypography variant='subtitle1'>
-                                    INFO@OMERBALABAN.COM.TR 
+                                    INFO@OMERBALABAN.COM.TR
                                 </MyTypography>
                             </div>
                         </Paper>

@@ -2,6 +2,14 @@ import React, {Component} from 'react'
 import {withStyles} from '@material-ui/core/styles';
 import {Typography, Button} from '@material-ui/core';
 import {Link} from "react-router-dom";
+import {LocEn, LocTr} from '../localization/translation';
+
+const translate = (key) => {
+    const lang = localStorage.getItem('lang');
+    return lang === 'tr'
+        ? LocTr(key)
+        : LocEn(key);
+}
 
 const styles = theme => ({
     banner: {
@@ -16,7 +24,7 @@ const styles = theme => ({
           ), url(${require('../images/banner-back.jpg')})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center'
     },
     buttonRoot: {
         width: '14em',
@@ -96,7 +104,7 @@ class Banner extends Component {
                             width: '12em'
                         }}/>
                         <MyTypography variant='h5'>
-                            GÜÇ
+                            {translate('power')}
                         </MyTypography>
                     </div>
                     <div
@@ -112,7 +120,7 @@ class Banner extends Component {
                             width: '12em'
                         }}/>
                         <MyTypography variant='h5'>
-                            ESNEKLİK
+                            {translate('flexibility')}
                         </MyTypography>
                     </div>
                     <div
@@ -128,7 +136,7 @@ class Banner extends Component {
                             width: '12em'
                         }}/>
                         <MyTypography variant='h5'>
-                            KARDİYO
+                            {translate('cardio')}
                         </MyTypography>
                     </div>
                     <div
@@ -143,7 +151,7 @@ class Banner extends Component {
                             width: '12em'
                         }}/>
                         <MyTypography variant='h5'>
-                            HIZ
+                            {translate('speed')}
                         </MyTypography>
                     </div>
                     <Link to='/courses' className={classes.link}>
@@ -152,7 +160,9 @@ class Banner extends Component {
                             classes={{
                             label: classes.buttonLabel,
                             root: classes.buttonRoot
-                        }}>Hemen Keşfet</Button>
+                        }}>
+                            {translate('discoverNow')}
+                        </Button>
                     </Link>
                 </div>
             </div>

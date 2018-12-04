@@ -53,9 +53,12 @@ localStorage.setItem('lang', 'tr');
 
 class App extends Component {
 
-    changeLang = () => {
-        console.log('fckyoufckyou')
+    changeLang = (lang) => {
+        localStorage.setItem('lang', lang);
+        this.forceUpdate();
     }
+
+    
 
     render() {
         return (
@@ -71,24 +74,24 @@ class App extends Component {
                                 <Route path="/courses" component={() => <Layout changeLang={this.changeLang}><Courses/></Layout>}/>
                                 <Route
                                     path="/muaythai"
-                                    component={({history}) => <Layout><MuayThai history={history}/></Layout>}/>
+                                    component={({history}) => <Layout changeLang={this.changeLang}><MuayThai history={history}/></Layout>}/>
                                 <Route
                                     path="/kickbox"
-                                    component={({history}) => <Layout><KickBox history={history}/></Layout>}/>
+                                    component={({history}) => <Layout changeLang={this.changeLang}><KickBox history={history}/></Layout>}/>
                                 <Route
                                     path="/box"
-                                    component={({history}) => <Layout><Box history={history}/></Layout>}/>
+                                    component={({history}) => <Layout changeLang={this.changeLang}><Box history={history}/></Layout>}/>
                                 <Route
                                     path="/taek"
-                                    component={({history}) => <Layout><Taek history={history}/></Layout>}/>
+                                    component={({history}) => <Layout changeLang={this.changeLang}><Taek history={history}/></Layout>}/>
                                 <Route
                                     path="/wushu"
-                                    component={({history}) => <Layout><Wushu history={history}/></Layout>}/>
+                                    component={({history}) => <Layout changeLang={this.changeLang}><Wushu history={history}/></Layout>}/>
                                 <Route
                                     path="/mma"
-                                    component={({history}) => <Layout><Mma history={history}/></Layout>}/>
-                                <Route path="/contact" component={() => <Layout><Contact/></Layout>}/>
-                                <Route path="/gym" component={() => <Layout><Gym/></Layout>}/>
+                                    component={({history}) => <Layout changeLang={this.changeLang}><Mma history={history}/></Layout>}/>
+                                <Route path="/contact" component={() => <Layout changeLang={this.changeLang}><Contact/></Layout>}/>
+                                <Route path="/gym" component={() => <Layout changeLang={this.changeLang}><Gym/></Layout>}/>
                             </Switch>
                         </ScrollToTop>
                     </Router>

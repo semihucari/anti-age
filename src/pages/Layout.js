@@ -1,23 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import {fade} from '@material-ui/core/styles/colorManipulator';
 import {withStyles} from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
-import {
-    Button,
-    Menu,
-    MenuItem,
-    Collapse,
-    Drawer,
-    Typography
-} from '@material-ui/core';
-import ButtonMenu from '../components/ButtonMenu';
-import {HashRouter as Router, Route, Link} from "react-router-dom";
-import i18n from "i18next";
-import {withI18n, reactI18nextModule} from "react-i18next";
+import {Button, Typography} from '@material-ui/core';
+import {Link} from "react-router-dom";
 import {LocEn, LocTr} from '../localization/translation';
 
 const translate = (key) => {
@@ -43,10 +28,11 @@ const styles = theme => ({
         height: '100%'
     },
     buttonFit: {
-        height: '72%'
+        height: '100%'
     },
     buttonSmall: {
-        height: '20%'
+        minHeight: '0px',
+        height: '2em'
     },
     labelLight: {
         fontFamily: '"Anton", sans-serif',
@@ -54,12 +40,11 @@ const styles = theme => ({
     },
     labelFit: {
         fontFamily: '"Anton", sans-serif',
-        fontSize: '1.8em',
-        marginTop: '-30%'
+        fontSize: '1.8em'
     },
     langLabel: {
         fontFamily: '"Anton", sans-serif',
-        fontSize: '0.8em'
+        fontSize: '0.4em'
     },
     navigationContainer: {
         display: 'inline-flex',
@@ -73,8 +58,9 @@ const styles = theme => ({
     },
     buttonContainer: {
         cursor: 'pointer',
-        display: 'inline-flex',
-        width: '5em'
+        display: 'block',
+        width: '6em',
+        height: '100%'
     },
     imgResize: {
         width: '3em',
@@ -126,6 +112,26 @@ class PrimarySearchAppBar extends React.Component {
                                 {translate('homePage')}
                             </MyTypography>
                         </Link>
+                        <div>
+                            <Button
+                                className={classes.buttonSmall}
+                                classes={{
+                                label: classes.langLabel
+                            }}
+                                color='primary'
+                                disableRipple
+                                onClick={() => localStorage.getItem('lang') === 'tr'
+                                ? changeLang('en')
+                                : changeLang('tr')}>
+                                <img
+                                    src={require('../images/english.png')}
+                                    style={{
+                                    width: '4em',
+                                    height: '4em',
+                                    marginTop: '-0.5em'
+                                }}/>
+                            </Button>
+                        </div>
                     </div>
                     <div className={classes.navigationContainer}>
                         <div className={classes.grow}/>
@@ -138,7 +144,7 @@ class PrimarySearchAppBar extends React.Component {
                                 }}
                                     color='primary'
                                     disableRipple>
-                                    Kurslar
+                                    {translate('courses')}
                                 </Button>
                             </Link>
                         </div>
@@ -151,7 +157,7 @@ class PrimarySearchAppBar extends React.Component {
                                 }}
                                     color='primary'
                                     disableRipple>
-                                    Üyelİkler
+                                    {translate('subscriptions')}
                                 </Button>
                             </Link>
                         </div>
@@ -164,7 +170,7 @@ class PrimarySearchAppBar extends React.Component {
                                 }}
                                     color='primary'
                                     disableRipple>
-                                    Salonumuz
+                                    {translate('facility')}
                                 </Button>
                             </Link>
                         </div>
@@ -177,23 +183,14 @@ class PrimarySearchAppBar extends React.Component {
                                 }}
                                     color='primary'
                                     disableRipple>
-                                    İletİŞİm
+                                    {translate('contact')}
                                 </Button>
                             </Link>
                         </div>
-                        <div style={{textAlign: 'right'}}>
-                            <div>
-                                <Button
-                                    className={classes.buttonSmall}
-                                    classes={{
-                                    label: classes.langLabel
-                                }}
-                                    color='primary'
-                                    disableRipple
-                                    onClick={() => changeLang()}>
-                                    <img src={require('../images/english.png')}/>
-                                </Button>
-                            </div>
+                        <div
+                            style={{
+                            textAlign: 'right'
+                        }}>
                             <Link to='/about' className={classes.link}>
                                 <Button
                                     className={classes.buttonFit}
@@ -202,7 +199,7 @@ class PrimarySearchAppBar extends React.Component {
                                 }}
                                     color='primary'
                                     disableRipple>
-                                    Hakkımızda
+                                    {translate('about')}
                                 </Button>
                             </Link>
                         </div>

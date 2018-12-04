@@ -11,7 +11,7 @@
 }
 
 .app-bar {
-    background: rgb(254, 184, 28);
+    background: #feb81c;
     display: inline-flex;
     position: fixed;
     top: 0;
@@ -39,7 +39,7 @@ body {
 }
 
 .img {
-    height: 95vh;
+    height: 75vh;
 }
 
 .dot {

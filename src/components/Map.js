@@ -9,18 +9,18 @@ const MyMapComponent = compose(withProps({
     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDqvELnwBzrP7WkdyyyO1MQ_D9RNHi-" +
             "na0&v=3.exp&libraries=geometry,drawing,places",
     loadingElement: <div style={{
-        height: `100%`
+        height: `80vh`,
+        margin: '8em 2em 0 2em'
     }}/>,
     containerElement: <div style={{
-        height: `80vh`
+        height: `80vh`,
+        margin: '8em 2em 0 2em'
     }}/>,
     mapElement: <div style={{
             height: `100%`
         }}/>
 }), withScriptjs, withGoogleMap)(props => (
-    <div style={{
-        margin: '1vh'
-    }}>
+    <div>
         <GoogleMap
             defaultZoom={17}
             defaultOptions={{
@@ -29,7 +29,8 @@ const MyMapComponent = compose(withProps({
             defaultCenter={{
             lat: 39.890941,
             lng: 32.885370
-        }}>
+        }}
+        >
             <Marker
                 position={{
                 lat: 39.890941,

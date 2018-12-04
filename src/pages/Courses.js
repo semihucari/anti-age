@@ -3,6 +3,14 @@ import {withStyles} from '@material-ui/core/styles';
 import ProductCard from '../components/ProductCard';
 import {Typography, Grow} from '@material-ui/core';
 import {Link} from "react-router-dom";
+import {LocEn, LocTr} from '../localization/translation';
+
+const translate = (key) => {
+    const lang = localStorage.getItem('lang');
+    return lang === 'tr'
+        ? LocTr(key)
+        : LocEn(key);
+}
 
 const styles = theme => ({
     productContainer: {
@@ -128,7 +136,7 @@ class Courses extends Component {
                         noWrap
                         classes={{
                         h6: classes.h6
-                    }}>MUAY THAI</Typography>
+                    }}>{translate('muayThai')}</Typography>
                     <Grow in={groupLecturesShow}>
                         {groupLecturesShow
                             ? <div>
@@ -140,7 +148,7 @@ class Courses extends Component {
                                             className={classes.subtitle}
                                             classes={{
                                             subtitle1: classes.subtitle1
-                                        }}>DETAYLI BİLGİ
+                                        }}>{translate('learnMore')}
                                         </Typography>
                                     </Link>
                                 </div>
@@ -159,7 +167,7 @@ class Courses extends Component {
                         noWrap
                         classes={{
                         h6: classes.h6
-                    }}>KICK BOX</Typography>
+                    }}>{translate('kickboxing')}</Typography>
                     <Grow in={groupLecturesShow}>
                         {groupLecturesShow
                             ? <div>
@@ -170,7 +178,7 @@ class Courses extends Component {
                                             className={classes.subtitle}
                                             classes={{
                                             subtitle1: classes.subtitle1
-                                        }}>DETAYLI BİLGİ
+                                        }}>{translate('learnMore')}
                                         </Typography>
                                     </Link>
                                 </div>
@@ -189,7 +197,7 @@ class Courses extends Component {
                         noWrap
                         classes={{
                         h6: classes.h6
-                    }}>BOKS</Typography>
+                    }}>{translate('boxing')}</Typography>
                     <Grow in={groupLecturesShow}>
                         {groupLecturesShow
                             ? <div>
@@ -200,7 +208,7 @@ class Courses extends Component {
                                             className={classes.subtitle}
                                             classes={{
                                             subtitle1: classes.subtitle1
-                                        }}>DETAYLI BİLGİ
+                                        }}>{translate('learnMore')}
                                         </Typography>
                                     </Link>
                                 </div>
@@ -219,7 +227,7 @@ class Courses extends Component {
                         noWrap
                         classes={{
                         h6: classes.h6
-                    }}>TAEKWONDO</Typography>
+                    }}>{translate('taek')}</Typography>
                     <Grow in={groupLecturesShow}>
                         {groupLecturesShow
                             ? <div>
@@ -230,7 +238,7 @@ class Courses extends Component {
                                             className={classes.subtitle}
                                             classes={{
                                             subtitle1: classes.subtitle1
-                                        }}>DETAYLI BİLGİ
+                                        }}>{translate('learnMore')}
                                         </Typography>
                                     </Link>
                                 </div>
@@ -249,7 +257,7 @@ class Courses extends Component {
                         noWrap
                         classes={{
                         h6: classes.h6
-                    }}>WUSHU</Typography>
+                    }}>{translate('wushu')}</Typography>
                     <Grow in={groupLecturesShow}>
                         {groupLecturesShow
                             ? <div>
@@ -260,7 +268,7 @@ class Courses extends Component {
                                             className={classes.subtitle}
                                             classes={{
                                             subtitle1: classes.subtitle1
-                                        }}>DETAYLI BİLGİ
+                                        }}>{translate('learnMore')}
                                         </Typography>
                                     </Link>
                                 </div>
@@ -279,7 +287,7 @@ class Courses extends Component {
                         noWrap
                         classes={{
                         h6: classes.h6
-                    }}>MMA</Typography>
+                    }}>{translate('MMA')}</Typography>
                     <Grow in={groupLecturesShow}>
                         {groupLecturesShow
                             ? <div>
@@ -290,7 +298,7 @@ class Courses extends Component {
                                             className={classes.subtitle}
                                             classes={{
                                             subtitle1: classes.subtitle1
-                                        }}>DETAYLI BİLGİ
+                                        }}>{translate('learnMore')}
                                         </Typography>
                                     </Link>
                                 </div>

@@ -2,6 +2,14 @@ import React, {Component} from 'react'
 import {withStyles} from '@material-ui/core/styles';
 import ProductCard from '../components/ProductCard';
 import {Typography, Grow} from '@material-ui/core';
+import {LocEn, LocTr} from '../localization/translation';
+
+const translate = (key) => {
+    const lang = localStorage.getItem('lang');
+    return lang === 'tr'
+        ? LocTr(key)
+        : LocEn(key);
+}
 
 const styles = theme => ({
     productContainer: {
@@ -54,7 +62,7 @@ const styles = theme => ({
         paddingLeft: '0.5em',
         height: '1.4em',
         marginBottom: '0.1em'
-    },
+    }
 });
 
 class Products extends Component {
@@ -91,7 +99,9 @@ class Products extends Component {
                         noWrap
                         classes={{
                         h6: classes.h6
-                    }}>GRUP DERSLERİ</Typography>
+                    }}>
+                        {translate('groupClasses')}
+                    </Typography>
                     <Grow in={groupLecturesShow}>
                         {groupLecturesShow
                             ? <div>
@@ -101,21 +111,27 @@ class Products extends Component {
                                         className={classes.subtitle}
                                         classes={{
                                         subtitle1: classes.subtitle1
-                                    }}>Haftada 4 gün</Typography>
+                                    }}>
+                                        {translate('fourDaysAWeek')}
+                                    </Typography>
                                     <Typography
                                         variant='subtitle1'
                                         color='secondary'
                                         className={classes.subtitle}
                                         classes={{
                                         subtitle1: classes.subtitle1
-                                    }}>15 - 20 kişilik sınıflarda</Typography>
+                                    }}>
+                                        {translate('1520Students')}
+                                    </Typography>
                                     <Typography
                                         variant='subtitle1'
                                         color='secondary'
                                         className={classes.subtitle}
                                         classes={{
                                         subtitle1: classes.subtitle1
-                                    }}>Aylık 200₺</Typography>
+                                    }}>
+                                        {translate('200TLMonth')}
+                                    </Typography>
                                 </div>
                             : <div></div>}
                     </Grow>
@@ -132,7 +148,9 @@ class Products extends Component {
                         noWrap
                         classes={{
                         h6: classes.h6
-                    }}>8 KİŞİLİK ÖZEL DERSLER</Typography>
+                    }}>
+                        {translate('premiumGroupClasses')}
+                    </Typography>
                     <Grow in={premiumLecturesShow}>
                         {premiumLecturesShow
                             ? <div>
@@ -142,21 +160,27 @@ class Products extends Component {
                                         className={classes.subtitle}
                                         classes={{
                                         subtitle1: classes.subtitle1
-                                    }}>Haftada 4 gün</Typography>
+                                    }}>
+                                        {translate('fourDaysAWeek')}
+                                    </Typography>
                                     <Typography
                                         variant='subtitle1'
                                         color='secondary'
                                         className={classes.subtitle}
                                         classes={{
                                         subtitle1: classes.subtitle1
-                                    }}>8 kişilik sınıflarda</Typography>
+                                    }}>
+                                        {translate('8Students')}
+                                    </Typography>
                                     <Typography
                                         variant='subtitle1'
                                         color='secondary'
                                         className={classes.subtitle}
                                         classes={{
                                         subtitle1: classes.subtitle1
-                                    }}>Aylık 400₺</Typography>
+                                    }}>
+                                        {translate('400TLMonth')}
+                                    </Typography>
                                 </div>
                             : <div></div>}
                     </Grow>
@@ -173,7 +197,7 @@ class Products extends Component {
                         noWrap
                         classes={{
                         h6: classes.h6
-                    }}>TEK KİŞİLİK ÖZEL DERSLER</Typography>
+                    }}>{translate('individualClasses')}</Typography>
                     <Grow in={specialLecturesShow}>
                         {specialLecturesShow
                             ? <div>
@@ -183,21 +207,27 @@ class Products extends Component {
                                         className={classes.subtitle}
                                         classes={{
                                         subtitle1: classes.subtitle1
-                                    }}>Seçtiğiniz günlerde</Typography>
+                                    }}>
+                                        {translate('wheneverYouChoose')}
+                                    </Typography>
                                     <Typography
                                         variant='subtitle1'
                                         color='secondary'
                                         className={classes.subtitle}
                                         classes={{
                                         subtitle1: classes.subtitle1
-                                    }}>Ömer Hoca ile</Typography>
+                                    }}>
+                                        {translate('withOmerSensei')}
+                                    </Typography>
                                     <Typography
                                         variant='subtitle1'
                                         color='secondary'
                                         className={classes.subtitle}
                                         classes={{
                                         subtitle1: classes.subtitle1
-                                    }}>Ders başına 100₺</Typography>
+                                    }}>
+                                        {translate('100TLHour')}
+                                    </Typography>
                                 </div>
                             : <div></div>}
                     </Grow>

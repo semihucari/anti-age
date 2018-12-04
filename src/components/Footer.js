@@ -1,6 +1,14 @@
 import React, {Component} from 'react'
 import {withStyles} from '@material-ui/core/styles';
 import {Grid, Typography} from '@material-ui/core';
+import {LocEn, LocTr} from '../localization/translation';
+
+const translate = (key) => {
+    const lang = localStorage.getItem('lang');
+    return lang === 'tr'
+        ? LocTr(key)
+        : LocEn(key);
+}
 
 const styles = theme => ({
     footerContainer: {
@@ -55,16 +63,6 @@ class Footer extends Component {
                 <Grid container direction="row" justify="space-evenly" alignItems="flex-start">
                     <Grid item xs={3}>
                         <div className={classes.rowContainer}>
-                            <Typography
-                                classes={{
-                                subtitle1: classes.subtitle1
-                            }}
-                                className={classes.title}
-                                variant="subtitle1"
-                                color="secondary"
-                                noWrap>
-                                KURUMSAL
-                            </Typography>
                             <div className={classes.subgroupContainer}>
                                 <Typography
                                     className={classes.title}
@@ -74,7 +72,7 @@ class Footer extends Component {
                                     variant="body2"
                                     color="secondary"
                                     noWrap>
-                                    Hakkımızda
+                                    {translate('about')}
                                 </Typography>
                                 <Typography
                                     className={classes.title}
@@ -84,7 +82,7 @@ class Footer extends Component {
                                     variant="body2"
                                     color="secondary"
                                     noWrap>
-                                    Başarılarımız
+                                    {translate('achievements')}
                                 </Typography>
                                 <Typography
                                     className={classes.title}
@@ -94,23 +92,13 @@ class Footer extends Component {
                                     variant="body2"
                                     color="secondary"
                                     noWrap>
-                                    Bize Ulaşın
+                                    {translate('contactUs')}
                                 </Typography>s
                             </div>
                         </div>
                     </Grid>
                     <Grid item xs={3}>
                         <div className={classes.rowContainer}>
-                            <Typography
-                                className={classes.title}
-                                classes={{
-                                subtitle1: classes.subtitle1
-                            }}
-                                variant="subtitle1"
-                                color="secondary"
-                                noWrap>
-                                İPUÇLARI
-                            </Typography>
                             <div className={classes.subgroupContainer}>
                                 <Typography
                                     className={classes.title}
@@ -120,7 +108,7 @@ class Footer extends Component {
                                     variant="body2"
                                     color="secondary"
                                     noWrap>
-                                    Dövüş Sanatları Tavsiyeleri
+                                    {translate('tips')}
                                 </Typography>
                                 <Typography
                                     className={classes.title}
@@ -130,7 +118,7 @@ class Footer extends Component {
                                     variant="body2"
                                     color="secondary"
                                     noWrap>
-                                    Sıkça Sorulan Sorular
+                                    {translate('FAQ')}
                                 </Typography>
                             </div>
                         </div>
@@ -160,7 +148,7 @@ class Footer extends Component {
                     overline: classes.overline
                 }}
                     color="secondary">
-                    INFO@OMERBALABAN.COM.TR      0553 619 97 68
+                    INFO@OMERBALABAN.COM.TR 0553 619 97 68
                 </Typography>
             </div>
         )
