@@ -9,7 +9,6 @@ import Loadable from "react-loadable";
 import Loading from "./components/Loading";
 import {HashRouter as Router, Link} from "react-router-dom";
 import {Switch, Route} from 'react-router'
-import Gym from './pages/Gym';
 import MuayThai from './pages/Courses/MuayThai';
 import KickBox from './pages/Courses/KickBox';
 import Box from './pages/Courses/Box';
@@ -46,6 +45,11 @@ const LoadableHome = Loadable({
 
 const LoadableProducts = Loadable({
     loader: () => import ('./pages/Products'),
+    loading: (Loading)
+});
+
+const LoadableGym = Loadable({
+    loader: () => import ('./pages/Gym'),
     loading: (Loading)
 });
 
@@ -91,7 +95,7 @@ class App extends Component {
                                     path="/mma"
                                     component={({history}) => <Layout changeLang={this.changeLang}><Mma history={history}/></Layout>}/>
                                 <Route path="/contact" component={() => <Layout changeLang={this.changeLang}><Contact/></Layout>}/>
-                                <Route path="/gym" component={() => <Layout changeLang={this.changeLang}><Gym/></Layout>}/>
+                                <Route path="/gym" component={() => <Layout changeLang={this.changeLang}><LoadableGym/></Layout>}/>
                             </Switch>
                         </ScrollToTop>
                     </Router>
