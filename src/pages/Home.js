@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import {withStyles} from '@material-ui/core/styles';
-import TopVideo from '../components/TopVideo';
 import Swipes from '../components/Swipes';
 import Footer from '../components/Footer';
 import Banner from '../components/Banner';
+import BannerNext from '../components/BannerNext';
 import Motivation from '../components/Motivation';
 
 const styles = theme => ({});
@@ -16,7 +16,7 @@ class Main extends Component {
                     <Banner/>
                 </section>
                 <section className="section static">
-                    <TopVideo/>
+                    <BannerNext/>
                 </section>
                 <section className="section parallax bg1">
                     <Motivation/>

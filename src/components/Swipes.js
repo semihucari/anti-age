@@ -41,7 +41,8 @@ const MyTypography = withStyles({
         color: '#feb81c',
         top: '50%',
         left: '50%',
-        transform: 'translate(-50%, -50%)'
+        transform: 'translate(-50%, -50%)',
+        textTransform: 'uppercase'
     }
 })(Typography)
 
@@ -70,9 +71,7 @@ class Swipes extends React.Component {
                     style={{
                     width: '70vw',
                     height: '100vh',
-                    textAlign: '-webkit-center',
-                    paddingTop: '6vw',
-                    textTransform: 'uppercase'
+                    paddingTop: '6vw'
                 }}>
                     <div style={styles.root}>
                         <AutoPlaySwipeableViews

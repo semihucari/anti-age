@@ -27,8 +27,7 @@ const styles = theme => ({
     },
     gridList: {
         margin: '0 1em 1em 1em !important',
-        background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgb(254, 184, 28, 0.7) 10%, rgb(254' +
-                ', 184, 28, 0.7) 90%, rgba(0,0,0,0) 100%)'
+        background: 'black'
     },
     titleBar: {
         background: 'linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0' +
@@ -36,8 +35,10 @@ const styles = theme => ({
     },
     icon: {
         color: 'rgb(254, 184, 28)',
+        transition: 'all .5s',
         '&:hover': {
-            background: 'rgb(0, 0, 0, 0.5)'
+            background: 'rgb(0, 0, 0, 0.5)',
+            transform: 'scale(1.2)'
         }
     },
     background: {
@@ -415,7 +416,7 @@ class Contact extends Component {
                     <MyTypography variant='h5'>
                         {translate('photoGallery')}
                     </MyTypography>
-                    <GridList cellHeight={250} className={classes.gridList} cols={3} spacing={0}>
+                    <GridList cellHeight={250} className={classes.gridList} cols={3} spacing={40}>
                         {tileData.map(tile => {
                             const img = tile.img;
                             return (

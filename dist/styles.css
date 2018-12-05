@@ -52,7 +52,7 @@ body {
     background-color: rgb(143, 127, 127);
     border-radius: 50%;
     display: inline-block;
-    margin: 2px;
+    margin: 4px;
     transition: transform 2s;
 }
 .dot:hover {
@@ -63,10 +63,10 @@ body {
 .selected-dot {
     height: 16px;
     width: 16px;
-    background-color: rgb(255, 255, 0);
+    background-color: #feb81c;
     border-radius: 50%;
     display: inline-block;
-    margin: 2px;
+    margin: 4px;
     transition: transform 2s;
 }
 .selected-dot:hover {

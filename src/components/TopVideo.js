@@ -18,7 +18,7 @@ class TopVideo extends Component {
         return (
             <div className={classes.videoContainer}>
                 <video autoPlay muted loop id="myVideo" style={{width: '100%'}}>
-                    <source src={require('../images/intro.mp4')} type="video/mp4"/>
+                    {/* <source src={require('../images/intro.mp4')} type="video/mp4"/> */}
                 </video>
             </div>
         )
