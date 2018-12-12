@@ -70,8 +70,8 @@ class Swipes extends React.Component {
                 <div
                     style={{
                     width: '70vw',
-                    height: '100vh',
-                    paddingTop: '6vw'
+                    height: '90vh',
+                    paddingTop: '2vh'
                 }}>
                     <div style={styles.root}>
                         <AutoPlaySwipeableViews

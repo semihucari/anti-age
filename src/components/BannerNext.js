@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {withStyles} from '@material-ui/core/styles';
 import {LocEn, LocTr} from '../localization/translation';
-import {Grid, Typography} from '@material-ui/core';
+import {Grid, Typography, Divider} from '@material-ui/core';
 
 const translate = (key) => {
     const lang = localStorage.getItem('lang');
@@ -15,6 +15,11 @@ const styles = theme => ({
         width: '100vw',
         height: '70vh',
         background: 'black'
+    },
+    divider: {
+        backgroundColor: '#feb81c',
+        margin: '2em auto 2em auto',
+        width: '3em'
     }
 });
 
@@ -52,23 +57,21 @@ class BannerNext extends Component {
                     <Grid item xs={4}>
                         <img src={require('../images/locker.png')} className={classes.img}/>
                         <MyTypography variant='h4'>
-                            Tam Donanımlı Soyunma Odaları
+                            {translate('lockerRooms')}
                         </MyTypography>
+                        <Divider variant="middle" className={classes.divider}/>
                         <MyTypography variant='h5'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec neque libero.
-                            Vivamus id mi nec urna convallis tincidunt. Suspendisse auctor dui eget sem
-                            porttitor accumsan. Ut vehicula justo felis.
+                            {translate('lockerRoomsText')}
                         </MyTypography>
                     </Grid>
                     <Grid item xs={4}>
                         <img src={require('../images/value.png')} className={classes.img}/>
                         <MyTypography variant='h4'>
-                            Yepyeni Ekipmanlar
+                            {translate('brandNew')}
                         </MyTypography>
+                        <Divider variant="middle" className={classes.divider}/>
                         <MyTypography variant='h5'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lectus
-                            consectetur, maximus tellus ut, viverra mi. Maecenas ac massa at enim tristique
-                            convallis sed fermentum velit. Phasellus sagittis.
+                            {translate('brandNewText')}
                         </MyTypography>
                     </Grid>
                 </Grid>

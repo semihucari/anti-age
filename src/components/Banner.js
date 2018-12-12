@@ -46,13 +46,13 @@ const styles = theme => ({
 });
 
 const MyTypography = withStyles({
-    h4: {
+    h1: {
         fontSize: '3vw',
         fontFamily: '"Anton", sans-serif',
         color: 'rgb(254, 184, 28)',
         marginBottom: '1vw'
     },
-    h5: {
+    h2: {
         fontSize: '2vw',
         fontFamily: '"Anton", sans-serif',
         color: 'rgb(254, 184, 28)'
@@ -68,7 +68,7 @@ class Banner extends Component {
         return (
             <div className={classes.banner}>
                 <div className='fade-in' id='bannerContainer'>
-                    <MyTypography variant='h4'>
+                    <MyTypography variant='h1'>
                         ÖMER BALABAN FIGHT ACADEMY
                     </MyTypography>
                     <div
@@ -80,7 +80,7 @@ class Banner extends Component {
                         <img
                             src={require('../images/body-building.png')}
                             className={classes.img}/>
-                        <MyTypography variant='h5'>
+                        <MyTypography variant='h2'>
                             {translate('power')}
                         </MyTypography>
                     </div>
@@ -92,7 +92,7 @@ class Banner extends Component {
                         <img
                             src={require('../images/warming.png')}
                             className={classes.img}/>
-                        <MyTypography variant='h5'>
+                        <MyTypography variant='h2'>
                             {translate('flexibility')}
                         </MyTypography>
                     </div>
@@ -104,7 +104,7 @@ class Banner extends Component {
                         <img
                             src={require('../images/cardio.png')}
                             className={classes.img}/>
-                        <MyTypography variant='h5'>
+                        <MyTypography variant='h2'>
                             {translate('cardio')}
                         </MyTypography>
                     </div>
@@ -115,7 +115,7 @@ class Banner extends Component {
                         <img
                             src={require('../images/speed.png')}
                             className={classes.img}/>
-                        <MyTypography variant='h5'>
+                        <MyTypography variant='h2'>
                             {translate('speed')}
                         </MyTypography>
                     </div>

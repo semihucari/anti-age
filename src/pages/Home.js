@@ -5,6 +5,8 @@ import Footer from '../components/Footer';
 import Banner from '../components/Banner';
 import BannerNext from '../components/BannerNext';
 import Motivation from '../components/Motivation';
+import Offers from '../components/Offers';
+
 
 const styles = theme => ({});
 
@@ -23,6 +25,9 @@ class Main extends Component {
                 </section>
                 <section className="section static">
                     <Swipes/>
+                </section>
+                <section className="section parallax bg3">
+                    <Offers/>
                 </section>
                 <Footer/>
             </div>
