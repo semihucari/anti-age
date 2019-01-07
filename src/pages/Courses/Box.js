@@ -44,7 +44,8 @@ const MyTypography = withStyles({
     },
     subtitle1: {
         fontSize: '1em',
-        fontFamily: '"Anton", sans-serif'
+        fontFamily: '"Anton", sans-serif',
+        whiteSpace: 'pre-line'
     }
 })(Typography)
 
@@ -61,30 +62,10 @@ class Box extends Component {
                     variant='subtitle1'
                     color='secondary'
                     style={{
-                    width: '50vw'
+                    width: '50vw',
+                    marginTop: '1em'
                 }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper,
-                    diam at aliquet tristique, leo nibh porttitor lorem, quis aliquet eros nunc eu
-                    nisi. Pellentesque convallis nulla in interdum pellentesque. Nulla consequat
-                    malesuada magna a ullamcorper. Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Nunc suscipit elit at gravida feugiat. Morbi pretium tellus
-                    ipsum, ut mattis enim tempus in. Nulla fringilla nisl ac lacus vestibulum
-                    sodales. Sed porta blandit ante, vitae pharetra neque aliquet non. Sed tincidunt
-                    ligula sed interdum hendrerit. In hac habitasse platea dictumst. Aenean feugiat
-                    odio enim, sit amet fermentum urna facilisis ut. Quisque nec nibh egestas,
-                    commodo ante eget, dapibus dui. Morbi sed justo imperdiet, imperdiet sapien vel,
-                    laoreet felis. Integer tincidunt facilisis eros, sit amet porttitor turpis
-                    eleifend fermentum. Morbi vitae metus rhoncus, egestas libero non, volutpat
-                    enim. In vulputate aliquet ultricies. Mauris aliquam nisi sed enim gravida
-                    iaculis. Curabitur non pharetra urna. Pellentesque et velit molestie, dignissim
-                    arcu eu, luctus tortor. Donec ut leo sit amet mi pellentesque tempor. Nunc sed
-                    velit diam. Cras ullamcorper viverra volutpat. Cras iaculis porta consequat.
-                    Donec eget egestas eros. Quisque non sollicitudin tortor. Integer luctus velit
-                    nisl, eu mattis dui consectetur ut. Maecenas ut elit ante. Praesent porta
-                    pretium nulla, interdum cursus quam. Maecenas eget tellus cursus, placerat enim
-                    sit amet, rutrum neque. Cras fermentum molestie dui, at porta nunc pulvinar non.
-                    Aliquam nec sapien non dui hendrerit malesuada. Nullam tempor lorem a hendrerit
-                    posuere.
+                    {translate('boxingText')}
                 </MyTypography>
 
                 <div className={classes.buttonContainer}>

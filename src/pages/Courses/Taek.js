@@ -44,7 +44,8 @@ const MyTypography = withStyles({
     },
     subtitle1: {
         fontSize: '1em',
-        fontFamily: '"Anton", sans-serif'
+        fontFamily: '"Anton", sans-serif',
+        whiteSpace: 'pre-line'
     }
 })(Typography)
 
@@ -61,26 +62,10 @@ class Taek extends Component {
                     variant='subtitle1'
                     color='secondary'
                     style={{
-                    width: '50vw'
+                    width: '50vw',
+                    marginTop: '1em'
                 }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec magna nunc.
-                    Quisque ultrices vestibulum massa, non mattis risus varius vel. Phasellus vitae
-                    erat tempus, mattis erat sit amet, vehicula enim. Curabitur et bibendum felis.
-                    Duis non rhoncus velit. Fusce lobortis est at quam interdum, vitae posuere leo
-                    faucibus. In sed sollicitudin diam. Donec bibendum sodales ex, quis facilisis
-                    diam sollicitudin sit amet. Integer sagittis pretium dolor nec viverra.
-                    Suspendisse pulvinar at metus in aliquet. Vestibulum ante ipsum primis in
-                    faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus mollis metus
-                    nec odio lobortis luctus. Phasellus maximus nisl vel nisi lacinia, ut mollis
-                    magna scelerisque. Nam accumsan diam sit amet orci rhoncus, et iaculis elit
-                    hendrerit. Vestibulum scelerisque molestie nunc, id condimentum neque lobortis
-                    non. Praesent at tempus massa, at pulvinar turpis. Nunc in fringilla libero, et
-                    ornare dui. Maecenas ultrices blandit nisl. Nulla nulla risus, luctus id
-                    vestibulum in, pretium vitae nulla. Aliquam auctor rutrum diam, sit amet
-                    sagittis nunc lobortis nec. Integer sem elit, molestie ut egestas a, congue sed
-                    nunc. Donec et quam turpis. Pellentesque nec semper turpis. Nullam faucibus orci
-                    ut arcu faucibus, a gravida elit accumsan. Nam in augue sem. Integer at nunc id
-                    lectus congue fermentum.
+                    {translate('taekText')}
                 </MyTypography>
 
                 <div className={classes.buttonContainer}>

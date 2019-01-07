@@ -44,7 +44,8 @@ const MyTypography = withStyles({
     },
     subtitle1: {
         fontSize: '1em',
-        fontFamily: '"Anton", sans-serif'
+        fontFamily: '"Anton", sans-serif',
+        whiteSpace: 'pre-line'
     }
 })(Typography)
 
@@ -61,28 +62,10 @@ class MuayThai extends Component {
                     variant='subtitle1'
                     color='secondary'
                     style={{
-                    width: '50vw'
+                    width: '50vw',
+                    marginTop: '1em'
                 }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in convallis
-                    mauris. Curabitur condimentum lacus quis libero pretium, vitae malesuada ipsum
-                    semper. Vivamus quis ex quis metus aliquam ullamcorper. Maecenas nisl magna,
-                    varius id fermentum eu, vestibulum id nunc. Aenean ut convallis arcu, at lacinia
-                    dui. Integer accumsan tempor felis, quis tristique nulla lacinia et. Sed eget
-                    nisi elit. Pellentesque sed tincidunt leo, sit amet ultrices tortor. Phasellus
-                    facilisis nulla magna. Sed consequat, justo in pretium auctor, nulla urna
-                    condimentum tortor, et scelerisque dui eros at est. Etiam et tellus porta,
-                    sagittis libero eu, venenatis metus. Sed elementum tincidunt tincidunt. Maecenas
-                    dignissim quam enim. Aenean lorem nibh, vestibulum eget felis quis, semper
-                    aliquet metus. Nullam ac imperdiet turpis, sit amet gravida erat. Sed vel
-                    accumsan tortor, at eleifend libero. Nullam mattis lacus at turpis commodo
-                    dictum. Aenean dapibus auctor libero. Phasellus pulvinar, eros at mattis semper,
-                    massa nunc rutrum libero, eu commodo orci sem pellentesque lectus. Vivamus
-                    volutpat ligula nec urna egestas, sed blandit ligula congue. Praesent varius
-                    ante sit amet ligula feugiat molestie. Donec posuere laoreet erat. Nullam a
-                    nulla sem. Suspendisse eget enim nulla. In consequat quis nunc in dapibus. Sed
-                    pretium felis at augue ornare, vitae facilisis orci vestibulum. Duis gravida, ex
-                    quis iaculis lobortis, est metus malesuada erat, a sodales urna leo eget neque.
-                    Donec odio nulla, vestibulum eget gravida in, mollis quis neque.
+                    {translate('muayThaiText')}
                 </MyTypography>
 
                 <div className={classes.buttonContainer}>

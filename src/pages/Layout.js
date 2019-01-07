@@ -15,7 +15,8 @@ const translate = (key) => {
 const styles = theme => ({
     root: {
         opacity: '1',
-        fontWeight: 100
+        fontWeight: 100,
+        overflowY: 'auto'
     },
     toolbar: {
         margin: 'auto',
@@ -32,7 +33,9 @@ const styles = theme => ({
     },
     buttonSmall: {
         minHeight: '0px',
-        height: '2em'
+        height: '2em',
+        width: '1em',
+        minWidth: '1em'
     },
     labelLight: {
         fontFamily: '"Anton", sans-serif',
@@ -49,7 +52,6 @@ const styles = theme => ({
     navigationContainer: {
         display: 'inline-flex',
         width: '100%',
-        paddingRight: '2vw',
         maxHeight: '9em'
     },
     personalContainer: {
@@ -112,26 +114,6 @@ class PrimarySearchAppBar extends React.Component {
                                 {translate('homePage')}
                             </MyTypography>
                         </Link>
-                        <div>
-                            <Button
-                                className={classes.buttonSmall}
-                                classes={{
-                                label: classes.langLabel
-                            }}
-                                color='primary'
-                                disableRipple
-                                onClick={() => localStorage.getItem('lang') === 'tr'
-                                ? changeLang('en')
-                                : changeLang('tr')}>
-                                <img
-                                    src={require('../images/english.png')}
-                                    style={{
-                                    width: '4em',
-                                    height: '4em',
-                                    marginTop: '-0.5em'
-                                }}/>
-                            </Button>
-                        </div>
                     </div>
                     <div className={classes.navigationContainer}>
                         <div className={classes.grow}/>
@@ -203,6 +185,26 @@ class PrimarySearchAppBar extends React.Component {
                                 </Button>
                             </Link>
                         </div>
+                    </div>
+                    <div>
+                        <Button
+                            className={classes.buttonSmall}
+                            classes={{
+                            label: classes.langLabel
+                        }}
+                            color='primary'
+                            disableRipple
+                            onClick={() => localStorage.getItem('lang') === 'tr'
+                            ? changeLang('en')
+                            : changeLang('tr')}>
+                            <img
+                                src={require('../images/english.png')}
+                                style={{
+                                width: '4em',
+                                height: '4em',
+                                marginTop: '-0.5em'
+                            }}/>
+                        </Button>
                     </div>
                 </div>
                 <main className='main'>

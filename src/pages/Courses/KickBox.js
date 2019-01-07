@@ -44,7 +44,8 @@ const MyTypography = withStyles({
     },
     subtitle1: {
         fontSize: '1em',
-        fontFamily: '"Anton", sans-serif'
+        fontFamily: '"Anton", sans-serif',
+        whiteSpace: 'pre-line'
     }
 })(Typography)
 
@@ -61,30 +62,10 @@ class KickBox extends Component {
                     variant='subtitle1'
                     color='secondary'
                     style={{
-                    width: '50vw'
+                    width: '50vw',
+                    marginTop: '1em'
                 }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec risus egestas,
-                    imperdiet urna nec, aliquam urna. Nullam iaculis arcu nec viverra blandit.
-                    Curabitur eleifend nulla nisi, euismod interdum quam tempor dapibus. Orci varius
-                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis
-                    vitae rhoncus felis. Aliquam quis mi dapibus, dictum dui accumsan, volutpat leo.
-                    Pellentesque auctor nunc vel dignissim facilisis. Sed eu urna in ex fringilla
-                    tincidunt sit amet aliquet ante. Vestibulum ante ipsum primis in faucibus orci
-                    luctus et ultrices posuere cubilia Curae; Sed sagittis consectetur nunc, nec
-                    eleifend lorem bibendum at. Pellentesque pellentesque ligula eget massa
-                    facilisis lobortis. Nullam sodales nunc nibh, sit amet scelerisque lacus
-                    ultrices commodo. Pellentesque molestie neque eget risus gravida, eu consectetur
-                    leo sollicitudin. Morbi in tellus laoreet, posuere ex vitae, hendrerit justo.
-                    Vivamus neque metus, consequat volutpat nibh eu, varius rutrum magna. Proin
-                    dignissim dolor a fringilla pulvinar. Vivamus condimentum ante aliquet felis
-                    ultrices, eu sollicitudin sapien consequat. Donec lectus dolor, viverra ac
-                    fermentum quis, vehicula congue dui. Sed justo diam, hendrerit sit amet viverra
-                    sed, condimentum nec diam. Quisque semper quam ut mi vehicula maximus. Nunc
-                    elementum, nibh accumsan ullamcorper tempor, quam felis luctus arcu, nec
-                    pharetra diam purus quis eros. Praesent porta erat in ex pellentesque, vitae
-                    dictum turpis mattis. Proin laoreet ligula et sem sagittis, vitae fringilla orci
-                    ornare. Sed sit amet imperdiet arcu, at bibendum nisi. Integer vitae ligula mi.
-                    Vestibulum massa dolor, aliquet eu rhoncus et, venenatis eget est.
+                    {translate('kickboxingText')}
                 </MyTypography>
 
                 <div className={classes.buttonContainer}>

@@ -62,8 +62,6 @@ class App extends Component {
         this.forceUpdate();
     }
 
-    
-
     render() {
         return (
             <div className="App">
@@ -72,10 +70,10 @@ class App extends Component {
                         <ScrollToTop>
                             <Switch>
                                 <Route path="/" exact render={() => <Layout changeLang={this.changeLang}><LoadableHome/></Layout>}/>
-                                <Route path="/home" component={() => <Layout changeLang={this.changeLang}><LoadableHome/></Layout>}/>
-                                <Route path="/about" component={() => <Layout changeLang={this.changeLang}><About/></Layout>}/>
-                                <Route path="/products" component={() => <Layout changeLang={this.changeLang}><LoadableProducts/></Layout>}/>
-                                <Route path="/courses" component={() => <Layout changeLang={this.changeLang}><Courses/></Layout>}/>
+                                <Route path="/home" render={() => <Layout changeLang={this.changeLang}><LoadableHome/></Layout>}/>
+                                <Route path="/about" render={() => <Layout changeLang={this.changeLang}><About/></Layout>}/>
+                                <Route path="/products" render={() => <Layout changeLang={this.changeLang}><LoadableProducts/></Layout>}/>
+                                <Route path="/courses" render={() => <Layout changeLang={this.changeLang}><Courses/></Layout>}/>
                                 <Route
                                     path="/muaythai"
                                     component={({history}) => <Layout changeLang={this.changeLang}><MuayThai history={history}/></Layout>}/>
@@ -95,7 +93,7 @@ class App extends Component {
                                     path="/mma"
                                     component={({history}) => <Layout changeLang={this.changeLang}><Mma history={history}/></Layout>}/>
                                 <Route path="/contact" component={() => <Layout changeLang={this.changeLang}><Contact/></Layout>}/>
-                                <Route path="/gym" component={() => <Layout changeLang={this.changeLang}><LoadableGym/></Layout>}/>
+                                <Route path="/gym" exact render={() => <Layout changeLang={this.changeLang}><LoadableGym/></Layout>}/>
                             </Switch>
                         </ScrollToTop>
                     </Router>

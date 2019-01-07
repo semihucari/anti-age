@@ -15,8 +15,10 @@ const translate = (key) => {
 const styles = theme => ({
     productContainer: {
         textAlign: 'center',
-        marginTop: '8em',
-        width: '100vw'
+        paddingTop: '8em',
+        width: '100vw',
+        height: '100vh',
+        overflowY: 'auto'
     },
     muayThai: {
         textAlign: 'left',

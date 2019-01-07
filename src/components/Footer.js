@@ -148,7 +148,7 @@ class Footer extends Component {
                     overline: classes.overline
                 }}
                     color="secondary">
-                    INFO@OMERBALABAN.COM.TR 0553 619 97 68
+                    Balabanomer73@gmail.com 0553 619 97 68
                 </Typography>
             </div>
         )

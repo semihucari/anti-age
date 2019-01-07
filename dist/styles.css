@@ -20,6 +20,8 @@
     opacity: 0.9;
     clip-path: polygon( 0 0, /* left top */ 100vw 0, /* right top */ 100vw 9em, /* right bottom */ 0 5em /* left bottom */ );
     transition: all 0.7s;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .app-bar:hover {
     opacity: 1;
@@ -132,15 +134,18 @@ iframe {
 }
 
 .home {
-    /* The height needs to be set to a fixed value for the effect to work.
-     * 100vh is the full height of the viewport. */
     height: 100vh;
     width: 100vw;
-    /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
     overflow-x: hidden;
-    /* Enable scrolling on the page. */
     overflow-y: auto;
-    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+    perspective: 2px;
+}
+
+.gym {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
     perspective: 2px;
 }
 

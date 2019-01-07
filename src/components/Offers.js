@@ -55,11 +55,11 @@ class Offers extends Component {
 
         return (
             <div className={classes.flexContainer}>
-                
+
                 <div className={classes.innerFlexContainer}>
                     <div className={classes.flexItem}>
                         <MyTypography variant='h4'>
-                            Grup - 1 ay
+                            {translate('group1m')}
                         </MyTypography>
                         <MyTypography variant='h5'>
                             200₺
@@ -67,7 +67,7 @@ class Offers extends Component {
                     </div>
                     <div className={classes.flexItem}>
                         <MyTypography variant='h4'>
-                            Grup - 3 ay
+                            {translate('group3m')}
                         </MyTypography>
                         <MyTypography variant='h5'>
                             500₺
@@ -75,7 +75,7 @@ class Offers extends Component {
                     </div>
                     <div className={classes.flexItem}>
                         <MyTypography variant='h4'>
-                            Grup - 6 ay
+                            {translate('group6m')}
                         </MyTypography>
                         <MyTypography variant='h5'>
                             850₺
@@ -83,10 +83,10 @@ class Offers extends Component {
                     </div>
                     <div className={classes.flexItem}>
                         <MyTypography variant='h4'>
-                            Grup - 1 yıl
+                            {translate('group1y')}
                         </MyTypography>
                         <MyTypography variant='h5'>
-                            1500₺
+                            1.500₺
                         </MyTypography>
                     </div>
                 </div>
@@ -94,15 +94,7 @@ class Offers extends Component {
                 <div className={classes.innerFlexContainer}>
                     <div className={classes.flexItem}>
                         <MyTypography variant='h4'>
-                            Grup - 1 ay
-                        </MyTypography>
-                        <MyTypography variant='h5'>
-                            200₺
-                        </MyTypography>
-                    </div>
-                    <div className={classes.flexItem}>
-                        <MyTypography variant='h4'>
-                            Grup - 3 ay
+                            {translate('specialGroup1m')}
                         </MyTypography>
                         <MyTypography variant='h5'>
                             500₺
@@ -110,18 +102,26 @@ class Offers extends Component {
                     </div>
                     <div className={classes.flexItem}>
                         <MyTypography variant='h4'>
-                            Grup - 6 ay
+                            {translate('specialGroup3m')}
                         </MyTypography>
                         <MyTypography variant='h5'>
-                            850₺
+                            1.250₺
                         </MyTypography>
                     </div>
                     <div className={classes.flexItem}>
                         <MyTypography variant='h4'>
-                            Grup - 1 yıl
+                            {translate('specialGroup6m')}
                         </MyTypography>
                         <MyTypography variant='h5'>
-                            1500₺
+                            2.250₺
+                        </MyTypography>
+                    </div>
+                    <div className={classes.flexItem}>
+                        <MyTypography variant='h4'>
+                            {translate('specialGroup1y')}
+                        </MyTypography>
+                        <MyTypography variant='h5'>
+                            4.250₺
                         </MyTypography>
                     </div>
                 </div>
@@ -129,34 +129,69 @@ class Offers extends Component {
                 <div className={classes.innerFlexContainer}>
                     <div className={classes.flexItem}>
                         <MyTypography variant='h4'>
-                            Grup - 1 ay
+                            {translate('hourPrivate12')}
                         </MyTypography>
                         <MyTypography variant='h5'>
-                            200₺
+                            1.000₺
                         </MyTypography>
                     </div>
                     <div className={classes.flexItem}>
                         <MyTypography variant='h4'>
-                            Grup - 3 ay
+                            {translate('hourPrivate35')}
                         </MyTypography>
                         <MyTypography variant='h5'>
-                            500₺
+                            3.000₺
                         </MyTypography>
                     </div>
                     <div className={classes.flexItem}>
                         <MyTypography variant='h4'>
-                            Grup - 6 ay
+                            {translate('hourPrivate70')}
                         </MyTypography>
                         <MyTypography variant='h5'>
-                            850₺
+                            5.500₺
                         </MyTypography>
                     </div>
                     <div className={classes.flexItem}>
                         <MyTypography variant='h4'>
-                            Grup - 1 yıl
+                            {translate('hourPrivate140')}
                         </MyTypography>
                         <MyTypography variant='h5'>
-                            1500₺
+                            10.000₺
+                        </MyTypography>
+                    </div>
+                </div>
+
+                <div className={classes.innerFlexContainer}>
+                    <div className={classes.flexItem}>
+                        <MyTypography variant='h4'>
+                            {translate('hour5Private12')}
+                        </MyTypography>
+                        <MyTypography variant='h5'>
+                            1.500₺
+                        </MyTypography>
+                    </div>
+                    <div className={classes.flexItem}>
+                        <MyTypography variant='h4'>
+                            {translate('hour5Private35')}
+                        </MyTypography>
+                        <MyTypography variant='h5'>
+                            4.000₺
+                        </MyTypography>
+                    </div>
+                    <div className={classes.flexItem}>
+                        <MyTypography variant='h4'>
+                            {translate('hour5Private70')}
+                        </MyTypography>
+                        <MyTypography variant='h5'>
+                            7.500₺
+                        </MyTypography>
+                    </div>
+                    <div className={classes.flexItem}>
+                        <MyTypography variant='h4'>
+                            {translate('hour5Private140')}
+                        </MyTypography>
+                        <MyTypography variant='h5'>
+                            14.000₺
                         </MyTypography>
                     </div>
                 </div>

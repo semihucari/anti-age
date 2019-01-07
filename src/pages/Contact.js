@@ -8,7 +8,7 @@ const styles = theme => ({});
 class Contact extends Component {
     render() {
         return (
-            <div>
+            <div className='gym'>
                 <MyMapComponent/>
                 <Hours/>
             </div>

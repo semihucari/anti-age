@@ -44,7 +44,8 @@ const MyTypography = withStyles({
     },
     subtitle1: {
         fontSize: '1em',
-        fontFamily: '"Anton", sans-serif'
+        fontFamily: '"Anton", sans-serif',
+        whiteSpace: 'pre-line'
     }
 })(Typography)
 
@@ -61,25 +62,10 @@ class Mma extends Component {
                     variant='subtitle1'
                     color='secondary'
                     style={{
-                    width: '50vw'
+                    width: '50vw',
+                    marginTop: '1em'
                 }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis sapien
-                    sed felis malesuada suscipit. Duis euismod congue dui a dignissim. Integer
-                    feugiat purus eu tortor faucibus, et sagittis sapien vehicula. Donec sodales,
-                    sapien at mattis ultrices, urna augue euismod magna, quis posuere ligula orci ut
-                    tortor. Ut lobortis, justo id viverra efficitur, odio velit fringilla sapien,
-                    sed mattis lacus elit non turpis. Aenean et scelerisque massa. Integer quam
-                    quam, efficitur at lacus ac, consequat sollicitudin ligula. Integer aliquet
-                    purus sit amet sodales commodo. Aliquam tempor consequat nisl in ornare. Vivamus
-                    placerat tristique ex, eu tristique ex rutrum in. Proin vitae purus odio. Morbi
-                    pulvinar nunc purus, et egestas elit hendrerit vel. Pellentesque eleifend
-                    lacinia mauris, a blandit ligula commodo eget. Sed in dignissim lectus, in
-                    volutpat nisi. Maecenas lacinia pharetra rutrum. Etiam vel velit non orci
-                    consectetur fringilla id non eros. Curabitur tempus dolor sed condimentum
-                    imperdiet. Proin accumsan condimentum bibendum. Phasellus posuere non diam in
-                    rutrum. Sed id pulvinar nibh, nec aliquam felis. Ut quis felis scelerisque felis
-                    vulputate malesuada. Aenean ut dolor at mauris accumsan tincidunt sit amet a
-                    sem.
+                    {translate('mmaText')}
                 </MyTypography>
 
                 <div className={classes.buttonContainer}>

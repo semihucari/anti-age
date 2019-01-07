@@ -44,7 +44,8 @@ const MyTypography = withStyles({
     },
     subtitle1: {
         fontSize: '1em',
-        fontFamily: '"Anton", sans-serif'
+        fontFamily: '"Anton", sans-serif',
+        whiteSpace: 'pre-line'
     }
 })(Typography)
 
@@ -61,27 +62,10 @@ class Wushu extends Component {
                     variant='subtitle1'
                     color='secondary'
                     style={{
-                    width: '50vw'
+                    width: '50vw',
+                    marginTop: '1em'
                 }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a diam justo.
-                    Proin et gravida quam, vel consectetur est. Nullam suscipit leo turpis, non
-                    tempus enim laoreet nec. Nulla facilisi. Quisque imperdiet, est id consequat
-                    fringilla, velit nisi vestibulum ex, at condimentum ante elit et odio. Nulla
-                    maximus faucibus mauris eget bibendum. Cras ultricies, justo nec efficitur
-                    ullamcorper, augue nisl condimentum elit, nec euismod nibh metus sagittis elit.
-                    Vivamus accumsan auctor tempus. Maecenas dolor sapien, ullamcorper sit amet
-                    mollis vitae, luctus ut nulla. Aenean ornare enim felis, et auctor odio viverra
-                    quis. Pellentesque dignissim tortor non nibh condimentum euismod. Vestibulum ac
-                    dolor id erat condimentum tincidunt quis consectetur nisi. Mauris pharetra
-                    congue placerat. Pellentesque varius purus nec libero ullamcorper efficitur.
-                    Maecenas orci nunc, vestibulum at libero in, semper auctor elit. Orci varius
-                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                    Pellentesque fringilla elementum nunc ultrices mollis. Donec ullamcorper elit
-                    vitae molestie porta. Donec mattis dui tortor, eu porta sapien accumsan eget.
-                    Etiam non elementum massa, eget posuere ex. Vivamus quis quam ultrices,
-                    imperdiet neque nec, sodales orci. Etiam malesuada accumsan auctor. Mauris
-                    maximus leo massa, quis facilisis arcu tincidunt eu. Suspendisse ac venenatis
-                    sem.
+                    {translate('wushuText')}
                 </MyTypography>
 
                 <div className={classes.buttonContainer}>

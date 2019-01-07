@@ -23,7 +23,8 @@ const translate = (key) => {
 const styles = theme => ({
     gymContainer: {
         marginTop: '10em',
-        width: '100vw'
+        width: '100vw',
+        overflowY: 'auto'
     },
     gridList: {
         margin: '0 1em 1em 1em !important',
@@ -286,176 +287,178 @@ class Contact extends Component {
         const {img, dialogOpen} = this.state;
 
         return (
-            <div className={classes.gymContainer}>
-                <div className={classes.trainer}>
-                    <Grid container direction="row" justify="center" alignItems="flex-start">
-                        <Grid item xs={4}>
-                            <Avatar
-                                alt='Omer Balaban'
-                                src={require('../images/balaban.jpeg')}
-                                className={classes.avatar}/>
+            <div className='gym'>
+                <div className={classes.gymContainer}>
+                    <div className={classes.trainer}>
+                        <Grid container direction="row" justify="center" alignItems="flex-start">
+                            <Grid item xs={4}>
+                                <Avatar
+                                    alt='Omer Balaban'
+                                    src={require('../images/balaban.jpeg')}
+                                    className={classes.avatar}/>
+                            </Grid>
+                            <Grid item xs={5}>
+                                <MyTypography variant='h3'>
+                                    Ömer Balaban
+                                </MyTypography>
+                                <MyTypography variant='h6'>
+                                    {translate('balabanSummarize')}
+                                </MyTypography>
+                            </Grid>
                         </Grid>
-                        <Grid item xs={5}>
-                            <MyTypography variant='h3'>
-                                Ömer Balaban
+                    </div>
+                    <Divider
+                        classes={{
+                        root: classes.divider
+                    }}/>
+                    <div className={classes.features}>
+                        <MyTypography variant='h5'>
+                            {translate('equipments')}
+                        </MyTypography>
+                        <div className={classes.itemContainer}>
+                            <img
+                                src={require('../images/regular-punching-bag.png')}
+                                style={{
+                                height: '10em',
+                                width: '10em'
+                            }}/>
+                            <MyTypography variant='h4'>
+                                {translate('punchingBag')}
                             </MyTypography>
-                            <MyTypography variant='h6'>
-                                {translate('balabanSummarize')}
+                        </div>
+                        <div className={classes.itemContainer}>
+                            <img
+                                src={require('../images/punching-bag.png')}
+                                style={{
+                                height: '10em',
+                                width: '10em'
+                            }}/>
+                            <MyTypography variant='h4'>
+                                {translate('punchingBagLong')}
                             </MyTypography>
-                        </Grid>
-                    </Grid>
-                </div>
-                <Divider
-                    classes={{
-                    root: classes.divider
-                }}/>
-                <div className={classes.features}>
-                    <MyTypography variant='h5'>
-                        {translate('equipments')}
-                    </MyTypography>
-                    <div className={classes.itemContainer}>
-                        <img
-                            src={require('../images/regular-punching-bag.png')}
-                            style={{
-                            height: '10em',
-                            width: '10em'
-                        }}/>
-                        <MyTypography variant='h4'>
-                            {translate('punchingBag')}
-                        </MyTypography>
+                        </div>
+                        <div className={classes.itemContainer}>
+                            <img
+                                src={require('../images/tires.png')}
+                                style={{
+                                padding: '2em',
+                                height: '11em',
+                                width: '11em'
+                            }}/>
+                            <MyTypography variant='h4'>
+                                {translate('tireBag')}
+                            </MyTypography>
+                        </div>
+                        <div className={classes.itemContainer}>
+                            <img
+                                src={require('../images/top-bag.png')}
+                                style={{
+                                padding: '2em',
+                                height: '11em',
+                                width: '11em'
+                            }}/>
+                            <MyTypography variant='h4'>
+                                {translate('ballBag')}
+                            </MyTypography>
+                        </div>
+                        <div className={classes.itemContainer}>
+                            <img
+                                src={require('../images/hourglass.png')}
+                                style={{
+                                padding: '2em',
+                                height: '11em',
+                                width: '11em'
+                            }}/>
+                            <MyTypography variant='h4'>
+                                {translate('curvedBag')}
+                            </MyTypography>
+                        </div>
+                        <div className={classes.itemContainer}>
+                            <img
+                                src={require('../images/speed-bag.png')}
+                                style={{
+                                padding: '2em',
+                                height: '10em',
+                                width: '10em'
+                            }}/>
+                            <MyTypography variant='h4'>
+                                {translate('speedBag')}
+                            </MyTypography>
+                        </div>
+                        <div className={classes.itemContainer}>
+                            <img
+                                src={require('../images/boxing-ring.png')}
+                                style={{
+                                padding: '2em',
+                                height: '11em',
+                                width: '11em'
+                            }}/>
+                            <MyTypography variant='h4'>
+                                {translate('ringx2')}
+                            </MyTypography>
+                        </div>
+                        <div className={classes.itemContainer}>
+                            <img
+                                src={require('../images/dumbbell.png')}
+                                style={{
+                                padding: '2em',
+                                height: '11em',
+                                width: '11em'
+                            }}/>
+                            <MyTypography variant='h4'>
+                                {translate('weights')}
+                            </MyTypography>
+                        </div>
                     </div>
-                    <div className={classes.itemContainer}>
-                        <img
-                            src={require('../images/punching-bag.png')}
-                            style={{
-                            height: '10em',
-                            width: '10em'
-                        }}/>
-                        <MyTypography variant='h4'>
-                            {translate('punchingBagLong')}
+                    <Divider
+                        classes={{
+                        root: classes.divider
+                    }}/>
+                    <div className={classes.photoGallery}>
+                        <MyTypography variant='h5'>
+                            {translate('photoGallery')}
                         </MyTypography>
-                    </div>
-                    <div className={classes.itemContainer}>
-                        <img
-                            src={require('../images/tires.png')}
-                            style={{
-                            padding: '2em',
-                            height: '11em',
-                            width: '11em'
-                        }}/>
-                        <MyTypography variant='h4'>
-                            {translate('tireBag')}
-                        </MyTypography>
-                    </div>
-                    <div className={classes.itemContainer}>
-                        <img
-                            src={require('../images/top-bag.png')}
-                            style={{
-                            padding: '2em',
-                            height: '11em',
-                            width: '11em'
-                        }}/>
-                        <MyTypography variant='h4'>
-                            {translate('ballBag')}
-                        </MyTypography>
-                    </div>
-                    <div className={classes.itemContainer}>
-                        <img
-                            src={require('../images/hourglass.png')}
-                            style={{
-                            padding: '2em',
-                            height: '11em',
-                            width: '11em'
-                        }}/>
-                        <MyTypography variant='h4'>
-                            {translate('curvedBag')}
-                        </MyTypography>
-                    </div>
-                    <div className={classes.itemContainer}>
-                        <img
-                            src={require('../images/speed-bag.png')}
-                            style={{
-                            padding: '2em',
-                            height: '10em',
-                            width: '10em'
-                        }}/>
-                        <MyTypography variant='h4'>
-                            {translate('speedBag')}
-                        </MyTypography>
-                    </div>
-                    <div className={classes.itemContainer}>
-                        <img
-                            src={require('../images/boxing-ring.png')}
-                            style={{
-                            padding: '2em',
-                            height: '11em',
-                            width: '11em'
-                        }}/>
-                        <MyTypography variant='h4'>
-                            {translate('ringx2')}
-                        </MyTypography>
-                    </div>
-                    <div className={classes.itemContainer}>
-                        <img
-                            src={require('../images/dumbbell.png')}
-                            style={{
-                            padding: '2em',
-                            height: '11em',
-                            width: '11em'
-                        }}/>
-                        <MyTypography variant='h4'>
-                            {translate('weights')}
-                        </MyTypography>
-                    </div>
-                </div>
-                <Divider
-                    classes={{
-                    root: classes.divider
-                }}/>
-                <div className={classes.photoGallery}>
-                    <MyTypography variant='h5'>
-                        {translate('photoGallery')}
-                    </MyTypography>
-                    <GridList cellHeight={250} className={classes.gridList} cols={3} spacing={40}>
-                        {tileData.map(tile => {
-                            const img = tile.img;
-                            return (
-                                <GridListTile
-                                    key={img}
-                                    cols={tile.cols || 1}
-                                    rows={tile.rows || 1}
-                                    className={classes.zoom}>
-                                    <img src={img} alt={tile.title}/>
-                                    <GridListTileBar
-                                        titlePosition="top"
-                                        actionIcon={(
-                                        <IconButton className={classes.icon} onClick={this.handleDialog(img)}>
-                                            <FullscreenIcon/>
-                                        </IconButton>
-                                    )}
-                                        actionPosition="left"
-                                        className={classes.titleBar}
-                                        id='tile-bar'/>
-                                </GridListTile>
-                            )
-                        })}
-                    </GridList>
-                    <div
-                        className={dialogOpen
-                        ? classes.background
-                        : ''}
-                        onClick={this.handleClose}/>
-                    <div
-                        id='img-dialog'
-                        className={dialogOpen
-                        ? classes.image
-                        : classes.hide}>
-                        <img
-                            src={img}
-                            style={{
-                            maxWidth: '90vw',
-                            maxHeight: '80vh'
-                        }}/>
+                        <GridList cellHeight={250} className={classes.gridList} cols={3} spacing={40}>
+                            {tileData.map(tile => {
+                                const img = tile.img;
+                                return (
+                                    <GridListTile
+                                        key={img}
+                                        cols={tile.cols || 1}
+                                        rows={tile.rows || 1}
+                                        className={classes.zoom}>
+                                        <img src={img} alt={tile.title}/>
+                                        <GridListTileBar
+                                            titlePosition="top"
+                                            actionIcon={(
+                                            <IconButton className={classes.icon} onClick={this.handleDialog(img)}>
+                                                <FullscreenIcon/>
+                                            </IconButton>
+                                        )}
+                                            actionPosition="left"
+                                            className={classes.titleBar}
+                                            id='tile-bar'/>
+                                    </GridListTile>
+                                )
+                            })}
+                        </GridList>
+                        <div
+                            className={dialogOpen
+                            ? classes.background
+                            : ''}
+                            onClick={this.handleClose}/>
+                        <div
+                            id='img-dialog'
+                            className={dialogOpen
+                            ? classes.image
+                            : classes.hide}>
+                            <img
+                                src={img}
+                                style={{
+                                maxWidth: '90vw',
+                                maxHeight: '80vh'
+                            }}/>
+                        </div>
                     </div>
                 </div>
             </div>
