@@ -14,7 +14,7 @@ const styles = theme => ({
     footerContainer: {
         height: '11em',
         background: 'black',
-        marginTop: '1em',
+        marginTop: '7em',
         paddingTop: '0.8em',
         position: 'relative'
     },

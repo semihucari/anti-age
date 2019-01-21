@@ -11,13 +11,6 @@ const translate = (key) => {
 }
 
 const styles = theme => ({
-    flexContainer: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-around',
-        width: '100%',
-        height: '100%'
-    },
     innerFlexContainer: {
         display: 'flex',
         flexDirection: 'row',
@@ -54,7 +47,7 @@ class Offers extends Component {
         const {classes} = this.props;
 
         return (
-            <div className={classes.flexContainer}>
+            <div className='offers-container'>
 
                 <div className={classes.innerFlexContainer}>
                     <div className={classes.flexItem}>

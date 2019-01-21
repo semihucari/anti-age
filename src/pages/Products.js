@@ -232,7 +232,7 @@ class Products extends Component {
                                             classes={{
                                             subtitle1: classes.subtitle1
                                         }}>
-                                            {translate('100TLHour')}
+                                            {translate('120TLHour')}
                                         </Typography>
                                     </div>
                                 : <div></div>}

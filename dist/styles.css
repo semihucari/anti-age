@@ -39,13 +39,113 @@ body {
     overflow-x: hidden;
     background-color: #000;
 }
+@media screen and (max-width: 1200px) {
+    .img {
+        height: 34rem;
+        width: 37rem;
+        border-width: 4px !important;
+        border: white;
+        border-style: solid;
+        border-color: #feb81c;
+    }
+    .banner {
+        width: 100vw;
+        height: 25rem;
+        text-align: center;
+    }
+    .section {
+        height: 59rem;
+    }
+    .static {
+        height: 50rem;
+    }
+    .swipe {
+        width: 70vw;
+        height: 60rem;
+        padding-top: 2vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .bg3::after {
+        background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('./banner-back-3.jpg');
+        transform: translateZ(-1px) scale(2.3);
+        margin-top: 20rem;
+    }
+    .bg2::after {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.20) ), url('./banner-back-2.jpg');
+        transform: translateZ(-1px) scale(1.8);
+        background-size: 134%;
+    }
+    .bg1::after {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0) ), url('./banner-back.jpg');
+        background-size: 170%;
+        transform: translateZ(-1px) scale(1.7);
+    }
+    .offers-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .img {
+        height: 75vh;
+        border-width: 4px !important;
+        border: white;
+        border-style: solid;
+        border-color: #feb81c;
+    }
+    .banner {
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        padding-top: 13vh;
+    }
+    .section {
+        height: 140vh;
+    }
+    .static {
+        height: 100vh;
+    }
+    .swipe {
+        width: 70vw;
+        height: 90vh;
+        padding-top: 2vh;
+    }
+    .bg3::after {
+        background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('./banner-back-3.jpg');
+        transform: translateZ(-1px) scale(1.5);
+    }
+    .bg2::after {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.20) ), url('./banner-back-2.jpg');
+    }
+    .parallax::after {
 
-.img {
-    height: 75vh;
-    border-width: 4px !important;
-    border: white;
-    border-style: solid;
-    border-color: #feb81c;
+        transform: translateZ(-1px) scale(1.5);
+        /* Force the background image to fill the whole element. */
+        background-size: 130%;
+    }
+    .offers-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+    }
+    .bg1::after {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0) ), url('./banner-back.jpg');
+        transform: translateZ(-1px) scale(1.5);
+        background-size: 130%;
+    }
+}
+
+.banner-next {
+    width: 100vw;
+    height: 100%;
+    background: black;
 }
 
 .dot {
@@ -116,11 +216,6 @@ iframe {
     }
 }
 
-/* video {
-    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 70%);
-    mask-image: linear-gradient(to top, transparent 0%, black 70%);
-} */
-
 #img-dialog {
     animation: fadeIn 0.7s;
 }
@@ -152,8 +247,6 @@ iframe {
 .section {
     /* Needed for children to be absolutely positioned relative to the parent. */
     position: relative;
-    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-    height: 140vh;
 
     /* For text formatting. */
     display: flex;
@@ -164,45 +257,13 @@ iframe {
 }
 
 .parallax::after {
-    /* Display and position the pseudo-element */
     content: " ";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-
-    /* Move the pseudo-element back away from the camera,
-     * then scale it back up to fill the viewport.
-     * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
-    transform: translateZ(-1px) scale(1.5);
-    /* Force the background image to fill the whole element. */
-    background-size: 130%;
     background-position-x: center;
     background-repeat: no-repeat;
-
-    /* Keep the image from overlapping sibling elements. */
     z-index: -1;
-}
-
-/* The styling for the static div. */
-.static {
-    height: 100vh;
-}
-
-/* Sets the actual background images to adorable kitties. This part is crucial. */
-/* .bg2::after {
-    background-image: url('./banner-back.jpg');
-  } */
-
-.bg1::after {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0) ), url('./banner-back.jpg');
-}
-
-.bg2::after {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.20) ), url('./banner-back-2.jpg');
-}
-
-.bg3::after {
-    background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('./banner-back-3.jpg');
 }

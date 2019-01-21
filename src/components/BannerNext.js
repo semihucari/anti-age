@@ -11,11 +11,6 @@ const translate = (key) => {
 }
 
 const styles = theme => ({
-    container: {
-        width: '100vw',
-        height: '70vh',
-        background: 'black'
-    },
     divider: {
         backgroundColor: '#feb81c',
         margin: '2em auto 2em auto',
@@ -44,15 +39,15 @@ class BannerNext extends Component {
         const {classes} = this.props;
 
         return (
-            <div className={classes.container}>
+            <div className='banner-next'>
                 <Grid
                     container
                     direction="row"
                     justify="space-evenly"
-                    alignItems="flex-start"
+                    alignItems="center"
                     style={{
                     textAlign: 'center',
-                    marginTop: '4em'
+                    height: '100%'
                 }}>
                     <Grid item xs={4}>
                         <img src={require('../images/locker.png')} className={classes.img}/>

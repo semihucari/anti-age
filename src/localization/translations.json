@@ -1,7 +1,7 @@
 {
     "tr": {
         "translation": {
-            "100TLHour": "Saatlik 100₺",
+            "120TLHour": "Saatlik 120₺",
             "1520Students": "15 - 20 Kişilik Gruplar",
             "200TLMonth": "Aylık 200₺",
             "400TLMonth": "Aylık 400₺",
@@ -93,7 +93,7 @@
     },
     "en": {
         "translation": {
-            "100TLHour": "100₺ per Hour",
+            "100TLHour": "120₺ per Hour",
             "1520Students": "Group of 15 - 20 Students",
             "200TLMonth": "200₺ per Month",
             "400TLMonth": "400₺ per Month",

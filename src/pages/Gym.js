@@ -8,7 +8,8 @@ import {
     Typography,
     Avatar,
     Divider,
-    Grid
+    Grid,
+    Dialog
 } from '@material-ui/core';
 import FullscreenIcon from '@material-ui/icons/FullscreenRounded';
 import {LocEn, LocTr} from '../localization/translation';
@@ -41,24 +42,6 @@ const styles = theme => ({
             background: 'rgb(0, 0, 0, 0.5)',
             transform: 'scale(1.2)'
         }
-    },
-    background: {
-        position: 'fixed',
-        top: '0',
-        left: '0',
-        width: '100%',
-        height: '100%',
-        opacity: '0.2',
-        background: 'rgb(255, 255, 0)'
-    },
-    image: {
-        position: 'fixed',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%) translate(0, 4em)'
-    },
-    hide: {
-        display: 'none'
     },
     photoGallery: {
         width: '90vw',
@@ -101,7 +84,7 @@ const tileData = [
         img: require('../images/15.34.15.jpeg'),
         title: '15.34.15.jpeg',
         author: 'author',
-        cols: 2,
+        cols: 1,
         rows: 2
     }, {
         img: require('../images/15.34.19.jpeg'),
@@ -122,26 +105,20 @@ const tileData = [
         cols: 2,
         rows: 2
     }, {
-        img: require('../images/15.34.09.jpeg'),
-        title: '15.34.09.jpeg',
-        author: 'author',
-        cols: 2,
-        rows: 2
-    }, {
         img: require('../images/15.34.16 (1).jpeg'),
         title: '15.34.16 (1).jpeg',
         author: 'author',
         cols: 1,
         rows: 2
     }, {
-        img: require('../images/15.34.14 (1).jpeg'),
-        title: '15.34.14 (1).jpeg',
+        img: require('../images/15.34.09.jpeg'),
+        title: '15.34.09.jpeg',
         author: 'author',
-        cols: 1,
+        cols: 2,
         rows: 2
     }, {
-        img: require('../images/15.34.16.jpeg'),
-        title: '15.34.16.jpeg',
+        img: require('../images/15.34.14 (1).jpeg'),
+        title: '15.34.14 (1).jpeg',
         author: 'author',
         cols: 1,
         rows: 2
@@ -188,12 +165,6 @@ const tileData = [
         cols: 1,
         rows: 2
     }, {
-        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.13 (2).jpeg'),
-        title: 'WhatsApp Image 2018-12-03 at 15.44.13 (2).jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
         img: require('../images/WhatsApp Image 2018-12-03 at 15.44.13.jpeg'),
         title: 'WhatsApp Image 2018-12-03 at 15.44.13.jpeg',
         author: 'author',
@@ -224,14 +195,14 @@ const tileData = [
         cols: 1,
         rows: 2
     }, {
-        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.15.jpeg'),
-        title: 'WhatsApp Image 2018-12-03 at 15.44.15.jpeg',
+        img: require('../images/4f2a7f62-ff10-43cf-87dc-4f5f715f2298.jpg'),
+        title: '4f2a7f62-ff10-43cf-87dc-4f5f715f2298.jpg',
         author: 'author',
         cols: 1,
         rows: 2
     }, {
-        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.16.jpeg'),
-        title: 'WhatsApp Image 2018-12-03 at 15.44.16.jpeg',
+        img: require('../images/d5b93c1d-9271-416b-9477-ee48baf09232.jpg'),
+        title: 'd5b93c1d-9271-416b-9477-ee48baf09232.jpg',
         author: 'author',
         cols: 2,
         rows: 2
@@ -273,7 +244,8 @@ class Contact extends Component {
         img: undefined
     }
 
-    handleDialog = (img) => event => {
+    handleDialog = (img) => {
+        console.log('clicked');
         this.setState({dialogOpen: true, img});
     }
 
@@ -431,7 +403,7 @@ class Contact extends Component {
                                         <GridListTileBar
                                             titlePosition="top"
                                             actionIcon={(
-                                            <IconButton className={classes.icon} onClick={this.handleDialog(img)}>
+                                            <IconButton className={classes.icon} onClick={() => this.handleDialog(img)}>
                                                 <FullscreenIcon/>
                                             </IconButton>
                                         )}
@@ -442,23 +414,17 @@ class Contact extends Component {
                                 )
                             })}
                         </GridList>
-                        <div
-                            className={dialogOpen
-                            ? classes.background
-                            : ''}
-                            onClick={this.handleClose}/>
-                        <div
-                            id='img-dialog'
-                            className={dialogOpen
-                            ? classes.image
-                            : classes.hide}>
+                        <Dialog
+                            open={dialogOpen}
+                            onClose={() => this.setState({dialogOpen: false, img: undefined})}
+                            maxWidth={false}>
                             <img
                                 src={img}
                                 style={{
                                 maxWidth: '90vw',
                                 maxHeight: '80vh'
                             }}/>
-                        </div>
+                        </Dialog>
                     </div>
                 </div>
             </div>

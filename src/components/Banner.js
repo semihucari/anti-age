@@ -12,12 +12,6 @@ const translate = (key) => {
 }
 
 const styles = theme => ({
-    banner: {
-        width: '100vw',
-        height: '100vh',
-        textAlign: 'center',
-        paddingTop: '13vh'
-    },
     buttonRoot: {
         width: '12vw',
         height: '10vw',
@@ -66,7 +60,7 @@ class Banner extends Component {
         const {classes} = this.props;
 
         return (
-            <div className={classes.banner}>
+            <div className='banner'>
                 <div className='fade-in' id='bannerContainer'>
                     <MyTypography variant='h1'>
                         ÖMER BALABAN FIGHT ACADEMY
