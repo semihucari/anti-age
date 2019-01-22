@@ -33,7 +33,7 @@ class Motivation extends Component {
         const {classes} = this.props;
 
         return (
-            <div>
+            <div style={{margin: '0 4em'}}>
                 <MyTypography variant='h5'>
                     {translate('bruceLee')}
                 </MyTypography>

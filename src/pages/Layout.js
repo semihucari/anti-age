@@ -186,7 +186,7 @@ class PrimarySearchAppBar extends React.Component {
                             </Link>
                         </div>
                     </div>
-                    <div>
+                    <div style={{width: '2.5em'}}>
                         <Button
                             className={classes.buttonSmall}
                             classes={{
@@ -194,14 +194,28 @@ class PrimarySearchAppBar extends React.Component {
                         }}
                             color='primary'
                             disableRipple
-                            onClick={() => localStorage.getItem('lang') === 'tr'
-                            ? changeLang('en')
-                            : changeLang('tr')}>
+                            onClick={() => changeLang('tr')}>
                             <img
-                                src={require('../images/english.png')}
+                                src={require('../images/tr-flag.png')}
                                 style={{
                                 width: '4em',
-                                height: '4em',
+                                height: '3em',
+                                marginTop: '-0.5em'
+                            }}/>
+                        </Button>
+                        <Button
+                            className={classes.buttonSmall}
+                            classes={{
+                            label: classes.langLabel
+                        }}
+                            color='primary'
+                            disableRipple
+                            onClick={() => changeLang('en')}>
+                            <img
+                                src={require('../images/eng-flag.png')}
+                                style={{
+                                width: '4em',
+                                height: '3em',
                                 marginTop: '-0.5em'
                             }}/>
                         </Button>
