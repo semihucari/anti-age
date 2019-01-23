@@ -134,7 +134,7 @@ class Hours extends Component {
                                     0553 619 97 68
                                 </MyTypography>
                                 <MyTypography variant='subtitle1'>
-                                    INFO@OMERBALABAN.COM.TR
+                                    balabanomer73@gmail.com
                                 </MyTypography>
                             </div>
                         </Paper>

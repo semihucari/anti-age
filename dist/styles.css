@@ -70,7 +70,8 @@ body {
     .bg3::after {
         background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('./banner-back-3.jpg');
         transform: translateZ(-1px) scale(2.3);
-        margin-top: 20rem;
+        background-size: 134%;
+        margin-top: 24rem;
     }
     .bg2::after {
         background-image: linear-gradient( rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.20) ), url('./banner-back-2.jpg');
@@ -88,6 +89,18 @@ body {
         justify-content: space-evenly;
         width: 100%;
         height: 100%;
+    }
+    .card-container {
+        width: 17em;
+        height: 25em;
+    }
+    .image-sensei {
+        width: 100vw;
+        text-align: center;
+    }
+    .text-sensei {
+        width: 100vw;
+        padding: 0 3em;
     }
 }
 @media screen and (min-width: 1200px) {
@@ -139,6 +152,20 @@ body {
         background-image: linear-gradient( rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0) ), url('./banner-back.jpg');
         transform: translateZ(-1px) scale(1.5);
         background-size: 130%;
+    }
+    .card-container {
+        width: 26vw;
+        height: 70vh;
+    }
+    .text-sensei {
+        position: absolute;
+        top: 0;
+        width: 45%;
+        display: inline-block;
+    }
+    .image-sensei {
+        display: inline-block;
+        width: 50%;
     }
 }
 

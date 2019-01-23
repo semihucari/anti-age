@@ -4,8 +4,6 @@ import {withStyles} from '@material-ui/core';
 const styles = theme => ({
     parentContainer: {
         display: 'inline-flex',
-        width: '26vw',
-        height: '70vh',
         margin: '2vh',
         borderRadius: '3px',
         position: 'relative',
@@ -60,7 +58,7 @@ class ProductCard extends Component {
 
         return (
             <div
-                className={classes.parentContainer}
+                className={classes.parentContainer + ' card-container'}
                 onMouseEnter={() => {
                 this.setState({hover: true});
                 mouseEnter(id)

@@ -14,7 +14,8 @@ const translate = (key) => {
 const styles = theme => ({
     aboutContainer: {
         marginTop: '9em',
-        width: '100vw'
+        width: '100vw',
+        position: 'relative'
     },
     img: {
         height: '30em'
@@ -27,7 +28,8 @@ const MyTypography = withStyles({
         fontFamily: '"Anton", sans-serif',
         color: 'rgb(254, 184, 28)',
         textAlign: 'left',
-        paddingTop: '1em'
+        paddingTop: '1em',
+        paddingLeft: '1.5em'
     },
     subtitle1: {
         fontSize: '1em',
@@ -50,21 +52,17 @@ class About extends Component {
 
         return (
             <div className={classes.aboutContainer}>
-                <Grid container direction="row" justify="space-around" alignItems="flex-start">
-                    <Grid item xs={4}>
-                        <img className={classes.img} src={require('../images/balaban.jpeg')}/>
-                        <MyTypography variant='h5' color='secondary'>
-                            Ömer Balaban
-                        </MyTypography>
-                    </Grid>
-                    <Grid item xs={5}>
-                        <MyTypography
-                            variant='subtitle1'
-                            color='secondary'>
-                            {translate('aboutText')}
-                        </MyTypography>
-                    </Grid>
-                </Grid>
+                <div className='image-sensei'>
+                    <img className={classes.img} src={require('../images/balaban.jpeg')}/>
+                    <MyTypography variant='h5' color='secondary'>
+                        Ömer Balaban
+                    </MyTypography>
+                </div>
+                <div className='text-sensei'>
+                    <MyTypography variant='subtitle1' color='secondary'>
+                        {translate('aboutText')}
+                    </MyTypography>
+                </div>
                 <SenseiBadge/>
             </div>
         )

@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {withStyles} from '@material-ui/core/styles';
 import {Grid, Typography} from '@material-ui/core';
 import {LocEn, LocTr} from '../localization/translation';
+import {Link} from "react-router-dom";
 
 const translate = (key) => {
     const lang = localStorage.getItem('lang');
@@ -12,10 +13,9 @@ const translate = (key) => {
 
 const styles = theme => ({
     footerContainer: {
-        height: '11em',
+        height: '2em',
         background: 'black',
-        marginTop: '7em',
-        paddingTop: '0.8em',
+        marginTop: '11em',
         position: 'relative'
     },
     rowContainer: {
@@ -40,16 +40,9 @@ const styles = theme => ({
         fontWeight: 200,
         fontSize: '0.7em'
     },
-    copyrights: {
-        position: 'absolute',
-        bottom: 0
-    },
+    copyrights: {},
     contact: {
-        position: 'absolute',
-        bottom: 0,
-        left: '100%',
-        transform: 'translate(-100%)',
-        paddingRight: '1vw'
+        textAlign: 'right'
     }
 });
 
@@ -60,96 +53,42 @@ class Footer extends Component {
 
         return (
             <div className={classes.footerContainer}>
-                <Grid container direction="row" justify="space-evenly" alignItems="flex-start">
+                <Grid container direction="row" justify="space-around" alignItems="center">
                     <Grid item xs={3}>
-                        <div className={classes.rowContainer}>
-                            <div className={classes.subgroupContainer}>
-                                <Typography
-                                    className={classes.title}
-                                    classes={{
-                                    body2: classes.body2
-                                }}
-                                    variant="body2"
-                                    color="secondary"
-                                    noWrap>
-                                    {translate('about')}
-                                </Typography>
-                                <Typography
-                                    className={classes.title}
-                                    classes={{
-                                    body2: classes.body2
-                                }}
-                                    variant="body2"
-                                    color="secondary"
-                                    noWrap>
-                                    {translate('achievements')}
-                                </Typography>
-                                <Typography
-                                    className={classes.title}
-                                    classes={{
-                                    body2: classes.body2
-                                }}
-                                    variant="body2"
-                                    color="secondary"
-                                    noWrap>
-                                    {translate('contactUs')}
-                                </Typography>s
-                            </div>
-                        </div>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <div className={classes.rowContainer}>
-                            <div className={classes.subgroupContainer}>
-                                <Typography
-                                    className={classes.title}
-                                    classes={{
-                                    body2: classes.body2
-                                }}
-                                    variant="body2"
-                                    color="secondary"
-                                    noWrap>
-                                    {translate('tips')}
-                                </Typography>
-                                <Typography
-                                    className={classes.title}
-                                    classes={{
-                                    body2: classes.body2
-                                }}
-                                    variant="body2"
-                                    color="secondary"
-                                    noWrap>
-                                    {translate('FAQ')}
-                                </Typography>
-                            </div>
-                        </div>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <div className={classes.rowContainer}>
+                        <a
+                            href='https://instagram.com/omerbalabn_fghtacademiy?utm_source=ig_profile_share&igshid=10ab5z274aplk'>
                             <img className={classes.mediaIcon} src={require('../images/instagram.png')}/>
-                            <img className={classes.mediaIcon} src={require('../images/facebook.png')}/>
-                            <img className={classes.mediaIcon} src={require('../images/twitter.png')}/>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCtx3vLCkwcvXVsfcfBOqf9w">
                             <img className={classes.mediaIcon} src={require('../images/youtube.png')}/>
-                        </div>
+                        </a>
+                        <a href="https://www.facebook.com/omer.balaban.7547">
+                            <img className={classes.mediaIcon} src={require('../images/facebook.png')}/>
+                        </a>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Typography
+                            variant="overline"
+                            className={classes.copyrights}
+                            classes={{
+                            overline: classes.overline
+                        }}
+                            color="secondary">
+                            © ÖMER BALABAN FİGHT ACADEMY TÜM HAKLARI SAKLIDIR.
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Typography
+                            variant="overline"
+                            className={classes.contact}
+                            classes={{
+                            overline: classes.overline
+                        }}
+                            color="secondary">
+                            balabanomer73@gmail.com<br/>0553 619 97 68
+                        </Typography>
                     </Grid>
                 </Grid>
-                <Typography
-                    variant="overline"
-                    className={classes.copyrights}
-                    classes={{
-                    overline: classes.overline
-                }}
-                    color="secondary">
-                    © ÖMER BALABAN FİGHT ACADEMY TÜM HAKLARI SAKLIDIR.
-                </Typography>
-                <Typography
-                    variant="overline"
-                    className={classes.contact}
-                    classes={{
-                    overline: classes.overline
-                }}
-                    color="secondary">
-                    Balabanomer73@gmail.com 0553 619 97 68
-                </Typography>
             </div>
         )
 

@@ -174,7 +174,7 @@ class Products extends Component {
                                             classes={{
                                             subtitle1: classes.subtitle1
                                         }}>
-                                            {translate('8Students')}
+                                            {translate('6Students')}
                                         </Typography>
                                         <Typography
                                             variant='subtitle1'
