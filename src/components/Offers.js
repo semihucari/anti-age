@@ -122,7 +122,7 @@ class Offers extends Component {
                 <div className={classes.innerFlexContainer}>
                     <div className={classes.flexItem}>
                         <MyTypography variant='h4'>
-                            {translate('hourPrivate12')}
+                            {translate('hourPrivate10')}
                         </MyTypography>
                         <MyTypography variant='h5'>
                             1.000₺
