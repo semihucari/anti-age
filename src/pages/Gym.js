@@ -81,20 +81,8 @@ const styles = theme => ({
 
 const tileData = [
     {
-        img: require('../images/15.34.15.jpeg'),
-        title: '15.34.15.jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
         img: require('../images/15.34.19.jpeg'),
         title: '15.34.19.jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
-        img: require('../images/15.34.14.jpeg'),
-        title: '15.34.14.jpeg',
         author: 'author',
         cols: 1,
         rows: 2
@@ -105,16 +93,16 @@ const tileData = [
         cols: 2,
         rows: 2
     }, {
-        img: require('../images/15.34.16 (1).jpeg'),
-        title: '15.34.16 (1).jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
         img: require('../images/15.34.09.jpeg'),
         title: '15.34.09.jpeg',
         author: 'author',
         cols: 2,
+        rows: 2
+    }, {
+        img: require('../images/15.34.16 (1).jpeg'),
+        title: '15.34.16 (1).jpeg',
+        author: 'author',
+        cols: 1,
         rows: 2
     }, {
         img: require('../images/15.34.14 (1).jpeg'),
@@ -141,18 +129,6 @@ const tileData = [
         cols: 1,
         rows: 2
     }, {
-        img: require('../images/WhatsApp Image 2018-12-03 at 15.35.02.jpeg'),
-        title: 'WhatsApp Image 2018-12-03 at 15.35.02.jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
-        img: require('../images/WhatsApp Image 2018-12-03 at 15.43.43.jpeg'),
-        title: 'WhatsApp Image 2018-12-03 at 15.43.43.jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
         img: require('../images/WhatsApp Image 2018-12-03 at 15.44.12.jpeg'),
         title: 'WhatsApp Image 2018-12-03 at 15.44.12.jpeg',
         author: 'author',
@@ -171,40 +147,34 @@ const tileData = [
         cols: 1,
         rows: 2
     }, {
-        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.14 (1).jpeg'),
-        title: 'WhatsApp Image 2018-12-03 at 15.44.14 (1).jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
-        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.14 (2).jpeg'),
-        title: 'WhatsApp Image 2018-12-03 at 15.44.14 (2).jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
-        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.14.jpeg'),
-        title: 'WhatsApp Image 2018-12-03 at 15.44.14.jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
         img: require('../images/WhatsApp Image 2018-12-03 at 15.44.15 (1).jpeg'),
         title: 'WhatsApp Image 2018-12-03 at 15.44.15 (1).jpeg',
         author: 'author',
+        cols: 2,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2019-02-01 at 15.36.21.jpeg'),
+        title: 'WhatsApp Image 2019-02-01 at 15.36.21.jpeg',
+        author: 'author',
         cols: 1,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2019-02-01 at 15.36.23 (1).jpeg'),
+        title: 'WhatsApp Image 2019-02-01 at 15.36.23 (1).jpeg',
+        author: 'author',
+        cols: 2,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2019-02-01 at 15.36.23.jpeg'),
+        title: 'WhatsApp Image 2019-02-01 at 15.36.23.jpeg',
+        author: 'author',
+        cols: 2,
         rows: 2
     }, {
         img: require('../images/4f2a7f62-ff10-43cf-87dc-4f5f715f2298.jpg'),
         title: '4f2a7f62-ff10-43cf-87dc-4f5f715f2298.jpg',
         author: 'author',
         cols: 1,
-        rows: 2
-    }, {
-        img: require('../images/d5b93c1d-9271-416b-9477-ee48baf09232.jpg'),
-        title: 'd5b93c1d-9271-416b-9477-ee48baf09232.jpg',
-        author: 'author',
-        cols: 2,
         rows: 2
     }
 ]
@@ -245,7 +215,6 @@ class Contact extends Component {
     }
 
     handleDialog = (img) => {
-        console.log('clicked');
         this.setState({dialogOpen: true, img});
     }
 

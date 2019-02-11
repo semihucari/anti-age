@@ -126,23 +126,23 @@ class Courses extends Component {
 
         return (
             <div className={classes.productContainer}>
-                <ProductCard
-                    className={classes.muayThai}
-                    id='groupLecturesShow'
-                    mouseEnter={this.mouseEnter}
-                    mouseLeave={this.mouseLeave}>
-                    <Typography
-                        variant='h6'
-                        color='secondary'
-                        className={classes.title}
-                        noWrap
-                        classes={{
-                        h6: classes.h6
-                    }}>{translate('muayThai')}</Typography>
-                    <Grow in={groupLecturesShow}>
-                        {groupLecturesShow
-                            ? <div>
-                                    <Link to='/muaythai'>
+                <Link to='/muaythai'>
+                    <ProductCard
+                        className={classes.muayThai}
+                        id='groupLecturesShow'
+                        mouseEnter={this.mouseEnter}
+                        mouseLeave={this.mouseLeave}>
+                        <Typography
+                            variant='h6'
+                            color='secondary'
+                            className={classes.title}
+                            noWrap
+                            classes={{
+                            h6: classes.h6
+                        }}>{translate('muayThai')}</Typography>
+                        <Grow in={groupLecturesShow}>
+                            {groupLecturesShow
+                                ? <div>
                                         <Typography
                                             noWrap
                                             variant='subtitle1'
@@ -152,28 +152,28 @@ class Courses extends Component {
                                             subtitle1: classes.subtitle1
                                         }}>{translate('learnMore')}
                                         </Typography>
-                                    </Link>
-                                </div>
-                            : <div></div>}
-                    </Grow>
-                </ProductCard>
-                <ProductCard
-                    className={classes.kickBox}
-                    id='groupLecturesShow'
-                    mouseEnter={this.mouseEnter}
-                    mouseLeave={this.mouseLeave}>
-                    <Typography
-                        variant='h6'
-                        color='secondary'
-                        className={classes.title}
-                        noWrap
-                        classes={{
-                        h6: classes.h6
-                    }}>{translate('kickboxing')}</Typography>
-                    <Grow in={groupLecturesShow}>
-                        {groupLecturesShow
-                            ? <div>
-                                    <Link to='/kickbox'>
+                                    </div>
+                                : <div></div>}
+                        </Grow>
+                    </ProductCard>
+                </Link>
+                <Link to='/kickbox'>
+                    <ProductCard
+                        className={classes.kickBox}
+                        id='groupLecturesShow'
+                        mouseEnter={this.mouseEnter}
+                        mouseLeave={this.mouseLeave}>
+                        <Typography
+                            variant='h6'
+                            color='secondary'
+                            className={classes.title}
+                            noWrap
+                            classes={{
+                            h6: classes.h6
+                        }}>{translate('kickboxing')}</Typography>
+                        <Grow in={groupLecturesShow}>
+                            {groupLecturesShow
+                                ? <div>
                                         <Typography
                                             variant='subtitle1'
                                             color='secondary'
@@ -182,28 +182,28 @@ class Courses extends Component {
                                             subtitle1: classes.subtitle1
                                         }}>{translate('learnMore')}
                                         </Typography>
-                                    </Link>
-                                </div>
-                            : <div></div>}
-                    </Grow>
-                </ProductCard>
-                <ProductCard
-                    className={classes.box}
-                    id='groupLecturesShow'
-                    mouseEnter={this.mouseEnter}
-                    mouseLeave={this.mouseLeave}>
-                    <Typography
-                        variant='h6'
-                        color='secondary'
-                        className={classes.title}
-                        noWrap
-                        classes={{
-                        h6: classes.h6
-                    }}>{translate('boxing')}</Typography>
-                    <Grow in={groupLecturesShow}>
-                        {groupLecturesShow
-                            ? <div>
-                                    <Link to='/box'>
+                                    </div>
+                                : <div></div>}
+                        </Grow>
+                    </ProductCard>
+                </Link>
+                <Link to='/box'>
+                    <ProductCard
+                        className={classes.box}
+                        id='groupLecturesShow'
+                        mouseEnter={this.mouseEnter}
+                        mouseLeave={this.mouseLeave}>
+                        <Typography
+                            variant='h6'
+                            color='secondary'
+                            className={classes.title}
+                            noWrap
+                            classes={{
+                            h6: classes.h6
+                        }}>{translate('boxing')}</Typography>
+                        <Grow in={groupLecturesShow}>
+                            {groupLecturesShow
+                                ? <div>
                                         <Typography
                                             variant='subtitle1'
                                             color='secondary'
@@ -212,28 +212,28 @@ class Courses extends Component {
                                             subtitle1: classes.subtitle1
                                         }}>{translate('learnMore')}
                                         </Typography>
-                                    </Link>
-                                </div>
-                            : <div></div>}
-                    </Grow>
-                </ProductCard>
-                <ProductCard
-                    className={classes.taek}
-                    id='groupLecturesShow'
-                    mouseEnter={this.mouseEnter}
-                    mouseLeave={this.mouseLeave}>
-                    <Typography
-                        variant='h6'
-                        color='secondary'
-                        className={classes.title}
-                        noWrap
-                        classes={{
-                        h6: classes.h6
-                    }}>{translate('taek')}</Typography>
-                    <Grow in={groupLecturesShow}>
-                        {groupLecturesShow
-                            ? <div>
-                                    <Link to='/taek'>
+                                    </div>
+                                : <div></div>}
+                        </Grow>
+                    </ProductCard>
+                </Link>
+                <Link to='/taek'>
+                    <ProductCard
+                        className={classes.taek}
+                        id='groupLecturesShow'
+                        mouseEnter={this.mouseEnter}
+                        mouseLeave={this.mouseLeave}>
+                        <Typography
+                            variant='h6'
+                            color='secondary'
+                            className={classes.title}
+                            noWrap
+                            classes={{
+                            h6: classes.h6
+                        }}>{translate('taek')}</Typography>
+                        <Grow in={groupLecturesShow}>
+                            {groupLecturesShow
+                                ? <div>
                                         <Typography
                                             variant='subtitle1'
                                             color='secondary'
@@ -242,28 +242,28 @@ class Courses extends Component {
                                             subtitle1: classes.subtitle1
                                         }}>{translate('learnMore')}
                                         </Typography>
-                                    </Link>
-                                </div>
-                            : <div></div>}
-                    </Grow>
-                </ProductCard>
-                <ProductCard
-                    className={classes.wushu}
-                    id='groupLecturesShow'
-                    mouseEnter={this.mouseEnter}
-                    mouseLeave={this.mouseLeave}>
-                    <Typography
-                        variant='h6'
-                        color='secondary'
-                        className={classes.title}
-                        noWrap
-                        classes={{
-                        h6: classes.h6
-                    }}>{translate('wushu')}</Typography>
-                    <Grow in={groupLecturesShow}>
-                        {groupLecturesShow
-                            ? <div>
-                                    <Link to='/wushu'>
+                                    </div>
+                                : <div></div>}
+                        </Grow>
+                    </ProductCard>
+                </Link>
+                <Link to='/wushu'>
+                    <ProductCard
+                        className={classes.wushu}
+                        id='groupLecturesShow'
+                        mouseEnter={this.mouseEnter}
+                        mouseLeave={this.mouseLeave}>
+                        <Typography
+                            variant='h6'
+                            color='secondary'
+                            className={classes.title}
+                            noWrap
+                            classes={{
+                            h6: classes.h6
+                        }}>{translate('wushu')}</Typography>
+                        <Grow in={groupLecturesShow}>
+                            {groupLecturesShow
+                                ? <div>
                                         <Typography
                                             variant='subtitle1'
                                             color='secondary'
@@ -272,28 +272,28 @@ class Courses extends Component {
                                             subtitle1: classes.subtitle1
                                         }}>{translate('learnMore')}
                                         </Typography>
-                                    </Link>
-                                </div>
-                            : <div></div>}
-                    </Grow>
-                </ProductCard>
-                <ProductCard
-                    className={classes.mma}
-                    id='groupLecturesShow'
-                    mouseEnter={this.mouseEnter}
-                    mouseLeave={this.mouseLeave}>
-                    <Typography
-                        variant='h6'
-                        color='secondary'
-                        className={classes.title}
-                        noWrap
-                        classes={{
-                        h6: classes.h6
-                    }}>{translate('MMA')}</Typography>
-                    <Grow in={groupLecturesShow}>
-                        {groupLecturesShow
-                            ? <div>
-                                    <Link to='/mma'>
+                                    </div>
+                                : <div></div>}
+                        </Grow>
+                    </ProductCard>
+                </Link>
+                <Link to='/mma'>
+                    <ProductCard
+                        className={classes.mma}
+                        id='groupLecturesShow'
+                        mouseEnter={this.mouseEnter}
+                        mouseLeave={this.mouseLeave}>
+                        <Typography
+                            variant='h6'
+                            color='secondary'
+                            className={classes.title}
+                            noWrap
+                            classes={{
+                            h6: classes.h6
+                        }}>{translate('MMA')}</Typography>
+                        <Grow in={groupLecturesShow}>
+                            {groupLecturesShow
+                                ? <div>
                                         <Typography
                                             variant='subtitle1'
                                             color='secondary'
@@ -302,11 +302,11 @@ class Courses extends Component {
                                             subtitle1: classes.subtitle1
                                         }}>{translate('learnMore')}
                                         </Typography>
-                                    </Link>
-                                </div>
-                            : <div></div>}
-                    </Grow>
-                </ProductCard>
+                                    </div>
+                                : <div></div>}
+                        </Grow>
+                    </ProductCard>
+                </Link>
             </div>
         )
     }

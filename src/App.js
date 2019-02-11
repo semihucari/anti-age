@@ -16,6 +16,9 @@ import Taek from './pages/Courses/Taek';
 import Wushu from './pages/Courses/Wushu';
 import Mma from './pages/Courses/Mma';
 import ScrollToTop from './components/ScrollToTop';
+import GroupClasses from './pages/Products/GroupClasses';
+import PremiumClasses from './pages/Products/PremiumClasses';
+import IndividualClasses from './pages/Products/IndividualClasses';
 
 const theme = createMuiTheme({
     palette: {
@@ -69,11 +72,22 @@ class App extends Component {
                     <Router>
                         <ScrollToTop>
                             <Switch>
-                                <Route path="/" exact render={() => <Layout changeLang={this.changeLang}><LoadableHome/></Layout>}/>
-                                <Route path="/home" render={() => <Layout changeLang={this.changeLang}><LoadableHome/></Layout>}/>
-                                <Route path="/about" render={() => <Layout changeLang={this.changeLang}><About/></Layout>}/>
-                                <Route path="/products" render={() => <Layout changeLang={this.changeLang}><LoadableProducts/></Layout>}/>
-                                <Route path="/courses" render={() => <Layout changeLang={this.changeLang}><Courses/></Layout>}/>
+                                <Route
+                                    path="/"
+                                    exact
+                                    render={() => <Layout changeLang={this.changeLang}><LoadableHome/></Layout>}/>
+                                <Route
+                                    path="/home"
+                                    render={() => <Layout changeLang={this.changeLang}><LoadableHome/></Layout>}/>
+                                <Route
+                                    path="/about"
+                                    render={() => <Layout changeLang={this.changeLang}><About/></Layout>}/>
+                                <Route
+                                    path="/products"
+                                    render={() => <Layout changeLang={this.changeLang}><LoadableProducts/></Layout>}/>
+                                <Route
+                                    path="/courses"
+                                    render={() => <Layout changeLang={this.changeLang}><Courses/></Layout>}/>
                                 <Route
                                     path="/muaythai"
                                     component={({history}) => <Layout changeLang={this.changeLang}><MuayThai history={history}/></Layout>}/>
@@ -92,8 +106,24 @@ class App extends Component {
                                 <Route
                                     path="/mma"
                                     component={({history}) => <Layout changeLang={this.changeLang}><Mma history={history}/></Layout>}/>
-                                <Route path="/contact" component={() => <Layout changeLang={this.changeLang}><Contact/></Layout>}/>
-                                <Route path="/gym" exact render={() => <Layout changeLang={this.changeLang}><LoadableGym/></Layout>}/>
+                                <Route
+                                    path="/contact"
+                                    component={() => <Layout changeLang={this.changeLang}><Contact/></Layout>}/>
+                                <Route
+                                    path="/gym"
+                                    exact
+                                    render={() => <Layout changeLang={this.changeLang}><LoadableGym/></Layout>}/>
+                                <Route
+                                    path="/groupclasses"
+                                    exact
+                                    render={() => <Layout changeLang={this.changeLang}><GroupClasses/></Layout>}/>
+                                <Route
+                                    path="/premiumclasses"
+                                    component={() => <Layout changeLang={this.changeLang}><PremiumClasses/></Layout>}/>
+                                <Route
+                                    path="/individualclasses"
+                                    exact
+                                    render={() => <Layout changeLang={this.changeLang}><IndividualClasses/></Layout>}/>
                             </Switch>
                         </ScrollToTop>
                     </Router>

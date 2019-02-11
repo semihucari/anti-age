@@ -57,12 +57,21 @@ const styles = theme => ({
     },
     subtitle1: {
         fontFamily: '"Anton", sans-serif',
-        fontSize: '1.2em'
+        fontSize: '1.2em',
+        background: 'red',
+        textAlign: 'left',
+        paddingLeft: '0.5em',
+        '&:hover': {
+            background: 'rgb(254, 184, 28)'
+        }
     },
     subtitle: {
-        paddingLeft: '0.5em',
-        height: '1.4em',
-        marginBottom: '0.1em'
+        height: '3.1em',
+        width: '7em',
+        paddingBottom: '2.5em',
+        clipPath: 'polygon(86% 0%, 100% 50%, 86% 100%, 0% 100%, 0 50%, 0% 0%)',
+        paddingTop: '0.85em',
+        float: 'right'
     }
 });
 
@@ -107,33 +116,17 @@ class Products extends Component {
                         <Grow in={groupLecturesShow}>
                             {groupLecturesShow
                                 ? <div>
-                                        <Typography
-                                            variant='subtitle1'
-                                            color='secondary'
-                                            className={classes.subtitle}
-                                            classes={{
-                                            subtitle1: classes.subtitle1
-                                        }}>
-                                            {translate('fourDaysAWeek')}
-                                        </Typography>
-                                        <Typography
-                                            variant='subtitle1'
-                                            color='secondary'
-                                            className={classes.subtitle}
-                                            classes={{
-                                            subtitle1: classes.subtitle1
-                                        }}>
-                                            {translate('1520Students')}
-                                        </Typography>
-                                        <Typography
-                                            variant='subtitle1'
-                                            color='secondary'
-                                            className={classes.subtitle}
-                                            classes={{
-                                            subtitle1: classes.subtitle1
-                                        }}>
-                                            {translate('200TLMonth')}
-                                        </Typography>
+                                        <Link to='/groupclasses'>
+                                            <Typography
+                                                noWrap
+                                                variant='subtitle1'
+                                                color='secondary'
+                                                className={classes.subtitle}
+                                                classes={{
+                                                subtitle1: classes.subtitle1
+                                            }}>{translate('learnMore')}
+                                            </Typography>
+                                        </Link>
                                     </div>
                                 : <div></div>}
                         </Grow>
@@ -158,33 +151,17 @@ class Products extends Component {
                         <Grow in={premiumLecturesShow}>
                             {premiumLecturesShow
                                 ? <div>
-                                        <Typography
-                                            variant='subtitle1'
-                                            color='secondary'
-                                            className={classes.subtitle}
-                                            classes={{
-                                            subtitle1: classes.subtitle1
-                                        }}>
-                                            {translate('fourDaysAWeek')}
-                                        </Typography>
-                                        <Typography
-                                            variant='subtitle1'
-                                            color='secondary'
-                                            className={classes.subtitle}
-                                            classes={{
-                                            subtitle1: classes.subtitle1
-                                        }}>
-                                            {translate('6Students')}
-                                        </Typography>
-                                        <Typography
-                                            variant='subtitle1'
-                                            color='secondary'
-                                            className={classes.subtitle}
-                                            classes={{
-                                            subtitle1: classes.subtitle1
-                                        }}>
-                                            {translate('400TLMonth')}
-                                        </Typography>
+                                        <Link to='/premiumclasses'>
+                                            <Typography
+                                                noWrap
+                                                variant='subtitle1'
+                                                color='secondary'
+                                                className={classes.subtitle}
+                                                classes={{
+                                                subtitle1: classes.subtitle1
+                                            }}>{translate('learnMore')}
+                                            </Typography>
+                                        </Link>
                                     </div>
                                 : <div></div>}
                         </Grow>
@@ -207,33 +184,17 @@ class Products extends Component {
                         <Grow in={specialLecturesShow}>
                             {specialLecturesShow
                                 ? <div>
-                                        <Typography
-                                            variant='subtitle1'
-                                            color='secondary'
-                                            className={classes.subtitle}
-                                            classes={{
-                                            subtitle1: classes.subtitle1
-                                        }}>
-                                            {translate('wheneverYouChoose')}
-                                        </Typography>
-                                        <Typography
-                                            variant='subtitle1'
-                                            color='secondary'
-                                            className={classes.subtitle}
-                                            classes={{
-                                            subtitle1: classes.subtitle1
-                                        }}>
-                                            {translate('withOmerSensei')}
-                                        </Typography>
-                                        <Typography
-                                            variant='subtitle1'
-                                            color='secondary'
-                                            className={classes.subtitle}
-                                            classes={{
-                                            subtitle1: classes.subtitle1
-                                        }}>
-                                            {translate('120TLHour')}
-                                        </Typography>
+                                        <Link to='/individualclasses'>
+                                            <Typography
+                                                noWrap
+                                                variant='subtitle1'
+                                                color='secondary'
+                                                className={classes.subtitle}
+                                                classes={{
+                                                subtitle1: classes.subtitle1
+                                            }}>{translate('learnMore')}
+                                            </Typography>
+                                        </Link>
                                     </div>
                                 : <div></div>}
                         </Grow>

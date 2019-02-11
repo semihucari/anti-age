@@ -36,6 +36,7 @@ const MyTypography = withStyles({
     h5: {
         fontSize: '2.3em',
         fontFamily: '"Roboto", sans-serif',
+        background: '#f05a1a',
         color: 'white',
         paddingTop: '.2em'
     }

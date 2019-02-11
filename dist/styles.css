@@ -104,6 +104,39 @@ body {
     }
 }
 @media screen and (min-width: 1200px) {
+    .enter-first {
+        animation: fadeIn 2s ease-out;
+    }
+
+    .enter-second {
+        animation: fadeIn 3s ease-out;
+    }
+
+    .enter-third {
+        animation: fadeIn 4s ease-out;
+    }
+
+    .group-classes {
+        padding-top: 10em;
+        padding-left: 4em;
+        overflow-x: hidden;
+        height: 100vh;
+    }
+
+    .premium-classes {
+        padding-top: 10em;
+        margin-left: 4em;
+        overflow-x: hidden;
+        height: 100vh;
+    }
+
+    .individual-classes {
+        padding-top: 10em;
+        margin-left: 4em;
+        overflow-x: hidden;
+        height: 100vh;
+    }
+
     .img {
         height: 75vh;
         border-width: 4px !important;
