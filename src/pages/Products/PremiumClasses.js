@@ -95,7 +95,7 @@ class PremiumClasses extends Component {
         const {dialogOpen, img} = this.state;
 
         return (
-            <div className='premium-classes'>
+            <div className='group-premium-individual-classes'>
                 <div className='enter-first left-spaced'>
                     <MyTypography variant='h5'>
                         {translate('threeDaysAWeek')}

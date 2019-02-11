@@ -119,7 +119,7 @@ class IndividualClasses extends Component {
         const {dialogOpen, img} = this.state;
 
         return (
-            <div className='individual-classes'>
+            <div className='group-premium-individual-classes'>
                 <div className='enter-first left-spaced'>
                     <MyTypography variant='h5'>
                         {translate('wheneverYouChoose')}
