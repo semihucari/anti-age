@@ -87,50 +87,20 @@ const tileData = [
         cols: 1,
         rows: 2
     }, {
-        img: require('../images/15.34.13.jpeg'),
-        title: '15.34.13.jpeg',
-        author: 'author',
-        cols: 2,
-        rows: 2
-    }, {
         img: require('../images/15.34.09.jpeg'),
         title: '15.34.09.jpeg',
         author: 'author',
         cols: 2,
         rows: 2
     }, {
-        img: require('../images/15.34.16 (1).jpeg'),
-        title: '15.34.16 (1).jpeg',
+        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.15 (1).jpeg'),
+        title: 'WhatsApp Image 2018-12-03 at 15.44.15 (1).jpeg',
         author: 'author',
-        cols: 1,
+        cols: 2,
         rows: 2
     }, {
-        img: require('../images/15.34.14 (1).jpeg'),
-        title: '15.34.14 (1).jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
-        img: require('../images/15.34.17.jpeg'),
-        title: '15.34.17.jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
-        img: require('../images/15.34.18 (1).jpeg'),
-        title: '15.34.18 (1).jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
-        img: require('../images/15.34.18.jpeg'),
-        title: '15.34.18.jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
-        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.12.jpeg'),
-        title: 'WhatsApp Image 2018-12-03 at 15.44.12.jpeg',
+        img: require('../images/WhatsApp Image 2019-02-11 at 18.35.25 (1).jpeg'),
+        title: 'WhatsApp Image 2019-02-11 at 18.35.25 (1).jpeg',
         author: 'author',
         cols: 1,
         rows: 2
@@ -141,32 +111,26 @@ const tileData = [
         cols: 1,
         rows: 2
     }, {
-        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.13.jpeg'),
-        title: 'WhatsApp Image 2018-12-03 at 15.44.13.jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
-        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.15 (1).jpeg'),
-        title: 'WhatsApp Image 2018-12-03 at 15.44.15 (1).jpeg',
-        author: 'author',
-        cols: 2,
-        rows: 2
-    }, {
-        img: require('../images/WhatsApp Image 2019-02-01 at 15.36.21.jpeg'),
-        title: 'WhatsApp Image 2019-02-01 at 15.36.21.jpeg',
-        author: 'author',
-        cols: 1,
-        rows: 2
-    }, {
         img: require('../images/WhatsApp Image 2019-02-01 at 15.36.23 (1).jpeg'),
         title: 'WhatsApp Image 2019-02-01 at 15.36.23 (1).jpeg',
         author: 'author',
         cols: 2,
         rows: 2
     }, {
+        img: require('../images/WhatsApp Image 2018-12-03 at 15.44.13.jpeg'),
+        title: 'WhatsApp Image 2018-12-03 at 15.44.13.jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
         img: require('../images/WhatsApp Image 2019-02-01 at 15.36.23.jpeg'),
         title: 'WhatsApp Image 2019-02-01 at 15.36.23.jpeg',
+        author: 'author',
+        cols: 2,
+        rows: 2
+    }, {
+        img: require('../images/WhatsApp Image 2019-02-11 at 18.35.26.jpeg'),
+        title: 'WhatsApp Image 2019-02-11 at 18.35.26.jpeg',
         author: 'author',
         cols: 2,
         rows: 2

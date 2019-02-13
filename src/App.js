@@ -7,7 +7,7 @@ import Contact from './pages/Contact';
 import Courses from './pages/Courses';
 import Loadable from "react-loadable";
 import Loading from "./components/Loading";
-import {HashRouter as Router, Link} from "react-router-dom";
+import {HashRouter as Router} from "react-router-dom";
 import {Switch, Route} from 'react-router'
 import MuayThai from './pages/Courses/MuayThai';
 import KickBox from './pages/Courses/KickBox';
@@ -16,9 +16,6 @@ import Taek from './pages/Courses/Taek';
 import Wushu from './pages/Courses/Wushu';
 import Mma from './pages/Courses/Mma';
 import ScrollToTop from './components/ScrollToTop';
-import GroupClasses from './pages/Products/GroupClasses';
-import PremiumClasses from './pages/Products/PremiumClasses';
-import IndividualClasses from './pages/Products/IndividualClasses';
 
 const theme = createMuiTheme({
     palette: {
@@ -53,6 +50,21 @@ const LoadableProducts = Loadable({
 
 const LoadableGym = Loadable({
     loader: () => import ('./pages/Gym'),
+    loading: (Loading)
+});
+
+const LoadableGroupCls = Loadable({
+    loader: () => import ('./pages/Products/GroupClasses'),
+    loading: (Loading)
+});
+
+const LoadablePremiumCls = Loadable({
+    loader: () => import ('./pages/Products/PremiumClasses'),
+    loading: (Loading)
+});
+
+const LoadableIndividualCls = Loadable({
+    loader: () => import ('./pages/Products/IndividualClasses'),
     loading: (Loading)
 });
 
@@ -116,14 +128,14 @@ class App extends Component {
                                 <Route
                                     path="/groupclasses"
                                     exact
-                                    render={() => <Layout changeLang={this.changeLang}><GroupClasses/></Layout>}/>
+                                    render={() => <Layout changeLang={this.changeLang}><LoadableGroupCls/></Layout>}/>
                                 <Route
                                     path="/premiumclasses"
-                                    component={() => <Layout changeLang={this.changeLang}><PremiumClasses/></Layout>}/>
+                                    component={() => <Layout changeLang={this.changeLang}><LoadablePremiumCls/></Layout>}/>
                                 <Route
                                     path="/individualclasses"
                                     exact
-                                    render={() => <Layout changeLang={this.changeLang}><IndividualClasses/></Layout>}/>
+                                    render={() => <Layout changeLang={this.changeLang}><LoadableIndividualCls/></Layout>}/>
                             </Switch>
                         </ScrollToTop>
                     </Router>

@@ -83,6 +83,18 @@ const tileData = [
         author: 'author',
         cols: 1,
         rows: 2
+    }, {
+        img: require('../../images/WhatsApp Image 2019-02-11 at 18.36.53.jpeg'),
+        title: 'WhatsApp Image 2019-02-11 at 18.36.53.jpeg',
+        author: 'author',
+        cols: 1,
+        rows: 2
+    }, {
+        img: require('../../images/WhatsApp Image 2019-02-11 at 18.43.53.jpeg'),
+        title: 'WhatsApp Image 2019-02-11 at 18.43.53.jpeg',
+        author: 'author',
+        cols: 2,
+        rows: 2
     }
 ]
 

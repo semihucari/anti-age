@@ -69,6 +69,12 @@ const tileData = [
         img: require('../../images/d5b93c1d-9271-416b-9477-ee48baf09232.jpg'),
         title: 'd5b93c1d-9271-416b-9477-ee48baf09232.jpg',
         author: 'author',
+        cols: 1,
+        rows: 2
+    },  {
+        img: require('../../images/WhatsApp Image 2019-02-11 at 18.40.36.jpeg'),
+        title: 'WhatsApp Image 2019-02-11 at 18.40.36.jpeg',
+        author: 'author',
         cols: 2,
         rows: 2
     }
@@ -108,7 +114,7 @@ class PremiumClasses extends Component {
                 </div>
                 <div className='enter-third'>
                     <MyTypography variant='h5'>
-                        {translate('400TLMonth')}
+                        {translate('500TLMonth')}
                     </MyTypography>
                 </div>
                 <GridList cellHeight={250} className={classes.gridList} cols={3} spacing={40}>
